@@ -1,0 +1,140 @@
+extends layout/main
+
+block variables
+	-var title = 'inlight'
+
+block content
+	section.first
+		include modules/header/header
+		.container
+			.flex-center-between 
+				.first__left
+					.line.line-right
+					.canvas-dots.absolute-dots
+						canvas(class="stage" width="321" height="262")
+					h1.title 
+						span.text-gradient bright
+						span APPS
+						span STUDIO
+					.line.line-left
+				.first__right 
+					.gif-phone
+	section.second
+		.container
+			.second__top
+				.canvas-dots-gray.absolute-dots
+					canvas(class="stage" width="321" height="262")
+				each card in [{bgcolor: 'gradient__green-blue', src: 'img/im_mobile_development.png', name: 'MOBILE', span: 'Development', text: 'We create applications that delivers outstanding customer experience and reach business goals.'}, {bgcolor: 'gradient__blue-pink', src: 'img/il_web.png', name: 'WEB', span: 'Development', text: 'We provide ultimate solutions for custom website development which will be tailored to all client needs.'}, {bgcolor: 'gradient__pink-orange', src: 'img/ux.png', name: 'UI/UX', span: 'Design', text: 'We have extensive experience in UI/UX designing which will bring your business to new levels of growth and success.'}] 
+					.card-gadget(class=card.bgcolor)
+						img.card-gadget__img(src=card.src, alt="img")
+						.c-white.fw-medium.text-center
+							p.fs-36.fw-bold=card.name
+							p.fs-24=card.span
+							p.fs-14=card.text
+			.second__bottom
+				h2.title_2 The World  has gone mobile
+					span.line.line-left
+					span.line.line-right
+				p.c-gray.text-center Mobile Apps became a indispensable tool for daily interactions between business and users. Digital technologies have advanced more rapidly than any innovation in our history. Every day the numerous of new services and IoT appear to make our life more usable, fast, mobile and gainful.
+				.flex-center-center 
+					each ic in [{color: 'c-green', src: 'img/ic/android.svg', name: 'ANDROID'}, {color: 'c-blue', src: 'img/ic/ios.svg', name: 'IOS'}, {color: 'c-purple', src: 'img/ic/admin-panel.svg', name: 'ADMIN PANEL'}, {color: 'c-red', src: 'img/ic/iot.svg', name: 'IOT'}, {color: 'c-orange', src: 'img/ic/smartwatch.svg', name: 'WEARABLES'}] 
+						.ic(class=ic.color)
+							img(src=ic.src, alt="icon ic")
+							p.fw-bold.text-center(class=ic.color)=ic.name
+	section.third
+		.container
+			h2.title_3 Need a fast Time-to-market ?
+			.flex-center-between
+				.card
+					p.fs-48.fw-bold.c-blue Prototype
+						span.fs-24 in 1-2  Weeks
+					p.fs-20.fw-medium Сlickable prototyping <br> with UX expertise
+					a.btn-send.gradient__purple-blue(href="#")
+						|Send A request
+						+icon("send")
+				.card
+					p.fs-48.fw-bold.c-blue MVP
+						span.fs-24 in 2-3 Months
+					p.fs-20.fw-medium High-quality MVP uploaded <br> into app store
+					a.btn-send.gradient__orange-yellow(href="#")
+						|Send A request
+						+icon("send")
+		img.img-rocket(src="img/fxemoji_rocket.png", alt="rocket")
+		img.bg-circle(src="img/circle.svg", alt="circle")
+		img.cloud.cloud-1(src="img/cloud.png", alt="cloud")
+		img.cloud.cloud-2(src="img/cloud-1.png", alt="cloud")
+	section.fourth
+		.container
+			.justify-content-between
+				.col-50.justify-content-end
+					div.max-460
+						h2.title_2.c-white Technologies
+							span.line.line-left.line-white
+						p.fs-24.c-white We use the most up-to-date technologies in existence to deliver the best solutions to carry out complex projects. Basing on client needs and business goals we will line up the best technology stack to ensure smoothly run on any device and platform.
+						div.mobile-tech
+							p.fs-36.fw-bold.c-white.text-up Mobile
+							each mobTech in [{name: 'IOS', src1: 'img/ic/ic_swift.svg', src2: 'img/ic/ic_objectiveC.svg', lineColor: 'line-blue'}, {name: 'ANDROID', src1: 'img/ic/ic_java.svg', src2: 'img/ic/ic_Kotlin.svg', lineColor: 'line-green'}, {name: 'CROSS PLATFORM', src1: 'img/ic/ic_reactnative.svg', src2: 'img/ic/ic_flutter.svg', lineColor: 'line-yellow'}] 
+								
+								.align-items-center
+									p.fs-18.fw-medium.c-white.text-right.relative=mobTech.name
+										span.line.line-left(class=mobTech.lineColor)
+									img.block-ic(src=mobTech.src1, alt="icon")
+									img.block-ic(src=mobTech.src2, alt="icon")
+				.col-50
+					.web-tech
+						img.img-web(src="img/im_technologies.svg", alt="technologies")
+						.relative 
+							p.fs-36.fw-bold.c-white.text-up WEB
+							.d-flex
+								each webTech in [{name: 'FRONTEND', src1: 'img/ic/ic_html5.svg', src2: 'img/ic/ic_reactnative.svg', src3: 'img/ic/ic_vuejs.svg', lineColor: 'line-yellow'}, {name: 'BACKEND', src1: 'img/ic/ic_php.svg', src2: 'img/ic/ic_nodeJS.svg', src3: 'img/ic/ic_laravel.svg', lineColor: 'line-red'}, {name: 'DATABASES', src1: 'img/ic/ic_postgre.svg', src2: 'img/ic/ic_mongo.svg', src3: 'img/ic/ic_mysql.svg', lineColor: 'line-purple'}, {name: 'CMS', src1: 'img/ic/ic_wordpress.svg', src2: 'img/ic/ic_opencart.svg', src3: 'img/ic/ic_drupal.svg', lineColor: 'line-blue'}, {name: 'INFRASTUCTURE', src1: 'img/ic/ic_github.svg', src2: 'img/ic/ic_aws.svg', src3: 'img/ic/ic_git.svg', lineColor: 'line-green'}] 
+									.web-col
+										p.fs-18.fw-medium.c-white.text-right.relative=webTech.name
+											span.line.line-left(class=webTech.lineColor)
+										img.block-ic(src=webTech.src1, alt="icon web")
+										img.block-ic(src=webTech.src2, alt="icon web")
+										img.block-ic(src=webTech.src3, alt="icon web")
+	section.fiveth
+		.fiveth-top
+			.container 
+				h2.title_2 Why We
+					span.line.line-left
+					span.line.line-right
+				.flex-center-between
+					div.fiveth-side 
+						.block-icon.bg-blue 
+							+icon("cms")
+						p.fs-48.fw-medium.text-up What
+							span.c-blue.d-block.fw-black we do
+						p.fs-16.fw-medium.c-gray Our skilled developers create highest quality software for IOS, Android and other cross-platforms performing experiences across a wide range of connected IoT.
+					.circle-work 
+						img(src="img/img.jpg", alt="img")
+					div.fiveth-side  
+						.block-icon.bg-green.ml-auto
+							+icon("how-work")
+						p.fs-48.fw-medium.text-up.text-right how
+							span.c-green.d-block.fw-black we work
+						p.fs-16.fw-medium.c-gray.text-right We provide full-service software design and development from the beginning or at the late stages.  We  assist our clients until their ideas  achieves high technology results.
+							
+		.fiveth-bottom
+			.container 
+				.flex-wrap 
+					each cardWe in [{svg: 'stack', bgColor: 'bg-yellow', text: 'Platform-agnostic approach with the perfect stack chosen for your'}, {svg: 'leader', bgColor: 'bg-orange', text: 'Polished business processes to ensure a reliable performance'}, {svg: 'conversation', bgColor: 'bg-red', text: 'Fully transparent, open, and frequent communication'}, {svg: 'partnership', bgColor: 'bg-purple', text: 'Significant added value with a partnership approach'}]
+						.card-we
+							.card-we__head 
+								.card-we__circle
+								.card-we__color(class=cardWe.bgColor)
+									+icon(cardWe.svg) 
+							.justify-content-center
+								.circle_v2.mr-10(class=cardWe.bgColor) 
+								p.fs-18.fw-medium.c-white-100=cardWe.text
+
+
+
+
+
+
+									
+
+block script 
+	script(type="text/javascript" src="js/canvas.js")
+				
