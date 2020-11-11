@@ -2,7 +2,9 @@ const gulp = require('gulp');
 const concat = require('gulp-concat');
 
 const vendorsScripts = [
-  'node_modules/svg4everybody/dist/svg4everybody.min.js'
+  'dev/js/vendor/slick.min.js',
+  'dev/js/vendor/scrolloverflow.min.js',
+  'dev/js/vendor/fullpage.min.js'
 ];
 
 module.exports = function vendors(cb) {

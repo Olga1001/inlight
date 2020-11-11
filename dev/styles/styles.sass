@@ -1,4 +1,3 @@
-@import "utils/libs";
 @import "utils/vars";
 @import "utils/mixins";
 @import "utils/fonts";
@@ -69,9 +68,10 @@ textarea
   appearance: none
 
 section
-  min-height: 100vh
+  // min-height: 100vh
   position: relative
   overflow: hidden
+  background: #0A1226
 
 input, select, button 
   outline: none
@@ -86,6 +86,14 @@ input
 //   background: #EEEEEE
 //   color: #202020
 //   opacity: 1
+
+.fp-tableCell 
+  width: 100%
+  height: 100vh
+  +d-flex(center, center)
+
+.fp-scrollable
+  height: auto!important
 
 .container 
   max-width: $desktop
@@ -109,8 +117,11 @@ input
 .first 
   +d-flex(center,center)
   overflow: hidden
-  position: sticky
-  top: 0
+  // position: sticky
+  // top: 0
+  .fp-tableCell
+    +d-flex(space-between, center)
+    width: 100%
   &__left
     position: relative
     padding: 20px 0 30px
@@ -125,14 +136,16 @@ input
   
 .second 
   background: #fff 
-  padding: 20px 0
+  .fp-tableCell
+    display: flex
+    align-items: center
   &__top 
-    height: 59vh
+    // min-height: 59vh
     +d-flex(center, flex-end)
-    padding-bottom: 70px
+    padding: 70px 0
     position: relative
   &__bottom
-    height: 41vh
+    // min-height: 41vh
     .c-gray 
       max-width: 540px 
       width: 100% 
@@ -141,8 +154,11 @@ input
 .third 
   background: linear-gradient(241.84deg, #9717FF 1.94%, #1A6BE0 101.23%)
   position: relative
-  padding-bottom: 180px
-  +d-flex(center, center)
+  .fp-tableCell 
+    width: 100%
+    height: 100vh
+    +d-flex(center, center)
+    padding-bottom: 180px
 
 .bg-circle
   position: absolute 
@@ -169,7 +185,7 @@ input
   width: 160px 
   height: 160px
   margin-right: 30px
-  margin: 25px 15px
+  margin: 25px 15px 0
   &:last-child
     margin-right: 0
   img
@@ -269,7 +285,33 @@ canvas
   text-align: center
   text-transform: uppercase
   color: #FFFFFF
-      
+
+.title_4 
+  font-weight: 900
+  font-size: 42px
+  line-height: 56px
+  text-align: center
+  color: #FFFFFF
+  background: linear-gradient(222.6deg, #FE6B02 4.98%, #FFBE16 100.39%)
+  border-radius: 10px
+  max-width: 635px 
+  position: relative
+  padding: 21px 10px
+  margin: 0 auto
+  &:before 
+    content: ''
+    position: absolute 
+    left: 50%
+    top: 50% 
+    transform: translate(-50%,-50%)
+    background: url("../img/border.svg") no-repeat center / contain
+    width: 678px
+    height: 190px
+  .line-left
+    right: calc(100% + 20px)
+  .line-right 
+    left: calc(100% + 20px)
+
 .card-gadget 
   width: calc(33.33% - 20px)
   margin-right: 30px 
@@ -412,6 +454,12 @@ canvas
     background: #9815FE
     box-shadow: 0px 0px 10px #9815FE
 
+.line-orange 
+  background: #FF9900
+  &:before 
+    background: #FF9900
+    box-shadow: 0px 0px 10px #FF9900
+  
 .block-ic 
   width: 95px 
   height: 95px 
@@ -498,7 +546,185 @@ canvas
     padding-right: 10px
     max-width: 210px
 
+.sixth 
+  padding: 170px 0 67px
+  .title_4 
+    margin-bottom: 170px
+
+.stages
+  min-height: 445px
+  margin-bottom: 60px
+  &__info
+    max-width: 550px
+    width: 100%
+    padding-left: 100px
+  &__amount 
+    position: absolute
+    right: calc(100% + 34px)
+    top: 50%
+    width: 65px
+    height: 65px
+    border-radius: 50% 
+    font-weight: 900
+    font-size: 36px
+    line-height: 65px
+    text-align: center
+    color: #FFFFFF
+  .fs-48 
+    margin-bottom: 40px
+    .line-left
+      right: 20%
+      left: auto
+      bottom: -10px
+    .line-right
+      left: 0
+      bottom: -10px
+
+.seventh 
+  +d-flex(center, center)
+.cases
+  max-width: 730px 
+  width: 100% 
+  margin: 74px auto 30px
+.case 
+  width: calc(33.33% - 12px)
+  height: 232px
+  border-radius: 50px
+  margin: 0 17px 17px 0 
+  &-img 
+    width: 100% 
+    height: 100% 
+    transform: scale(0.7)
+    &_all 
+      width: 100% 
+      height: 100% 
+
+  &:nth-child(3n+3)
+    margin-right: 0
+
+.gradient
+  &-1
+    background: linear-gradient(222.15deg, #9916FF 4.06%, #1961F3 96%)
+  &-2 
+    background: linear-gradient(222.15deg, #9916FF 4.06%, #1961F3 96%)
+  &-3
+    background: linear-gradient(95.63deg, #9816FF 5.13%, #FF0000 100.19%)
+  &-4
+    background: linear-gradient(114.08deg, #1A5AFF 13.32%, #1FC74D 83.94%)
+  &-5
+    background: linear-gradient(178.05deg, #E00480 1.64%, #FB0010 52.22%, #FF7A00 98.75%)
+  &-6
+    background: linear-gradient(274.31deg, #FFB815 0.8%, #06C954 98.74%)
+  &-7
+    background: linear-gradient(274.31deg, #FFB815 0.8%, #06C954 98.74%)
+  &-8
+    background: linear-gradient(222.6deg, #FE6B02 4.98%, #FFBE16 100.39%)
+
+.eight 
+  background: #FFFFFF
+  &-top 
+    min-height: 62vh
+    +d-flex(center,flex-end)
+  &-bottom 
+    min-height: 38vh
+
+//slider
+.slider
+  max-width: 1140px 
+  padding: 0 15px
+  width: 100% 
+  margin: 90px auto 0
+  min-height: 422px
+  .slick-track
+    padding-bottom: 100px
+  &-item
+    height: 345.59px
+    width: 350.14px 
+    box-shadow: 0px 4px 15px rgba(26, 110, 220, 0.39)
+    border-radius: 10px
+    padding: 20px 25px
+    position: relative
+    opacity: 1
+    transition: all 0.3s ease
+    transform: scale(0.8)
+    // &[data-slick-index="1"], &[data-slick-index="-1"]
+    //   z-index: -1
+    //   min-height: 258px!important
+    //   padding: 15px
+    //   width: 255px
+    //   .avatar
+    //     width: 112px
+    //     height: 112px
+    //   .text-center 
+    //     margin-bottom: -30px
+    // &[data-slick-index="-1"] 
+    //   transform: scale(0.9) translate(24%, 40px)
+    // &[data-slick-index="1"]
+    //   transform: scale(0.9) translate(-24%, 40px)
+
+    // &[data-slick-index="-2"], &[data-slick-index="2"]
+    //   z-index: -2
+    //   min-height: 290px!important
+    //   width: 330px
+
+    // &[data-slick-index="-2"]
+    //   transform: scale(0.8) translate(calc(65% + 15px), 92px)
+    //   opacity: 0.6
+    // &[data-slick-index="2"]
+    //   transform: scale(0.8) translate(calc(-65% + 15px), 92px)
+    //   opacity: 0.6
+    .fs-14 
+      margin-top: 40px
+    &:before 
+      content: ''
+      position: absolute 
+      left: 30px 
+      top: calc(100% - 17px)
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 42px 18.5px 0 18.5px
+      z-index: -1
+    &.bg-blue:before 
+      border-color: #1C60F3 transparent transparent transparent
+    &.bg-yellow:before 
+      border-color: #FFB915 transparent transparent transparent
+    &.bg-green:before 
+      border-color: #1FC74D transparent transparent transparent
+    &.bg-red:before 
+      border-color: #F10222 transparent transparent transparent
+    &.bg-purple:before 
+      border-color: #9815FE transparent transparent transparent
+    svg 
+      fill: #FFFFFF
+      position: absolute
+      right: 0 
+      top: 0
+      width: 33.12px
+      height: 20.11px
+    &.slick-center
+      transform: none
+      z-index: 1
+      min-height: 322px!important
+
+.avatar
+  border: 6px solid #FFFFFF
+  border-radius: 50%
+  width: 142.82px
+  height: 142.82px
+  flex-shrink: 0
+  img 
+    width: 100% 
+    height: 100%
+    border-radius: 50%
+
+
+
+
 @import "modules/modules";
+
+.w-100
+  width: 100%
   
 .relative 
   position: relative
