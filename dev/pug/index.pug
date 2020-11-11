@@ -205,17 +205,18 @@ block content
 						h2.title_2 People are saying
 							span.line.line-left 
 							span.line.line-right
-						.slider
-							each review in [{bgColor: 'bg-blue', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.'}, {bgColor: 'bg-purple', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-red', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-yellow', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-green', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}]
-								.slider-item(class=review.bgColor)
-									.align-items-end.relative 
-										+icon("quotes")
-										.avatar
-											img(src=review.avatar, alt="img")
-										div.text-center.c-white
-											p.fs-20.fw-medium=review.name
-											p.fs-16.fw-black=review.post
-									p.fs-14.text-center.c-white=review.text
+						.swiper-container.slider
+							.swiper-wrapper
+								each review in [{bgColor: 'bg-blue', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.'}, {bgColor: 'bg-purple', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-red', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-yellow', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-green', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}]
+									.swiper-slide.slider-item(class=review.bgColor)
+										.align-items-end.relative 
+											+icon("quotes")
+											.avatar
+												img(src=review.avatar, alt="img")
+											div.text-center.c-white
+												p.fs-20.fw-medium=review.name
+												p.fs-16.fw-black=review.post
+										p.fs-14.text-center.c-white=review.text
 
 				.eight-bottom 	
 					div 

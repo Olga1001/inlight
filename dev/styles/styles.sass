@@ -70,7 +70,7 @@ textarea
 section
   // min-height: 100vh
   position: relative
-  overflow: hidden
+  // overflow: hidden
   background: #0A1226
 
 input, select, button 
@@ -90,10 +90,7 @@ input
 .fp-tableCell 
   width: 100%
   height: 100vh
-  +d-flex(center, center)
-
-.fp-scrollable
-  height: auto!important
+  // +d-flex(center, center)
 
 .container 
   max-width: $desktop
@@ -353,7 +350,10 @@ canvas
 .fourth 
   background-color: #0A1226
   padding: 20px 0
-  +d-flex(center,center)
+  .fp-tableCell
+    +d-flex(center,center)
+  .fp-scrollable
+    height: auto!important
   .title_2 
     text-align: left
     padding: 15px 0 0 0
@@ -547,9 +547,12 @@ canvas
     max-width: 210px
 
 .sixth 
-  padding: 170px 0 67px
+  .container
+    padding: 170px 20px 67px
   .title_4 
     margin-bottom: 170px
+  .fp-scrollable
+    height: 100%
 
 .stages
   min-height: 445px
@@ -581,7 +584,8 @@ canvas
       bottom: -10px
 
 .seventh 
-  +d-flex(center, center)
+  .fp-tableCell
+    +d-flex(center, center)
 .cases
   max-width: 730px 
   width: 100% 
@@ -629,6 +633,7 @@ canvas
     min-height: 38vh
 
 //slider
+
 .slider
   max-width: 1140px 
   padding: 0 15px
@@ -638,41 +643,14 @@ canvas
   .slick-track
     padding-bottom: 100px
   &-item
-    height: 345.59px
-    width: 350.14px 
+    // min-height: 235px
+    // width: 255px!important
     box-shadow: 0px 4px 15px rgba(26, 110, 220, 0.39)
     border-radius: 10px
     padding: 20px 25px
     position: relative
     opacity: 1
     transition: all 0.3s ease
-    transform: scale(0.8)
-    // &[data-slick-index="1"], &[data-slick-index="-1"]
-    //   z-index: -1
-    //   min-height: 258px!important
-    //   padding: 15px
-    //   width: 255px
-    //   .avatar
-    //     width: 112px
-    //     height: 112px
-    //   .text-center 
-    //     margin-bottom: -30px
-    // &[data-slick-index="-1"] 
-    //   transform: scale(0.9) translate(24%, 40px)
-    // &[data-slick-index="1"]
-    //   transform: scale(0.9) translate(-24%, 40px)
-
-    // &[data-slick-index="-2"], &[data-slick-index="2"]
-    //   z-index: -2
-    //   min-height: 290px!important
-    //   width: 330px
-
-    // &[data-slick-index="-2"]
-    //   transform: scale(0.8) translate(calc(65% + 15px), 92px)
-    //   opacity: 0.6
-    // &[data-slick-index="2"]
-    //   transform: scale(0.8) translate(calc(-65% + 15px), 92px)
-    //   opacity: 0.6
     .fs-14 
       margin-top: 40px
     &:before 
@@ -702,11 +680,10 @@ canvas
       top: 0
       width: 33.12px
       height: 20.11px
-    &.slick-center
-      transform: none
-      z-index: 1
-      min-height: 322px!important
-
+  .swiper-slide-active 
+    // width: 350px!important
+    // min-height: 323px!important
+    // z-index: 5!important
 .avatar
   border: 6px solid #FFFFFF
   border-radius: 50%

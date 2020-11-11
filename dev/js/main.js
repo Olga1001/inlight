@@ -11,15 +11,37 @@ $(document).ready(function () {
         // navigationPosition: 'right',
         // normalScrollElements: ".header, .header-search-flex, .header-search-contanet"
     });
-
-    $(".slider").slick({
-        infinite: true,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        dots: false,
-        arrows: false,
-        centerMode: true,
-        focusOnSelect: true,
-        variableWidth: true
-    });
+   
+    // var stop = false;
+    //     // do your logic here
+    // if(stop){
+    //     document.querySelector('.sixth').onwheel = e => e.stopPropagation();
+    // }   
+ 
+    // var div = $('.sixth .iScrollVerticalScrollbar'),
+    //     div_sh = $(div)[0].scrollHeight,
+    //     div_h = div.height();
+    // $(div).scroll(function(){
+    //     if ($(this).scrollTop() >= div_sh - div_h) {
+    //        console.log('прокрутил до конца');
+    //     }
+    //     else {
+    //         console.log('не прокрутил до конца');
+    //     }
+    // }); 
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        // grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 3,
+        roundLengths: true,
+        loop: true,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 40,
+          depth: 200,
+          modifier: 1,
+        //   slideShadows: true,
+        },
+      });
 });
