@@ -52,14 +52,14 @@ block content
 						p.fs-20.fw-medium Сlickable prototyping <br> with UX expertise
 						a.btn-send.gradient__purple-blue(href="#")
 							|Send A request
-							+icon("send")
+							+icon("send", "c-white")
 					.card
 						p.fs-48.fw-bold.c-blue MVP
 							span.fs-24 in 2-3 Months
 						p.fs-20.fw-medium High-quality MVP uploaded <br> into app store
 						a.btn-send.gradient__orange-yellow(href="#")
 							|Send A request
-							+icon("send")
+							+icon("send", "c-white")
 			img.img-rocket(src="img/fxemoji_rocket.png", alt="rocket")
 			img.bg-circle(src="img/circle.svg", alt="circle")
 			img.cloud.cloud-1(src="img/cloud.png", alt="cloud")
@@ -205,27 +205,84 @@ block content
 						h2.title_2 People are saying
 							span.line.line-left 
 							span.line.line-right
-						.swiper-container.slider
-							.swiper-wrapper
-								each review in [{bgColor: 'bg-blue', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.'}, {bgColor: 'bg-purple', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-red', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-yellow', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-green', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}]
-									.swiper-slide.slider-item(class=review.bgColor)
-										.align-items-end.relative 
-											+icon("quotes")
-											.avatar
-												img(src=review.avatar, alt="img")
-											div.text-center.c-white
-												p.fs-20.fw-medium=review.name
-												p.fs-16.fw-black=review.post
-										p.fs-14.text-center.c-white=review.text
-
+						.slider
+							each review in [{bgColor: 'bg-blue', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.'}, {bgColor: 'bg-purple', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-red', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-yellow', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-green', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'},{bgColor: 'bg-blue', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.'}, {bgColor: 'bg-purple', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-red', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-yellow', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-green', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}]
+								.slider-item(class=review.bgColor)
+									.align-items-end.relative 
+										+icon("quotes")
+										.avatar
+											img(src=review.avatar, alt="img")
+										div.text-center.c-white
+											p.fs-20.fw-medium=review.name
+											p.fs-16.fw-black=review.post
+									p.fs-14.text-center.c-white=review.text
 				.eight-bottom 	
-					div 
+					div 		
 						h2.title_2 Our Clients
 							span.line.line-left 
 							span.line.line-right
+						.slider-client 
+							each clients in [{src: 'img/clients/unnamed.svg', alt: 'unnamed'}, {src: 'img/clients/gopro_logo.svg', alt: 'gopro'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'},{src: 'img/clients/logo-black.svg', alt: 'black'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'}, {src: 'img/clients/gopro_logo.svg', alt: 'gopro'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'},{src: 'img/clients/logo-black.svg', alt: 'black'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'}]
+								.slider-img
+									img(src=clients.src, alt=clients.alt)
+		section.ninth.section
+			.container
+				h2.title_2.c-white About Us
+					span.line.line-left.line-white 
+					span.line.line-right.line-white
+				.flex-wrap 
+					.col-50 
+						.about-item
+							h3.about-title Who 
+								span.c-purple we are
+							p.about-text INLIGHT is an Mobile and Web Applications development studio.
+							p.about-text We have extensive experience in native mobile applications development, allowing us to carry out complex projects and meet any specifications required.
+							p.about-text Keeping our focus on the result and we’ve been focused solely on our customers’ needs for years now.
+							p.about-text INLIGHT achieves high-end results with meticulous attention to every single detail using the most up-to-date technologies in existence. 
+							.about-action.bg-purple 
+								h4.fs-32.c-white.fw-bold Start your project
+								p.fs-24.c-white Let’s work together
+								a.btn-send.bg-white(href="#")
+									span.c-purple Send A request
+									+icon("send", "c-purple")
+					.col-50 
+						.about-item
+							h3.about-title our  
+								span.c-orange philosophy
+							p.about-text We are powered by ideas that change the world, delivering our experience for different clients and industries all over the world.
+							p.about-text World-changing ideas are sometimes complex, even overwhelming and we’re glad to explore them for ambitious projects.
+							p.about-text We’ve inspired by what our clients do, and we strive to provide all the necessary technology and skills to turn their dreams into reality.
+							p.about-text That’s why your success is our main goal. We believe that together, we can help you achieve great things.
+							.about-action.bg-orange 
+								h4.fs-32.c-white.fw-bold Lack of resources?
+								p.fs-24.c-white We hire IT talents
+								a.btn-send.bg-white(href="#")
+									span.c-orange Send A request
+									+icon("send", "c-orange")
+		section.tenth.section
+			.container 
+				h2.title_2.c-white HQ Team
+					span.line.line-left.line-white 
+					span.line.line-right.line-white
+				.flex-wrap
+					.col-50 
+						a.team(href="#")
+							.team-head
+								.team-border 
+									.team-colors.gradient__green-blue_v2
+								img.team-img(src="img/team1.png", alt="team" width="221px" height="307px")
+							p.fs-24.c-white.fw-medium.text-center YAN HO <br> Founding Partner
+					.col-50 
+						a.team(href="#")
+							.team-head
+								.team-border 
+									.team-colors.gradient__purple-blue_v2 
+								img.team-img(src="img/team2.png", alt="team" width="419px" height="291px")
+							p.fs-24.c-white.fw-medium.text-center ALEX NABIL<br>Managing Partner
+			footer.footer 
+				.container 
 
 
-								
 
 block script 
 	script(type="text/javascript" src="js/canvas.js")

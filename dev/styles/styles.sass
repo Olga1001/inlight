@@ -547,12 +547,16 @@ canvas
     max-width: 210px
 
 .sixth 
+  height: 100%!important
   .container
     padding: 170px 20px 67px
+    height: 100%
   .title_4 
     margin-bottom: 170px
   .fp-scrollable
     height: 100%
+  .fp-scroller
+    height: 3086px
 
 .stages
   min-height: 445px
@@ -631,6 +635,7 @@ canvas
     +d-flex(center,flex-end)
   &-bottom 
     min-height: 38vh
+    +d-flex(center,start)
 
 //slider
 
@@ -640,17 +645,24 @@ canvas
   width: 100% 
   margin: 90px auto 0
   min-height: 422px
-  .slick-track
-    padding-bottom: 100px
+  &-row 
+    display: flex 
+    justify-content: center
   &-item
     // min-height: 235px
     // width: 255px!important
-    box-shadow: 0px 4px 15px rgba(26, 110, 220, 0.39)
     border-radius: 10px
     padding: 20px 25px
     position: relative
     opacity: 1
     transition: all 0.3s ease
+    box-shadow: 0px 4px 15px rgba(26, 110, 220, 0.39)
+    width: 350px!important
+    transform: scale(0.73)
+    z-index: 1
+    margin-top: 67px
+    outline: none
+
     .fs-14 
       margin-top: 40px
     &:before 
@@ -663,16 +675,21 @@ canvas
       border-style: solid
       border-width: 42px 18.5px 0 18.5px
       z-index: -1
-    &.bg-blue:before 
-      border-color: #1C60F3 transparent transparent transparent
-    &.bg-yellow:before 
-      border-color: #FFB915 transparent transparent transparent
-    &.bg-green:before 
-      border-color: #1FC74D transparent transparent transparent
-    &.bg-red:before 
-      border-color: #F10222 transparent transparent transparent
-    &.bg-purple:before 
-      border-color: #9815FE transparent transparent transparent
+    &.bg-blue
+      &:before 
+        border-color: #1C60F3 transparent transparent transparent
+    &.bg-yellow
+      &:before 
+        border-color: #FFB915 transparent transparent transparent
+    &.bg-green
+      &:before 
+        border-color: #1FC74D transparent transparent transparent
+    &.bg-red
+      &:before 
+        border-color: #F10222 transparent transparent transparent
+    &.bg-purple
+      &:before 
+        border-color: #9815FE transparent transparent transparent
     svg 
       fill: #FFFFFF
       position: absolute
@@ -680,10 +697,56 @@ canvas
       top: 0
       width: 33.12px
       height: 20.11px
-  .swiper-slide-active 
-    // width: 350px!important
-    // min-height: 323px!important
-    // z-index: 5!important
+    &.slick-active
+    &.slick-center
+      transform: scale(1)
+      z-index: 5
+  &-img 
+    height: 120px!important
+    margin: 0 15px
+    +d-flex(center,center)
+    img
+      width: 100% 
+      height: 100%
+
+  .slick-active 
+    transform: scale(0.73) translateX(110%)
+    z-index: 1
+    margin-top: 67px
+    min-height: 320px!important
+  .slick-active + .slick-active 
+    transform: scale(0.73) translateX(45%)
+    z-index: 2
+    margin-top: 15px
+    min-height: 318px!important
+  .slick-active + .slick-active + .slick-active 
+    transform: scale(1) translateX(0)
+    z-index: 3
+    margin-top: 0
+    min-height: 322px!important
+  .slick-active + .slick-active + .slick-active + .slick-active 
+    transform: scale(0.73) translateX(-45%)
+    z-index: 2
+    margin-top: 15px
+    min-height: 318px!important
+  .slick-active + .slick-active + .slick-active + .slick-active + .slick-active 
+    transform: scale(0.73) translateX(-110%)
+    z-index: 1
+    margin-top: 67px
+    min-height: 320px!important
+
+.slider-client
+  max-width: 1140px 
+  padding: 0 15px
+  width: 100% 
+  margin: 50px auto 20px
+  .slick-active, .slick-active + .slick-active + .slick-active + .slick-active + .slick-active  
+    transform: scale(0.8) 
+  .slick-active + .slick-active, .slick-active + .slick-active + .slick-active + .slick-active 
+    transform: scale(0.9)
+  .slick-active + .slick-active + .slick-active 
+    transform: scale(1)
+
 .avatar
   border: 6px solid #FFFFFF
   border-radius: 50%
@@ -695,8 +758,85 @@ canvas
     height: 100%
     border-radius: 50%
 
+.ninth 
+  background: linear-gradient(rgba(#0A1226,0.8)), url("../img/photo.png") no-repeat center / cover
+  position: relative
+  z-index: 1
+  .fp-tableCell
+    padding-top: 6.8vh
+  &:before 
+    content: ''
+    position: absolute 
+    left: 0
+    bottom: 0
+    width: 100% 
+    height: 80vh 
+    background: linear-gradient(180deg, rgba(10, 18, 38, 0) 50%, #0A1226 83.85%)
+    pointer-events: none 
+    z-index: -1
+  .col-50 
+    width: calc(50% - 15px)
+    margin-right: 30px
+    &:nth-child(2n+2)
+      margin-right: 0
 
+.about
+  &-item 
+    background: rgba(#0A1226, 0.6)
+    border-radius: 10px
+    padding: 30px 46px 53px
+    margin: 35px 0
+  &-title 
+    font-weight: bold
+    font-size: 36px
+    line-height: 48px
+    letter-spacing: 0.08em
+    text-transform: uppercase
+    color: #FFFFFF
+    margin-bottom: 35px 
+  &-text 
+    font-weight: 500
+    font-size: 20px
+    line-height: 26px
+    color: rgba(#F9F9F9, 0.7)
+    margin-bottom: 25px
+  &-action 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
+    border-radius: 15px
+    padding: 45px 70px 40px
+    text-align: center
+    .fs-32
+      margin-bottom: 20px
+    .fs-24
+      margin-bottom: 25px
 
+.tenth 
+  background: linear-gradient(rgba(#0A1226,0.8)), url("../img/photo-1.png") no-repeat center / cover
+
+.team 
+  max-width: 420px
+  width: 100% 
+  margin: 12.4vh auto 30px
+  display: block 
+  &-border  
+    border: 2px solid #FFFFFF
+    border-radius: 20px
+    padding: 11px
+    height: 260px
+    max-width: 356px
+    margin: 0 auto
+  &-colors  
+    border-radius: 15px
+    width: 100% 
+    height: 100%
+  &-img 
+    position: absolute
+    left: 50% 
+    bottom: 13px
+    transform: translateX(-50%)
+  &-head
+    position: relative
+    margin-bottom: 5px
 
 @import "modules/modules";
 
@@ -708,6 +848,9 @@ canvas
 
 .col-50 
   width: 50% 
+
+.bg-white
+  background-color: #fff
 
 .bg-green
   background-color: #1FC74D
@@ -730,6 +873,9 @@ canvas
 .gradient__green-blue
   background: linear-gradient(84.72deg, #1FC74D 1.77%, #1C60F3 95.75%)
 
+.gradient__green-blue_v2
+  background: linear-gradient(114.08deg, #1FC74D 13.32%, #1A5AFF 83.94%)
+
 .gradient__blue-pink
   background: linear-gradient(249.01deg, #F10222 1.1%, #9815FE 49.67%, #1C60F3 100.09%)
 
@@ -738,6 +884,9 @@ canvas
 
 .gradient__purple-blue
   background: linear-gradient(222.15deg, #9916FF 4.06%, #1961F3 96%)
+
+.gradient__purple-blue_v2
+  background: linear-gradient(222.15deg, #9916FF 4.06%, #1961F3 96%);
 
 .gradient__orange-yellow
   background: linear-gradient(222.6deg, #FE6B02 4.98%, #FFBE16 100.39%)

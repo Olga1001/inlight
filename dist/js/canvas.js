@@ -17,15 +17,19 @@ var stage = document.querySelector('.stage'),
     elemOffTop = elemOff.top,
     elemOffLeft = elemOff.left,
     elemWidth = document.querySelector(".canvas-dots").offsetWidth * ratio;
+console.log(elemWidth);
 
 window.onmousemove = function (e) {
   mouse.y = (e.pageY - elemOffTop) * ratio;
 
-  if (e.pageX > elemWidth + elemOffLeft) {
+  if (e.pageX >= elemWidth + elemOffLeft) {
     mouse.x = elemWidth;
   } else {
     mouse.x = (e.pageX - elemOffLeft) * ratio;
   }
+
+  console.log("e.pageX = " + e.pageX);
+  console.log("e.pageY = " + e.pageY);
 };
 
 window.onresize = function () {
