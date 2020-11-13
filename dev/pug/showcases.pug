@@ -1,0 +1,44 @@
+extends layout/main
+
+block variables
+    -var title = 'showcases'
+    -var dark = true
+
+block content
+    include modules/header/header
+    .showcases
+        .showcases-first 
+            .container 
+                .flex-wrap
+                    .first__left.relative
+                        h1.showcases-title.relative showcase
+                            .line.line-right
+                        a.title.c-yellow.relative ALL
+                            .line.line-left.line-yellow
+                        a.title.c-green.relative android
+                            .line.line-left.line-green
+                        a.title.c-blue.relative ios
+                            .line.line-left.line-blue
+                        a.title.c-purple.relative web
+                            .line.line-left.line-purple
+                        .mt-50
+                            .line.line-left 
+                    .first__right 
+                        .gif-phone
+        .showcases-second 
+            .container 
+                .flex-wrap
+                    each cardCase in [{gradient1: 'gradient__purple-blue', src: 'img/case.png', name: 'Kasco Butic', text: 'KASKO BUTIK-də bütün müqavilələr elektron bağlanılır və digər sənədlərlə birlikdə. ...'}, {gradient1: 'gradient__purple-red', src: 'img/case.png', name: 'Kasco Butic', text: 'KASKO BUTIK-də bütün müqavilələr elektron bağlanılır və digər sənədlərlə birlikdə. ...'}, {gradient1: 'gradient-5', src: 'img/case.png', name: 'Kasco Butic', text: 'KASKO BUTIK-də bütün müqavilələr elektron bağlanılır və digər sənədlərlə birlikdə. ...'}, {gradient1: 'gradient__orange-yellow', src: 'img/case.png', name: 'Kasco Butic', text: 'KASKO BUTIK-də bütün müqavilələr elektron bağlanılır və digər sənədlərlə birlikdə. ...'}, {gradient1: 'gradient__green-orange', src: 'img/case.png', name: 'Kasco Butic', text: 'KASKO BUTIK-də bütün müqavilələr elektron bağlanılır və digər sənədlərlə birlikdə. ...'}, {gradient1: 'gradient__green-blue_v2', src: 'img/case.png', name: 'Kasco Butic', text: 'KASKO BUTIK-də bütün müqavilələr elektron bağlanılır və digər sənədlərlə birlikdə. ...'}] 
+                        a.card-case(href="#" class=cardCase.gradient1) 
+                            .card-case__bg(class=cardCase.gradient1)
+                            img(src=cardCase.src, alt="case")
+                            .card-case__content
+                                p.fs-36.fw-bold.c-white.relative Kasco Butic
+                                    span.line.line-left
+                                p.fs-16.c-white=cardCase.text
+                                +icon("send")
+
+
+
+
+

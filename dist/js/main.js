@@ -7,9 +7,9 @@ $(document).ready(function () {
     scrollOverflow: true,
     autoScrolling: true,
     scrollHorizontally: true,
-    verticalCentered: true // scrollBar: false,
-    // navigationPosition: 'right',
-    // normalScrollElements: ".header, .header-search-flex, .header-search-contanet"
+    verticalCentered: true,
+    controlArrows: false,
+    scrollBar: false // normalScrollElements: '#first',
 
   });
   $(".slider").slick({

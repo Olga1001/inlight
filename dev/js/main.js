@@ -5,11 +5,14 @@ $(document).ready(function () {
       navigation: false,
       scrollOverflow: true,
       autoScrolling: true,
+
       scrollHorizontally: true,
+
       verticalCentered: true,
-      // scrollBar: false,
-      // navigationPosition: 'right',
-      // normalScrollElements: ".header, .header-search-flex, .header-search-contanet"
+      controlArrows: false,
+      scrollBar: false,
+      // normalScrollElements: '#first',
+
   });
 
   $(".slider").slick({

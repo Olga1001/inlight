@@ -1,0 +1,51 @@
+extends layout/main
+
+block variables
+    -var title = 'showcase'
+    -var dark = true
+
+block content
+    include modules/header/header
+    .showcase
+        .showcase-first 
+            .container  
+                .justify-content-between
+                    div.showcase-first__left
+                        h2.fs-36.fw-bold.c-white.relative Kasco Butic
+                            span.line.line-left
+                        p.fs-18.c-gray Our highly skilled developers create topnotch software for IOS, Android, Flutter and other platforms. <br> We find the perfect technology stack to deliver the best solutions, tailored specifically to your business and clients.
+                    img(src="img/screen.png", alt="img")
+
+                .justify-content-end 
+                    a(href="#")
+                        img(src="img/CYJI99jUMAEXgYq2.png", alt="img")
+                    a(href="#")
+                        img(src="img/CYJI99jUMAEXgYq1.png", alt="img")
+        .container
+            .flex-center-center
+                .showcase-item 
+                    img(src="img/iphone-content.png", alt="content")
+                .showcase-item 
+                    img(src="img/iphone-content.png", alt="content")
+                .showcase-item 
+                    img(src="img/iphone-content.png", alt="content")
+            
+            .showcase__content
+                p.c-gray Мобильная программа компании S.K.Cargo. позволит Вам управлять, отслеживать путь, оформлять переводы через мобильное приложение. S.K. Cargo.
+                br
+                br
+                p.c-gray Трекинг: отслеживайте посылку по номеру
+                br
+                p.c-gray Создавайте переводы в онлайн режиме
+                br
+                p.c-gray Оформить заявку на доставку
+                br
+                p.c-gray Каталог всех отделений
+                br
+                p.c-gray График работы отделений
+                br
+                p.c-gray Актуальные новости компании
+                br
+                br
+                p.c-gray Следите за новостями компании в приложении: новые и/или обновленные услуги и сервисы, открытие отделений и другая важная информация о компании. Приложение доступно на русском и украинском языках.
+    

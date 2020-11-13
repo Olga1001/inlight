@@ -5,11 +5,27 @@
     left: 0 
     width: 100%
     z-index: 9
+    &.dark 
+        background: #0A1226
+        padding: 25px 0
+        position: inherit
+        .logo-icon 
+            height: 70px 
+            width: 70px
+            margin-right: 10px
+        .logo-name 
+            height: 28px
+        .btn 
+            background-color: #ffffff
+            color: #0F1930
+
 
 .logo 
     +d-flex(start, center)
     &-icon 
         margin-right: 25px
+        height: 76px 
+        width: 76px
     &-name 
         width: fit-content
         height: 32px
