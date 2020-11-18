@@ -3,13 +3,14 @@ header.header(class = dark ? 'dark' : '')
         .flex-center-between 
             a.logo(href="#")
                 img.logo-icon(src="img/logo-icon.svg", alt="logo")
-                img.logo-name(src="img/logo-name.svg", alt="logo")
+                .overflow-h
+                    img.logo-name.wow.slideInLeftSmall(data-wow-duration="0.8s" data-wow-delay="0s" src="img/logo-name.svg", alt="logo")
             .align-items-center
                 nav.navtop 
                     ul.menu
-                        each menu in [{val: 'home', color: 'bg-green'}, {val: '#SHOWCASE', color: 'bg-blue'}, {val: 'ABOUT', color: 'bg-purple'}, {val: 'TEAM', color: 'bg-red'}] 
+                        each menu in [{val: 'home', color: 'bg-green'}, {val: 'SHOWCASE', color: 'bg-blue'}, {val: 'ABOUT', color: 'bg-purple'}, {val: 'TEAM', color: 'bg-red'}] 
                             li.menu-item
                                 a.menu-link(href="#")
-                                    span.circle(class=menu.color)
+                                    span.circle.wow.fadeIn(data-wow-duration="0.8s" data-wow-delay="0s" class=menu.color)
                                     =menu.val
-                a.btn(href="#") Contuct Us
+                a.btn.wow.incline(href="#" data-wow-duration="0.8s" data-wow-delay="0s") Contuct Us

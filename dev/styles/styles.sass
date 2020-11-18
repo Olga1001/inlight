@@ -17,9 +17,9 @@ body
   font-family: "RedHatDisplay", sans-serif
   font-style: normal
   font-weight: normal
-  overflow-x: hidden
   background-color: $bg-color
   overflow-x: hidden
+  overflow-y: auto
 
 *, *::before, *::after
   box-sizing: border-box
@@ -68,11 +68,14 @@ textarea
   appearance: none
 
 section
-  // min-height: 100vh
-  z-index: 2
-  position: relative
-  // overflow: hidden
+  // height: 100vh!important
+  // z-index: 2
+  // width: 100%
+  // position: relative
   background: #0A1226
+  // overflow-y: auto
+  // overflow-x: hidden
+  // height: 100vh
 
 input, select, button 
   outline: none
@@ -83,15 +86,65 @@ a
 input
   appearance: none
 
-// input[disabled]
-//   background: #EEEEEE
-//   color: #202020
-//   opacity: 1
+.pp-tableCell
+  // width: 100%!important
+  // height: 100vh!important
+// .first
+//   z-index: 1!important
+//   &.pp-easing
+//     z-index: 10!important
+// .second
+//   z-index: 2!important
+//   &.pp-easing
+//     z-index: 9!important
+// .third
+//   z-index: 3!important
+//   &.pp-easing
+//     z-index: 8!important
+// .fourth
+//   z-index: 4!important
+//   &.pp-easing
+//     z-index: 7!important
+// .fiveth
+//   z-index: 5!important
+//   &.pp-easing
+//     z-index: 6!important
+// .sixth
+//   z-index: 6!important
+//   &.pp-easing
+//     z-index: 5!important
+// .seventh
+//   z-index: 7!important
+//   &.pp-easing
+//     z-index: 4!important
+// .eight
+//   z-index: 8!important
+//   &.pp-easing
+//     z-index: 3!important
+// .ninth
+//   z-index: 9!important
+//   &.pp-easing
+//     z-index: 2!important
+// .tenth
+//   z-index: 10!important
+//   &.pp-easing
+//     z-index: 1!important
 
-.fp-tableCell 
-  width: 100%
+.section 
+  position: fixed
+  top: 0
+  left: 0
+  width: 100% 
   height: 100vh
-  // +d-flex(center, center)
+  // transform: translate3d(100%)!important
+  transition: all 1s ease
+  
+  &.active
+  //   z-index: 999!important
+  //   transform: translateY(0)!important
+  &.pp-easing
+  //   transform: translateY(0)!important
+  //   transform: translateY(-100%)!important
 
 .container 
   max-width: $desktop
@@ -115,24 +168,13 @@ input
 .fixed 
   height: 100vh
   width: 100% 
-  position: fixed 
+  // position: fixed 
   top: 0
   left: 0
-  // z-index: -1
-  +d-flex(center,center)
-// .fullpage
-//   overflow-x: hidden
-.first 
-  // +d-flex(center,center)
-  // overflow: hidden
   z-index: -1
-  // position: sticky
-  // top: 0
-  height: 100vh!important
-  .fp-tableCell
-    +d-flex(space-between, center)
-    // height: 100vh!important
-    width: 100%
+  +d-flex(center,center)
+
+.first 
   &__left
     position: relative
     padding: 20px 0 30px
@@ -147,9 +189,8 @@ input
   
 .second 
   background: #fff 
-  .fp-tableCell
-    display: flex
-    align-items: center
+  .fixed
+    z-index: -2
   &__top 
     // min-height: 59vh
     +d-flex(center, flex-end)
@@ -164,12 +205,8 @@ input
 
 .third 
   background: linear-gradient(241.84deg, #9717FF 1.94%, #1A6BE0 101.23%)
-  position: relative
-  .fp-tableCell 
-    width: 100%
-    height: 100vh
-    +d-flex(center, center)
-    padding-bottom: 180px
+  .container 
+    position: relative
 
 .bg-circle
   position: absolute 
@@ -355,22 +392,20 @@ canvas
     margin-bottom: 80px
 
 .img-rocket 
-  position: absolute 
-  left: 50% 
-  top: 50% 
-  transform: translate(-50%, -50%)
-  z-index: 2
+  position: relative
+  z-index: 4
+  img
+    position: absolute 
+    left: 50% 
+    top: 50% 
+    transform: translate(-50%, -50%)
 
 .fp-scrollable 
   width: 100%
 
 .fourth 
   background-color: #0A1226
-  padding: 20px 0
-  .fp-tableCell
-    +d-flex(center,center)
-  .fp-scrollable
-    height: auto!important
+  padding: 20px 0 
   .title_2 
     text-align: left
     padding: 15px 0 0 0
@@ -565,9 +600,11 @@ canvas
 
 .sixth 
   width: 100%
+  overflow-x: hidden
+  // height: auto!important
   .container
     padding: 170px 20px 67px
-    height: 100%
+    // height: 100%
   .title_4 
     margin-bottom: 170px
   .fp-scrollable
@@ -577,7 +614,8 @@ canvas
 
 .stages
   min-height: 445px
-  margin-bottom: 60px
+  // margin-bottom: 60px
+  width: 100%
   &__info
     max-width: 550px
     width: 100%
@@ -603,10 +641,9 @@ canvas
     .line-right
       left: 0
       bottom: -10px
+  &__gif
+    flex-shrink: 0
 
-.seventh 
-  .fp-tableCell
-    +d-flex(center, center)
 .cases
   max-width: 730px 
   width: 100% 
@@ -654,116 +691,6 @@ canvas
     min-height: 38vh
     +d-flex(center,start)
 
-//slider
-
-.slider
-  max-width: 1140px 
-  padding: 0 15px
-  width: 100% 
-  margin: 90px auto 0
-  min-height: 422px
-  &-row 
-    display: flex 
-    justify-content: center
-  &-item
-    // min-height: 235px
-    // width: 255px!important
-    border-radius: 10px
-    padding: 20px 25px
-    position: relative
-    opacity: 1
-    transition: all 0.3s ease
-    box-shadow: 0px 4px 15px rgba(26, 110, 220, 0.39)
-    width: 350px!important
-    transform: scale(0.73)
-    z-index: 1
-    margin-top: 67px
-    outline: none
-
-    .fs-14 
-      margin-top: 40px
-    &:before 
-      content: ''
-      position: absolute 
-      left: 30px 
-      top: calc(100% - 17px)
-      width: 0
-      height: 0
-      border-style: solid
-      border-width: 42px 18.5px 0 18.5px
-      z-index: -1
-    &.bg-blue
-      &:before 
-        border-color: #1C60F3 transparent transparent transparent
-    &.bg-yellow
-      &:before 
-        border-color: #FFB915 transparent transparent transparent
-    &.bg-green
-      &:before 
-        border-color: #1FC74D transparent transparent transparent
-    &.bg-red
-      &:before 
-        border-color: #F10222 transparent transparent transparent
-    &.bg-purple
-      &:before 
-        border-color: #9815FE transparent transparent transparent
-    svg 
-      fill: #FFFFFF
-      position: absolute
-      right: 0 
-      top: 0
-      width: 33.12px
-      height: 20.11px
-    &.slick-active
-    &.slick-center
-      transform: scale(1)
-      z-index: 5
-  &-img 
-    height: 120px!important
-    margin: 0 15px
-    +d-flex(center,center)
-    img
-      width: 100% 
-      height: 100%
-
-  .slick-active 
-    transform: scale(0.73) translateX(110%)
-    z-index: 1
-    margin-top: 67px
-    min-height: 320px!important
-  .slick-active + .slick-active 
-    transform: scale(0.73) translateX(45%)
-    z-index: 2
-    margin-top: 15px
-    min-height: 318px!important
-  .slick-active + .slick-active + .slick-active 
-    transform: scale(1) translateX(0)
-    z-index: 3
-    margin-top: 0
-    min-height: 322px!important
-  .slick-active + .slick-active + .slick-active + .slick-active 
-    transform: scale(0.73) translateX(-45%)
-    z-index: 2
-    margin-top: 15px
-    min-height: 318px!important
-  .slick-active + .slick-active + .slick-active + .slick-active + .slick-active 
-    transform: scale(0.73) translateX(-110%)
-    z-index: 1
-    margin-top: 67px
-    min-height: 320px!important
-
-.slider-client
-  max-width: 1140px 
-  padding: 0 15px
-  width: 100% 
-  margin: 50px auto 20px
-  .slick-active, .slick-active + .slick-active + .slick-active + .slick-active + .slick-active  
-    transform: scale(0.8) 
-  .slick-active + .slick-active, .slick-active + .slick-active + .slick-active + .slick-active 
-    transform: scale(0.9)
-  .slick-active + .slick-active + .slick-active 
-    transform: scale(1)
-
 .avatar
   border: 6px solid #FFFFFF
   border-radius: 50%
@@ -778,9 +705,6 @@ canvas
 .ninth 
   background: linear-gradient(rgba(#0A1226,0.8)), url("../img/photo.png") no-repeat center / cover
   position: relative
-  z-index: 1
-  .fp-tableCell
-    padding-top: 6.8vh
   &:before 
     content: ''
     position: absolute 
@@ -802,7 +726,7 @@ canvas
   &-item 
     background: rgba(#0A1226, 0.6)
     border-radius: 10px
-    padding: 30px 46px 53px
+    padding: 30px 47px 53px
     margin: 35px 0
   &-title 
     font-weight: bold
@@ -830,13 +754,9 @@ canvas
 
 .tenth 
   background: linear-gradient(rgba(#0A1226,0.8)), url("../img/photo-1.png") no-repeat center / cover
-  .fp-tableCell
+  .pp-tableCell
     +d-flex(space-between, center)
     flex-direction: column
-  .fp-scrollable
-    height: 100%
-    overflow: hidden
-    position: relative
   .title_2
     margin-top: 55px
   .teams
@@ -965,14 +885,14 @@ canvas
   z-index: 1
   &:before 
     content: ''
-    +centerXY
+    +centerXY(50%,50%)
     width: 100%
     height: 100%
     background: url("../img/iphone-border.png") no-repeat center / contain
     z-index: 1
   &:after 
     content: ''
-    +centerXY
+    +centerXY(50%,50%)
     width: 260.36px
     height: 549.64px
     box-shadow: -2px 2px 30px 3px rgba(36, 45, 255, 0.79)
@@ -988,7 +908,17 @@ canvas
     height: 532.47px
     position: relative
     z-index: 2
+
+.h-win 
+  +d-flex(center,center)
+  flex-direction: column
 @import "modules/modules";
+
+.centerY 
+  +centerXY(0,50%)
+
+.overflow-h
+  overflow: hidden
 
 .w-100
   width: 100%
@@ -1043,5 +973,6 @@ canvas
 
 .gradient__orange-yellow
   background: linear-gradient(222.6deg, #FE6B02 4.98%, #FFBE16 100.39%)
+  
 
 @import "utils/media";

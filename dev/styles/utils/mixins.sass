@@ -35,11 +35,12 @@
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
 
-@mixin centerXY()
-  position: absolute 
-  left: 50%
-  top: 50% 
-  transform: translate(-50%,-50%)
+@mixin centerXY($x:50%,$y:50%) 
+  position: absolute
+  left: $x
+  top: $y
+  transform: translate(-$x, -$y)
+
   
 
 

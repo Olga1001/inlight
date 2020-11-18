@@ -3,94 +3,427 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media (min-height: 800px) and (max-height: 1023px)
-    .card-gadget__img
-        height: 21.8vh
-    .card-gadget
-        padding-bottom: 2.9vh
+@media (min-width: 1025px)
+    body
+        line-height: 1.09vw
+        font-size: 0.83vw
+    .fs-14 
+        font-size: 0.72vw
+        line-height: 0.9vw
+    .fs-20 
+        font-size: 1vw
+        line-height: 1.35vw
+    .fs-24 
+        font-size: 1.25vw
+        line-height: 1.66vw
+    .fs-32 
+        font-size: 1.66vw
+    .fs-36 
+        font-size: 1.875vw
+        line-height: 1.56vw
+    .fs-48 
+        font-size: 2.5vw
+        line-height: 2.6vw
+    .container
+        max-width: 60vw
+        padding: 0 1vw
+    // header
+    .header 
+        padding: 1.5vw 0
+    .logo-icon 
+        margin-right: 1.3vw
+        height: 3.95vw
+        width: 3.95vw
+    .logo-name
+        height: 1.66vw
+    .menu
+        padding-right: 1.56vw
+    .menu-link
+        font-size: 0.7vw
+        margin-left: 1vw
+    .circle 
+        width: 0.625vw
+        height: 0.625vw
+    .menu-link .circle 
+        margin-right: 0.5vw
+    .btn 
+        border-radius: 2vw
+        font-size: 0.83vw
+        line-height: 2vw
+        padding: 0 0.78vw
+        min-width: 8.33vw
+    .header.dark .logo-icon 
+        height: 3.64vw
+        width: 3.64vw
+        margin-right: 0.52vw
+    .header.dark .logo-name
+        height: 1.45vw
+    // first 
+    .first__left 
+        padding: 1vw 0 1.56vw
+    .canvas-dots 
+        width: 20vw
+        height: 17.8vw
+    .title
+        font-size: 3.75vw
+        line-height: 4.94vw
+    .line 
+        height: 0.1vw
+    .line:before
+        width: 0.625vw
+        height: 0.625vw
+
+    // second
     .second__top
-        padding-bottom: 6.8vh
-    .second__bottom .c-gray 
-        margin: 3.9vh auto 4.5vh
+        padding: 3.64vw 0
+    .card-gadget
+        width: calc(33.33% - 1vw)
+        margin-right: 1.56vw
+        border-radius: 0.78vw
+        padding: 0 1.82vw 1.56vw
+    .card-gadget__img 
+        margin: -2.5vw auto 1vw
+        height: 11.66vw
+    .card-gadget .fs-14
+        margin-top: 1vw
+    .second__bottom .c-gray
+        max-width: 28.125vw
+        margin: 2vw auto 2.44vw
     .ic 
-        width: 15.6vh
-        height: 15.6vh
-        margin: 2.4vh 15px 0
-    .ic img
-        height: 7.8vh
-    .third .fp-tableCell
-        padding-bottom: 17.5vh
+        width: 8.33vw
+        height: 8.33vw
+        margin-right: 1.56vw
+        margin: 1.3vw 0.78vw 0
+    .ic.c-green img 
+        width: 2.968vw
+    .ic img 
+        margin: 0 auto 0.52vw
+        height: 4.16vw
+    .ic.c-blue img 
+        width: 3.125vw
+    .ic.c-purple img 
+        width: 5.15vw
+    .ic.c-red img 
+        width: 4.84vw
+    .ic.c-orange img 
+        width: 2.5vw
+
+    // third 
+    .third .container
+        padding-bottom: 9.375vw
+    .title_3 
+        font-size: 2.5vw
+        line-height: 3.125vw
     .card
-        margin-top: 8.7vh
-    .cloud-1
-        height: 29.4vh
+        width: 21.3vw
+        padding: 3.125vw 2.86vw
+        border-radius: 0.78vw
+        margin-top: 4.68vw
+    .card .fs-48 
+        margin-bottom: 2.76vw
+    .card .fs-20 
+        margin-bottom: 4.16vw
+    .img-rocket
+        width: 12.39vw 
+        height: 12.39vw 
+        margin-top: 4.68vw
+    .bg-circle
+        width: 84.68vw
+        height: 25.67vw
+    .cloud-1 
+        height: 15.72vw
     .cloud-2 
-        height: 25.5vh
+        height: 13.64vw
+
+    //fourth 
+    .fourth .col-50 
+        margin-top: -1.71vw
+    .max-460 
+        max-width: 23.95vw
     .fourth .fs-24 
-        margin: 8.1vh 0 9.7vh
-    .img-web
-        max-width: 43.2vh
+        margin: 4.32vw 0 5.2vw
+        max-width: 23vw
+    .mobile-tech .fs-36 
+        margin-bottom: 1vw
+    .mobile-tech .fs-18 
+        width: 8.85vw
+        margin-right: 1.25vw
+        margin-left: -1.25vw
+        padding-right: 1vw
+    .block-ic 
+        width: 4.94vw
+        height: 4.94vw
+    .img-web 
+        margin: 0 0 0 0.625vw
+        max-width: 23vw
+    .web-tech .fs-36
+        left: -3.48vw
+        top: 2.6vw
+    .web-tech .fs-18 
+        height: 9.89vw
+        margin: -1.56vw 0 0 1.25vw
+        padding: 1.3vw 0 0 0
+    .web-tech .line 
+        width: 9.89vw
+        height: 0.1vw
+        top: calc(50% + 0.625vw)
+        left: -5vw
+
+    //fiveth
+    .fiveth-top .container
+        max-width: 56.25vw
     .fiveth-side 
-        margin-top: 2.9vh
-    .block-icon
-        margin-bottom: 2.6vh
-    .fiveth-side .fs-16
-        margin-top: 4.6vh
-    .card-we__circle
-        width: 26.2vh
-        height: 25.9vh
-    .card-we__head
-        height: 26.1vh
+        max-width: 13.5vw
+        margin-top: 1.56vw
+    .block-icon 
+        width: 5.2vw
+        height: 5.2vw
+        margin-bottom: 1.4vw
+    .block-icon svg
+        width: 2.39vw
+    .circle-work
+        width: 25.5vw
+        margin-bottom: -3.48vw
+        height: 25.5vw
+    .circle-work img
+        width: 16.25vw
+        height: 16.25vw
+        margin: 4.63vw auto
+    .fiveth-side .fs-16 
+        margin-top: 2.5vw
+    .fiveth-bottom
+        padding-top: 0.52vw
+    .card-we__head 
+        height: 13.95vw
+    .card-we__circle 
+        width: 13.956vw
+        height: 13.86vw
     .card-we__color 
-        width: 16.5vh
-        height: 16.5vh
+        width: 8.8vw
+        height: 8.8vw
     .card-we__color svg 
-        width: 7.8vh
-    .circle-work 
-        width: 47.8vh
-        margin-bottom: -6.5vh
-        height:  47.8vh
-    .circle-work img 
-        width: 30.4vh
-        height: 30.4vh
-        margin: 8.69vh auto
-    .sixth .container 
-        padding: 16.6vh 20px 6.5vh
-    .cases
-        margin: 7.2vh auto 2.9vh
-        max-width: 71.2vh
-    .case 
-        height: 22.6vh
+        width: 4.16vw
+    .mr-10 
+        margin-right: 0.52vw
+    .circle_v2 
+        width: 0.83vw
+        height: 0.83vw
+    .card-we .fs-18 
+        padding-right: 0.52vw
+        max-width: 10.9vw
+    
+    //sixth
+    .sixth .container
+        padding: 8.85vw 1vw 3.48vw
+        .h-win-first 
+            min-height: calc(100vh - 8.85vw)
+        .h-win
+            min-height: 100vh
+    .sixth .title_4 
+        margin-bottom: 8.85vw
+    .title_4 
+        font-size: 2.1875vw
+        line-height: 2.91vw
+        border-radius: 0.52vw
+        max-width: 33vw
+        padding: 1.09vw 0.52vw
+    .title_4:before 
+        width: 35.31vw
+        height: 9.89vw
+    .title_4 .line-left 
+        right: calc(100% + 1.09vw)
+    .stages__info 
+        max-width: 28.64vw
+        padding-left: 5.2vw
+    .stages .fs-48
+        margin-bottom: 2.08vw
+    .stages .fs-48 .line-left
+        bottom: -0.52vw
+    .stages__amount 
+        right: calc(100% + 34px)
+        width: 3.38vw
+        height: 3.38vw
+        font-size: 1.875vw
+        line-height: 3.38vw
+    .stages__gif 
+        width: 23.17vw
+        height: 23.17vw
+    .stages 
+        min-height: 23.17vw
+        // margin-bottom: 3.125vw
+
+    //seventh
+    .cases 
+        max-width: 38vw
+        margin: 3.85vw auto 1.56vw
+    .case
+        width: calc(33.33% - 0.625vw)
+        height: 12.08vw
+        border-radius: 2.6vw
+        margin: 0 0.88vw 0.88vw 0
+
+    //eight
     .slider 
-        margin: 8.7vh auto 0
-        min-height: 41.2vh
-    .slider-client 
-        margin: 4.8vh auto 2vh
-    .slider .slick-active, .slider .slick-active + .slick-active + .slick-active + .slick-active + .slick-active
-        margin-top: 6.5vh
-        min-height: 31.25vh !important
+        max-width: 59.375vw
+        padding: 0 0.78vw
+        margin: 4.68vw auto 0
+        min-height: 21.97vw
+    .slider-item 
+        border-radius: 0.52vw
+        padding: 1vw 1.3vw
+        width: 18.2vw !important
+        margin-top: 3.48vw
+    .slider .slick-active, .slider .slick-active + .slick-active + .slick-active + .slick-active + .slick-active 
+        margin-top: 3.48vw
+        min-height: 16.66vw !important
     .slider .slick-active + .slick-active, .slider .slick-active + .slick-active + .slick-active + .slick-active
-        margin-top: 1.4vh
-        min-height: 31vh!important
+        margin-top: 0.78vw
+        min-height: 16.56vw !important
     .slider .slick-active + .slick-active + .slick-active
-        min-height: 31.4vh!important
+        min-height: 16.77vw !important
+    .slider-item svg 
+        width: 1.725vw
+        height: 1.04vw
+    .avatar
+        border-width: 0.3125vw
+        width: 7.43vw
+        height: 7.43vw
+    .slider-item .fs-14 
+        margin-top: 2.08vw
+    .slider-client 
+        max-width: 59.375vw
+        padding: 0 0.78vw
+        margin: 2.6vw auto 1vw
+    .slider-img
+        height: 6.25vw !important
+        margin: 0 0.78vw
+
+    // ninth 
+    .ninth .container
+        padding-top: 3.5vw
+    .title_2 
+        font-size: 1.875vw
+        line-height: 2.5vw
+        padding: 0 2vw
+        min-width: 19.27vw
+    .ninth .col-50 
+        width: calc(50% - 0.75vw)
+        margin-right: 1.5vw
+        padding-bottom: 1.5vw
     .about-item 
-        padding: 2.9vh 4.5vh 5vh
-        margin: 3.4vh 0
-    .about-title
-        margin-bottom: 3.4vh
-    .about-text 
-        margin-bottom: 2.4vh
-    .about-action 
-        padding: 4.9vh 70px 3.9vh
+        border-radius: 0.5vw
+        padding: 1.5vw 2.45vw 2.76vw
+        margin: 1.8vw 0
+    .about-title 
+        font-size: 1.875vw
+        line-height: 2.5vw
+        letter-spacing: 0.08em
+        margin-bottom: 1.8vw
+    .about-text
+        font-size: 1vw
+        line-height: 1.35vw
+        margin-bottom: 1.3vw
+    .about-action
+        border-radius: 0.78vw
+        padding: 2.3vw 3.6vw 2vw
     .about-action .fs-32 
-        margin-bottom: 1.9vh
+        margin-bottom: 1vw
     .about-action .fs-24 
-        margin-bottom: 2.4vh
-    .footer 
-        padding: 6.8vh 0 1.9vh 0
+        margin-bottom: 1.3vw
+    .btn-send
+        border-radius: 2vw
+        font-size: 0.93vw
+        line-height: 3.125vw
+        padding: 0 0.78vw
+    .btn-send svg
+        right: 0.78vw
+        width: 1.19vw
+        height: 1.19vw
+
+    //tenth
     .tenth .title_2
-        margin-top: 5.3vh
+        margin-top: 2.86vw
+    .tenth .teams
+        max-width: 49.47vw
+    .team-border
+        border-radius: 1vw
+        padding: 0.57vw
+        height: 13.5vw
+        max-width: 18.5vw
+    .team-img
+        bottom: 0.67vw
+    .team 
+        max-width: 21.875vw
+        margin: 11vh auto 1.56vw
+        img 
+            width: 21.82vw
+            height: 15.15vw
+    .footer 
+        padding: 3.64vw 0 1vw 0
+        &__left 
+            padding-bottom: 1.3vw
+            p 
+                margin-bottom: 0.26vw
+        &-img 
+            margin: 0 auto 1.25vw
+            width: 7.81vw
+            height: 8vw
+
+    .navfooter
+        max-width: 31.7vw
+        padding-bottom: 1vw
+
+    .icon-copyright
+        width: 0.72vw
+        height: 0.72vw
+        margin-right: 0.26vw
+
+    .social 
+        margin: 1.14vw 0.26vw
+        svg 
+            width: 1.25vw
+            height: 1.25vw
+
+    .menu-footer
+        &-link, &-item 
+            font-size: 0.7vw
+            line-height: 0.98vw
+        &-item 
+            margin-bottom: 0.78vw
+            padding-left: 1.14vw
+
+    .menu-main
+        font-size: 0.7vw
+        line-height: 0.98vw
+        margin-bottom: 1vw
+    .showcases-title 
+        font-size: 1.25vw
+        line-height: 1.66vw
+        margin-bottom: 2.6vw
+    .showcases .title
+        margin-top: 1.3vw
+    .card-case 
+        width: calc(50% - 1.455vw)
+        margin-right: 2.91vw
+        border-radius: 2.6vw
+        padding: 2.6vw 2.39vw 1.71vw
+        margin-bottom: 3.125vw
+    .card-case__bg
+        left: 1.14vw
+        top: 1.14vw
+        border-radius: 2.6vw
+    .card-case img
+        height: 20.83vw
+        margin-bottom: 0.52vw
+    .showcases-second .container 
+        max-width: 56.56vw
+    .card-case .line 
+        top: calc(100% + 0.26vw)
+        width: calc(80% + 2.39vw + 1.3vw)
+    .showcases-second 
+        padding: 10.41vw 0
+    .card-case__content 
+        padding: 0 0 0 1.3vw
 
 @media only screen and (max-width : 991px)
     // 

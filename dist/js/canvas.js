@@ -16,8 +16,7 @@ var stage = document.querySelector('.stage'),
     elemOff = document.querySelector(".canvas-dots").getBoundingClientRect(),
     elemOffTop = elemOff.top,
     elemOffLeft = elemOff.left,
-    elemWidth = document.querySelector(".canvas-dots").offsetWidth * ratio;
-console.log(elemWidth);
+    elemWidth = document.querySelector(".canvas-dots").offsetWidth * ratio; // console.log(elemWidth);
 
 window.onmousemove = function (e) {
   mouse.y = (e.pageY - elemOffTop) * ratio;
@@ -26,10 +25,9 @@ window.onmousemove = function (e) {
     mouse.x = elemWidth;
   } else {
     mouse.x = (e.pageX - elemOffLeft) * ratio;
-  }
+  } // console.log("e.pageX = " + e.pageX);
+  // console.log("e.pageY = " + e.pageY);
 
-  console.log("e.pageX = " + e.pageX);
-  console.log("e.pageY = " + e.pageY);
 };
 
 window.onresize = function () {

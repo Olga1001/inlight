@@ -6,20 +6,22 @@ block variables
 
 block content
 	#fullpage.fullpage
-		.first.section#first
+		section.first.section
 			.fixed
 				include modules/header/header
 				.container
 					.flex-center-between 
 						.first__left
-							.line.line-right
-							.canvas-dots.absolute-dots
-								canvas(class="stage" width="321" height="262")
-							h1.title 
+							.line.line-right.wow.slideInRight(data-wow-duration="1s" data-wow-delay="0s") 
+							.centerY
+								.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0s")
+									.canvas-dots.absolute-dots
+										canvas(class="stage" width="321" height="262")
+							h1.title.wow.zoomOut(data-wow-duration="1s" data-wow-delay="0s") 
 								span.text-gradient bright
 								span APPS
 								span STUDIO
-							.line.line-left
+							.line.line-left.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0s")
 						.first__right 
 							.gif-phone
 		section.second.section
@@ -29,41 +31,42 @@ block content
 						canvas(class="stage" width="321" height="262")
 					each card in [{bgcolor: 'gradient__green-blue', src: 'img/im_mobile_development.png', name: 'MOBILE', span: 'Development', text: 'We create applications that delivers outstanding customer experience and reach business goals.'}, {bgcolor: 'gradient__blue-pink', src: 'img/il_web.png', name: 'WEB', span: 'Development', text: 'We provide ultimate solutions for custom website development which will be tailored to all client needs.'}, {bgcolor: 'gradient__pink-orange', src: 'img/ux.png', name: 'UI/UX', span: 'Design', text: 'We have extensive experience in UI/UX designing which will bring your business to new levels of growth and success.'}] 
 						.card-gadget(class=card.bgcolor)
-							img.card-gadget__img(src=card.src, alt="img")
+							img.card-gadget__img.wow.zoomIn(src=card.src, alt="img" data-wow-duration="1s" data-wow-delay="0.5s")
 							.c-white.fw-medium.text-center
 								p.fs-36.fw-bold=card.name
 								p.fs-24=card.span
 								p.fs-14=card.text
 				.second__bottom
-					h2.title_2 The World  has gone mobile
-						span.line.line-left
-						span.line.line-right
-					p.c-gray.text-center Mobile Apps became a indispensable tool for daily interactions between business and users. Digital technologies have advanced more rapidly than any innovation in our history. Every day the numerous of new services and IoT appear to make our life more usable, fast, mobile and gainful.
+					h2.title_2.wow.zoomOut(data-wow-duration="1s" data-wow-delay="0.5s") The World  has gone mobile
+						span.line.line-left.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0.5s")
+						span.line.line-right.wow.slideInRight(data-wow-duration="1s" data-wow-delay="0.5s")
+					p.c-gray.text-center.wow.slideInUpSmallOpacity(data-wow-duration="1s" data-wow-delay="0.5s") Mobile Apps became a indispensable tool for daily interactions between business and users. Digital technologies have advanced more rapidly than any innovation in our history. Every day the numerous of new services and IoT appear to make our life more usable, fast, mobile and gainful.
 					.flex-center-center 
-						each ic in [{color: 'c-green', src: 'img/ic/android.svg', name: 'ANDROID'}, {color: 'c-blue', src: 'img/ic/ios.svg', name: 'IOS'}, {color: 'c-purple', src: 'img/ic/admin-panel.svg', name: 'ADMIN PANEL'}, {color: 'c-red', src: 'img/ic/iot.svg', name: 'IOT'}, {color: 'c-orange', src: 'img/ic/smartwatch.svg', name: 'WEARABLES'}] 
-							.ic(class=ic.color)
+						each ic, index in [{color: 'c-green', src: 'img/ic/android.svg', name: 'ANDROID'}, {color: 'c-blue', src: 'img/ic/ios.svg', name: 'IOS'}, {color: 'c-purple', src: 'img/ic/admin-panel.svg', name: 'ADMIN PANEL'}, {color: 'c-red', src: 'img/ic/iot.svg', name: 'IOT'}, {color: 'c-orange', src: 'img/ic/smartwatch.svg', name: 'WEARABLES'}] 
+							.ic(class=index % 2 ? 'wow slideInUpSmall '+ic.color: 'wow slideInDownSmall ' +ic.color data-wow-duration="1s" data-wow-delay="0.5s")
 								img(src=ic.src, alt="icon ic")
 								p.fw-bold.text-center(class=ic.color)=ic.name
 		section.third.section
 			.container
 				h2.title_3 Need a fast Time-to-market ?
 				.flex-center-between
-					.card
+					.card.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0.5s")
 						p.fs-48.fw-bold.c-blue Prototype
 							span.fs-24 in 1-2  Weeks
 						p.fs-20.fw-medium Сlickable prototyping <br> with UX expertise
 						a.btn-send.gradient__purple-blue(href="#")
 							|Send A request
 							+icon("send", "c-white")
-					.card
+					.wow.slideInDownSmall.img-rocket(data-wow-duration="1s" data-wow-delay="0.5s")
+						img(src="img/fxemoji_rocket.png", alt="rocket")
+					.card.wow.slideInRight(data-wow-duration="1s" data-wow-delay="0.5s")
 						p.fs-48.fw-bold.c-blue MVP
 							span.fs-24 in 2-3 Months
 						p.fs-20.fw-medium High-quality MVP uploaded <br> into app store
 						a.btn-send.gradient__orange-yellow(href="#")
 							|Send A request
 							+icon("send", "c-white")
-			img.img-rocket(src="img/fxemoji_rocket.png", alt="rocket")
-			img.bg-circle(src="img/circle.svg", alt="circle")
+			img.bg-circle.wow.findIn(src="img/circle.svg", alt="circle" data-wow-duration="1s" data-wow-delay="0.5s")
 			img.cloud.cloud-1(src="img/cloud.png", alt="cloud")
 			img.cloud.cloud-2(src="img/cloud-1.png", alt="cloud")
 		section.fourth.section
@@ -131,51 +134,54 @@ block content
 									.justify-content-center
 										.circle_v2.mr-10(class=cardWe.bgColor) 
 										p.fs-18.fw-medium.c-white-100=cardWe.text
-		section.sixth.section
+		section.sixth.section.pp-scrollable
 			.container
-				h2.title_4 PHASES OF MOBILE APP DEVELOPMENT
-					span.line.line-left
-					span.line.line-right
-				.stages.flex-center-between.relative
-					.stages__info
-						p.fs-48.fw-bold.c-blue.text-up.relative inception
-							span.line.line-left.line-blue
-							span.stages__amount.bg-blue 1
-						p.fs-24.c-gray.fw-medium Clarifying app’s vision <br> Defining product’s goals <br> Specifying MVP <br> Writing project description 
-					.stages__gif
-						img(src="img/gif.png", alt="gif")
-				.stages.flex-center-between.relative
-					.stages__gif
-						img(src="img/gif.png", alt="gif")
-					.stages__info
-						p.fs-48.fw-bold.c-purple.text-up.relative design
-							span.line.line-right.line-purple
-							span.stages__amount.bg-purple 1
-						p.fs-24.c-gray.fw-medium Prototyping <br> Mind mapping <br> Clicable wireframes <br> Visual User Interfaces <br>Motion design
-				.stages.flex-center-between.relative
-					.stages__info
-						p.fs-48.fw-bold.c-red.text-up.relative development
-							span.line.line-left.line-red
-							span.stages__amount.bg-red 3
-						p.fs-24.c-gray.fw-medium Coding<br>Testing Bug detecting<br>Ensuring QA
-					.stages__gif
-						img(src="img/gif.png", alt="gif")
-				.stages.flex-center-between.relative
-					.stages__gif
-						img(src="img/gif.png", alt="gif")
-					.stages__info
-						p.fs-48.fw-bold.c-orange.text-up.relative deployment
-							span.line.line-right.line-orange
-							span.stages__amount.bg-orange 4
-						p.fs-24.c-gray.fw-medium Publishing App in to the stores<br>Content copywriting  <br>Beta testing <br>Optimizing the product page 
-				.stages.flex-center-between.relative
-					.stages__info
-						p.fs-48.fw-bold.c-green.text-up.relative Maintenance
-							span.line.line-left.line-green
-							span.stages__amount.bg-green 5
-						p.fs-24.c-gray.fw-medium App support<br>Product enhancement  <br>Crash detecting  <br>monitoring statistics.
-					.stages__gif
-						img(src="img/gif.png", alt="gif")
+				.h-win-first
+					h2.title_4 PHASES OF MOBILE APP DEVELOPMENT
+						span.line.line-left
+						span.line.line-right
+					.stages.flex-center-between.relative
+						.stages__info
+							p.fs-48.fw-bold.c-blue.text-up.relative inception
+								span.line.line-left.line-blue
+								span.stages__amount.bg-blue 1
+							p.fs-24.c-gray.fw-medium Clarifying app’s vision <br> Defining product’s goals <br> Specifying MVP <br> Writing project description 
+						.stages__gif
+							img(src="img/gif.png", alt="gif")
+				.h-win
+					.stages.flex-center-between.relative
+						.stages__gif
+							img(src="img/gif.png", alt="gif")
+						.stages__info
+							p.fs-48.fw-bold.c-purple.text-up.relative design
+								span.line.line-right.line-purple
+								span.stages__amount.bg-purple 1
+							p.fs-24.c-gray.fw-medium Prototyping <br> Mind mapping <br> Clicable wireframes <br> Visual User Interfaces <br>Motion design
+					.stages.flex-center-between.relative
+						.stages__info
+							p.fs-48.fw-bold.c-red.text-up.relative development
+								span.line.line-left.line-red
+								span.stages__amount.bg-red 3
+							p.fs-24.c-gray.fw-medium Coding<br>Testing Bug detecting<br>Ensuring QA
+						.stages__gif
+							img(src="img/gif.png", alt="gif")
+				.h-win
+					.stages.flex-center-between.relative
+						.stages__gif
+							img(src="img/gif.png", alt="gif")
+						.stages__info
+							p.fs-48.fw-bold.c-orange.text-up.relative deployment
+								span.line.line-right.line-orange
+								span.stages__amount.bg-orange 4
+							p.fs-24.c-gray.fw-medium Publishing App in to the stores<br>Content copywriting  <br>Beta testing <br>Optimizing the product page 
+					.stages.flex-center-between.relative
+						.stages__info
+							p.fs-48.fw-bold.c-green.text-up.relative Maintenance
+								span.line.line-left.line-green
+								span.stages__amount.bg-green 5
+							p.fs-24.c-gray.fw-medium App support<br>Product enhancement  <br>Crash detecting  <br>monitoring statistics.
+						.stages__gif
+							img(src="img/gif.png", alt="gif")
 		section.seventh.section 
 			.container 
 				h2.title_2.c-white SHOWCASE
@@ -285,4 +291,5 @@ block content
 			
 block script 
 	script(type="text/javascript" src="js/canvas.js")
+	
 				

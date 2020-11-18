@@ -14,7 +14,7 @@ var stage        = document.querySelector('.stage'),
     elemOffLeft  = elemOff.left,
     elemWidth    = document.querySelector(".canvas-dots").offsetWidth * ratio;
 
-    console.log(elemWidth);
+    // console.log(elemWidth);
 
     window.onmousemove = function(e){
         mouse.y = (e.pageY - elemOffTop) * ratio;
@@ -24,8 +24,8 @@ var stage        = document.querySelector('.stage'),
         }else{
             mouse.x = (e.pageX - elemOffLeft) * ratio;
         }
-        console.log("e.pageX = " + e.pageX);
-        console.log("e.pageY = " + e.pageY);
+        // console.log("e.pageX = " + e.pageX);
+        // console.log("e.pageY = " + e.pageY);
     }
     
     

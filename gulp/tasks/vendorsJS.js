@@ -2,10 +2,9 @@ const gulp = require('gulp');
 const concat = require('gulp-concat');
 
 const vendorsScripts = [
-  // 'dev/js/vendor/swiper-bundle.min.js',
   'dev/js/vendor/slick.min.js',
-  'dev/js/vendor/scrolloverflow.min.js',
-  'dev/js/vendor/fullpage.min.js'
+  'dev/js/vendor/jquery.pagepiling.min.js',
+  'dev/js/vendor/wow.min.js',
 ];
 
 module.exports = function vendors(cb) {

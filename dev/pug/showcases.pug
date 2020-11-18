@@ -13,13 +13,13 @@ block content
                     .first__left.relative
                         h1.showcases-title.relative showcase
                             span.line.line-right
-                        a.title.c-yellow.relative ALL
+                        a.title.c-yellow.relative(href="#") ALL
                             .line.line-left.line-yellow
-                        a.title.c-green.relative android
+                        a.title.c-green.relative(href="#") android
                             .line.line-left.line-green
-                        a.title.c-blue.relative ios
+                        a.title.c-blue.relative(href="#") ios
                             .line.line-left.line-blue
-                        a.title.c-purple.relative web
+                        a.title.c-purple.relative(href="#") web
                             .line.line-left.line-purple
                         .mt-50
                             .line.line-left 
@@ -37,8 +37,5 @@ block content
                                     span.line.line-left
                                 p.fs-16.c-white=cardCase.text
                                 +icon("send")
-
-
-
-
-
+    
+        include modules/footer/footer

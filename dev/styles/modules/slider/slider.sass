@@ -1,0 +1,113 @@
+.slider, .slider-client 
+    overflow: hidden
+
+.slick-track 
+    display: flex
+    justify-content: center
+
+.slider-client
+  max-width: 1140px 
+  padding: 0 15px
+  width: 100% 
+  margin: 50px auto 20px
+  .slick-active, .slick-active + .slick-active + .slick-active + .slick-active + .slick-active  
+    transform: scale(0.8) 
+  .slick-active + .slick-active, .slick-active + .slick-active + .slick-active + .slick-active 
+    transform: scale(0.9)
+  .slick-active + .slick-active + .slick-active 
+    transform: scale(1)
+
+.slider
+  max-width: 1140px 
+  padding: 0 15px
+  width: 100% 
+  margin: 90px auto 0
+  min-height: 422px
+  &-row 
+    display: flex 
+    justify-content: center
+  &-item
+    // min-height: 235px
+    // width: 255px!important
+    border-radius: 10px
+    padding: 20px 25px
+    position: relative
+    opacity: 1
+    transition: all 0.3s ease
+    box-shadow: 0px 4px 15px rgba(26, 110, 220, 0.39)
+    width: 350px!important
+    transform: scale(0.73)
+    z-index: 1
+    margin-top: 67px
+    outline: none
+
+    .fs-14 
+      margin-top: 40px
+    &:before 
+      content: ''
+      position: absolute 
+      left: 30px 
+      top: calc(100% - 17px)
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 42px 18.5px 0 18.5px
+      z-index: -1
+    &.bg-blue
+      &:before 
+        border-color: #1C60F3 transparent transparent transparent
+    &.bg-yellow
+      &:before 
+        border-color: #FFB915 transparent transparent transparent
+    &.bg-green
+      &:before 
+        border-color: #1FC74D transparent transparent transparent
+    &.bg-red
+      &:before 
+        border-color: #F10222 transparent transparent transparent
+    &.bg-purple
+      &:before 
+        border-color: #9815FE transparent transparent transparent
+    svg 
+      fill: #FFFFFF
+      position: absolute
+      right: 0 
+      top: 0
+      width: 33.12px
+      height: 20.11px
+    &.slick-active
+    &.slick-center
+      transform: scale(1)
+      z-index: 5
+  &-img 
+    height: 120px!important
+    margin: 0 15px
+    +d-flex(center,center)
+    img
+      width: 100% 
+      height: 100%
+  .slick-active 
+    transform: scale(0.73) translateX(110%)
+    z-index: 1
+    margin-top: 67px
+    min-height: 320px!important
+  .slick-active + .slick-active 
+    transform: scale(0.73) translateX(45%)
+    z-index: 2
+    margin-top: 15px
+    min-height: 318px!important
+  .slick-active + .slick-active + .slick-active 
+    transform: scale(1) translateX(0)
+    z-index: 3
+    margin-top: 0
+    min-height: 322px!important
+  .slick-active + .slick-active + .slick-active + .slick-active 
+    transform: scale(0.73) translateX(-45%)
+    z-index: 2
+    margin-top: 15px
+    min-height: 318px!important
+  .slick-active + .slick-active + .slick-active + .slick-active + .slick-active 
+    transform: scale(0.73) translateX(-110%)
+    z-index: 1
+    margin-top: 67px
+    min-height: 320px!important
