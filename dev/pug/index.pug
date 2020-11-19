@@ -3,102 +3,107 @@ extends layout/main
 block variables
 	-var title = 'inlight'
 	-var dark = false
+	-var overflowHidden = true
 
 block content
 	#fullpage.fullpage
-		section.first.section
-			.fixed
+		section.first.section.active
+			.flex-center-center.h-100
 				include modules/header/header
 				.container
 					.flex-center-between 
 						.first__left
-							.line.line-right.wow.slideInRight(data-wow-duration="1s" data-wow-delay="0s") 
-							.centerY
-								.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0s")
+							.line.line-right.wow.slideInRight(data-wow-duration="1.5s" data-wow-delay="0s") 
+							.centerY.d-lg-none
+								.wow.slideInLeft(data-wow-duration="1.5s" data-wow-delay="0s")
 									.canvas-dots.absolute-dots
 										canvas(class="stage" width="321" height="262")
-							h1.title.wow.zoomOut(data-wow-duration="1s" data-wow-delay="0s") 
+							h1.title.wow.zoomOut(data-wow-duration="1.5s" data-wow-delay="0s") 
 								span.text-gradient bright
 								span APPS
 								span STUDIO
-							.line.line-left.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0s")
+							.line.line-left.wow.slideInLeft(data-wow-duration="1.5s" data-wow-delay="0s")
 						.first__right 
 							.gif-phone
 		section.second.section
-			.container
-				.second__top
-					.canvas-dots-gray.absolute-dots
-						canvas(class="stage" width="321" height="262")
-					each card in [{bgcolor: 'gradient__green-blue', src: 'img/im_mobile_development.png', name: 'MOBILE', span: 'Development', text: 'We create applications that delivers outstanding customer experience and reach business goals.'}, {bgcolor: 'gradient__blue-pink', src: 'img/il_web.png', name: 'WEB', span: 'Development', text: 'We provide ultimate solutions for custom website development which will be tailored to all client needs.'}, {bgcolor: 'gradient__pink-orange', src: 'img/ux.png', name: 'UI/UX', span: 'Design', text: 'We have extensive experience in UI/UX designing which will bring your business to new levels of growth and success.'}] 
-						.card-gadget(class=card.bgcolor)
-							img.card-gadget__img.wow.zoomIn(src=card.src, alt="img" data-wow-duration="1s" data-wow-delay="0.5s")
-							.c-white.fw-medium.text-center
-								p.fs-36.fw-bold=card.name
-								p.fs-24=card.span
-								p.fs-14=card.text
-				.second__bottom
-					h2.title_2.wow.zoomOut(data-wow-duration="1s" data-wow-delay="0.5s") The World  has gone mobile
-						span.line.line-left.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0.5s")
-						span.line.line-right.wow.slideInRight(data-wow-duration="1s" data-wow-delay="0.5s")
-					p.c-gray.text-center.wow.slideInUpSmallOpacity(data-wow-duration="1s" data-wow-delay="0.5s") Mobile Apps became a indispensable tool for daily interactions between business and users. Digital technologies have advanced more rapidly than any innovation in our history. Every day the numerous of new services and IoT appear to make our life more usable, fast, mobile and gainful.
-					.flex-center-center 
-						each ic, index in [{color: 'c-green', src: 'img/ic/android.svg', name: 'ANDROID'}, {color: 'c-blue', src: 'img/ic/ios.svg', name: 'IOS'}, {color: 'c-purple', src: 'img/ic/admin-panel.svg', name: 'ADMIN PANEL'}, {color: 'c-red', src: 'img/ic/iot.svg', name: 'IOT'}, {color: 'c-orange', src: 'img/ic/smartwatch.svg', name: 'WEARABLES'}] 
-							.ic(class=index % 2 ? 'wow slideInUpSmall '+ic.color: 'wow slideInDownSmall ' +ic.color data-wow-duration="1s" data-wow-delay="0.5s")
-								img(src=ic.src, alt="icon ic")
-								p.fw-bold.text-center(class=ic.color)=ic.name
+			.relative.flex-center-center.h-100
+				.container
+					.second__top
+						.canvas-dots-gray.absolute-dots
+							canvas(class="stage" width="321" height="262")
+						each card in [{bgcolor: 'gradient__green-blue', src: 'img/im_mobile_development.png', name: 'MOBILE', span: 'Development', text: 'We create applications that delivers outstanding customer experience and reach business goals.'}, {bgcolor: 'gradient__blue-pink', src: 'img/il_web.png', name: 'WEB APP', span: 'Development', text: 'We provide ultimate solutions for custom website development which will be tailored to all client needs.'}, {bgcolor: 'gradient__pink-orange', src: 'img/ux.png', name: 'UI/UX', span: 'Design', text: 'We have extensive experience in UI/UX designing which will bring your business to new levels of growth and success.'}] 
+							.card-gadget(class=card.bgcolor)
+								.card-gadget__item
+									img.card-gadget__img.wow.zoomIn(src=card.src, alt="img" data-wow-duration="1s" data-wow-delay="0.5s")
+								.c-white.fw-medium.text-center
+									p.fs-36.fw-bold=card.name
+									p.fs-24=card.span
+									p.fs-14=card.text
+					.second__bottom
+						h2.title_2.wow.zoomOut(data-wow-duration="1s" data-wow-delay="0.5s") The World  has gone mobile
+							span.line.line-left.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0.5s")
+							span.line.line-right.wow.slideInRight(data-wow-duration="1s" data-wow-delay="0.5s")
+						p.c-gray.text-center.wow.slideInUpSmallOpacity(data-wow-duration="1s" data-wow-delay="0.5s") Mobile Apps became a indispensable tool for daily interactions between business and users. Digital technologies have advanced more rapidly than any innovation in our history. Every day the numerous of new services and IoT appear to make our life more usable, fast, mobile and gainful.
+						.flex-center-center 
+							each ic, index in [{color: 'c-green', src: 'img/ic/android.svg', name: 'ANDROID'}, {color: 'c-blue', src: 'img/ic/ios.svg', name: 'IOS'}, {color: 'c-purple', src: 'img/ic/admin-panel.svg', name: 'ADMIN PANEL'}, {color: 'c-red', src: 'img/ic/iot.svg', name: 'IOT'}, {color: 'c-orange', src: 'img/ic/smartwatch.svg', name: 'WEARABLES'}] 
+								.ic(class=index % 2 ? 'wow slideInUpSmall '+ic.color: 'wow slideInDownSmall ' +ic.color data-wow-duration="1s" data-wow-delay="0.5s")
+									img(src=ic.src, alt="icon ic")
+									p.fw-bold.text-center(class=ic.color)=ic.name
 		section.third.section
-			.container
-				h2.title_3 Need a fast Time-to-market ?
-				.flex-center-between
-					.card.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0.5s")
-						p.fs-48.fw-bold.c-blue Prototype
-							span.fs-24 in 1-2  Weeks
-						p.fs-20.fw-medium Сlickable prototyping <br> with UX expertise
-						a.btn-send.gradient__purple-blue(href="#")
-							|Send A request
-							+icon("send", "c-white")
-					.wow.slideInDownSmall.img-rocket(data-wow-duration="1s" data-wow-delay="0.5s")
-						img(src="img/fxemoji_rocket.png", alt="rocket")
-					.card.wow.slideInRight(data-wow-duration="1s" data-wow-delay="0.5s")
-						p.fs-48.fw-bold.c-blue MVP
-							span.fs-24 in 2-3 Months
-						p.fs-20.fw-medium High-quality MVP uploaded <br> into app store
-						a.btn-send.gradient__orange-yellow(href="#")
-							|Send A request
-							+icon("send", "c-white")
-			img.bg-circle.wow.findIn(src="img/circle.svg", alt="circle" data-wow-duration="1s" data-wow-delay="0.5s")
-			img.cloud.cloud-1(src="img/cloud.png", alt="cloud")
-			img.cloud.cloud-2(src="img/cloud-1.png", alt="cloud")
+			.relative.w-100.h-100.flex-center-center
+				.container
+					h2.title_3 Need a fast Time-to-market ?
+					.flex-center-between
+						.card.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0.5s")
+							p.fs-48.fw-bold.c-blue Prototype
+								span.fs-24 in 1-2  Weeks
+							p.fs-20.fw-medium Сlickable prototyping <br> with UX expertise
+							a.btn-send.gradient__purple-blue(href="#")
+								|Send A request
+								+icon("send", "c-white")
+						.wow.slideInDownSmall.img-rocket(data-wow-duration="1s" data-wow-delay="0.5s")
+							img(src="img/fxemoji_rocket.png", alt="rocket")
+						.card.wow.slideInRight(data-wow-duration="1s" data-wow-delay="0.5s")
+							p.fs-48.fw-bold.c-blue MVP
+								span.fs-24 in 2-3 Months
+							p.fs-20.fw-medium High-quality MVP uploaded <br> into app store
+							a.btn-send.gradient__orange-yellow(href="#")
+								|Send A request
+								+icon("send", "c-white")
+				img.bg-circle.wow.findIn(src="img/circle.svg", alt="circle" data-wow-duration="1s" data-wow-delay="0.5s")
+				img.cloud.cloud-1(src="img/cloud.png", alt="cloud")
+				img.cloud.cloud-2(src="img/cloud-1.png", alt="cloud")
 		section.fourth.section
-			.container
-				.flex-center-between
-					.col-50.justify-content-end
-						div.max-460
-							h2.title_2.c-white Technologies
-								span.line.line-left.line-white
-							p.fs-24.c-white We use the most up-to-date technologies in existence to deliver the best solutions to carry out complex projects. Basing on client needs and business goals we will line up the best technology stack to ensure smoothly run on any device and platform.
-							div.mobile-tech
-								p.fs-36.fw-bold.c-white.text-up Mobile
-								each mobTech in [{name: 'IOS', src1: 'img/ic/ic_swift.svg', src2: 'img/ic/ic_objectiveC.svg', lineColor: 'line-blue'}, {name: 'ANDROID', src1: 'img/ic/ic_java.svg', src2: 'img/ic/ic_Kotlin.svg', lineColor: 'line-green'}, {name: 'CROSS PLATFORM', src1: 'img/ic/ic_reactnative.svg', src2: 'img/ic/ic_flutter.svg', lineColor: 'line-yellow'}] 
-									
-									.align-items-center
-										p.fs-18.fw-medium.c-white.text-right.relative=mobTech.name
-											span.line.line-left(class=mobTech.lineColor)
-										img.block-ic(src=mobTech.src1, alt="icon")
-										img.block-ic(src=mobTech.src2, alt="icon")
-					.col-50
-						.web-tech
-							img.img-web(src="img/im_technologies.svg", alt="technologies")
-							.relative 
-								p.fs-36.fw-bold.c-white.text-up WEB
-								.d-flex
-									each webTech in [{name: 'FRONTEND', src1: 'img/ic/ic_html5.svg', src2: 'img/ic/ic_reactnative.svg', src3: 'img/ic/ic_vuejs.svg', lineColor: 'line-yellow'}, {name: 'BACKEND', src1: 'img/ic/ic_php.svg', src2: 'img/ic/ic_nodeJS.svg', src3: 'img/ic/ic_laravel.svg', lineColor: 'line-red'}, {name: 'DATABASES', src1: 'img/ic/ic_postgre.svg', src2: 'img/ic/ic_mongo.svg', src3: 'img/ic/ic_mysql.svg', lineColor: 'line-purple'}, {name: 'CMS', src1: 'img/ic/ic_wordpress.svg', src2: 'img/ic/ic_opencart.svg', src3: 'img/ic/ic_drupal.svg', lineColor: 'line-blue'}, {name: 'INFRASTUCTURE', src1: 'img/ic/ic_github.svg', src2: 'img/ic/ic_aws.svg', src3: 'img/ic/ic_git.svg', lineColor: 'line-green'}] 
-										.web-col
-											p.fs-18.fw-medium.c-white.text-right.relative=webTech.name
-												span.line.line-left(class=webTech.lineColor)
-											img.block-ic(src=webTech.src1, alt="icon web")
-											img.block-ic(src=webTech.src2, alt="icon web")
-											img.block-ic(src=webTech.src3, alt="icon web")
+			.flex-center-center.h-100
+				.container
+					.flex-center-between
+						.col-50.justify-content-end
+							div.max-460
+								h2.title_2.c-white Technologies
+									span.line.line-left.line-white
+								p.fs-24.c-white We use the most up-to-date technologies in existence to deliver the best solutions to carry out complex projects. Basing on client needs and business goals we will line up the best technology stack to ensure smoothly run on any device and platform.
+								div.mobile-tech
+									p.fs-36.fw-bold.c-white.text-up Mobile
+									each mobTech in [{name: 'IOS', src1: 'img/ic/ic_swift.svg', src2: 'img/ic/ic_objectiveC.svg', lineColor: 'line-blue'}, {name: 'ANDROID', src1: 'img/ic/ic_java.svg', src2: 'img/ic/ic_Kotlin.svg', lineColor: 'line-green'}, {name: 'CROSS PLATFORM', src1: 'img/ic/ic_reactnative.svg', src2: 'img/ic/ic_flutter.svg', lineColor: 'line-yellow'}] 
+										
+										.align-items-center
+											p.fs-18.fw-medium.c-white.text-right.relative=mobTech.name
+												span.line.line-left(class=mobTech.lineColor)
+											img.block-ic(src=mobTech.src1, alt="icon")
+											img.block-ic(src=mobTech.src2, alt="icon")
+						.col-50
+							.web-tech
+								img.img-web(src="img/im_technologies.svg", alt="technologies")
+								.relative 
+									p.fs-36.fw-bold.c-white.text-up WEB
+									.d-flex
+										each webTech in [{name: 'FRONTEND', src1: 'img/ic/ic_html5.svg', src2: 'img/ic/ic_reactnative.svg', src3: 'img/ic/ic_vuejs.svg', lineColor: 'line-yellow'}, {name: 'BACKEND', src1: 'img/ic/ic_php.svg', src2: 'img/ic/ic_nodeJS.svg', src3: 'img/ic/ic_laravel.svg', lineColor: 'line-red'}, {name: 'DATABASES', src1: 'img/ic/ic_postgre.svg', src2: 'img/ic/ic_mongo.svg', src3: 'img/ic/ic_mysql.svg', lineColor: 'line-purple'}, {name: 'CMS', src1: 'img/ic/ic_wordpress.svg', src2: 'img/ic/ic_opencart.svg', src3: 'img/ic/ic_drupal.svg', lineColor: 'line-blue'}, {name: 'INFRASTUCTURE', src1: 'img/ic/ic_github.svg', src2: 'img/ic/ic_aws.svg', src3: 'img/ic/ic_git.svg', lineColor: 'line-green'}] 
+											.web-col
+												p.fs-18.fw-medium.c-white.text-right.relative=webTech.name
+													span.line.line-left(class=webTech.lineColor)
+												img.block-ic(src=webTech.src1, alt="icon web")
+												img.block-ic(src=webTech.src2, alt="icon web")
+												img.block-ic(src=webTech.src3, alt="icon web")
 		section.fiveth.section
 			div.w-100
 				.fiveth-top
@@ -183,90 +188,93 @@ block content
 						.stages__gif
 							img(src="img/gif.png", alt="gif")
 		section.seventh.section 
-			.container 
-				h2.title_2.c-white SHOWCASE
-					span.line.line-left.line-white
-					span.line.line-right.line-white
-				.flex-wrap.cases
-					a.case.gradient-1(href="#")
-						img.case-img(src="img/case.png", alt="case") 
-					a.case.gradient-2(href="#")
-						img.case-img(src="img/case.png", alt="case") 
-					a.case.gradient-3(href="#")
-						img.case-img(src="img/case.png", alt="case") 
-					a.case.gradient-4(href="#")
-						img.case-img(src="img/case.png", alt="case") 
-					a.case(href="#")
-						img.case-img_all(src="img/all-works.svg", alt="all works") 
-					a.case.gradient-5(href="#")
-						img.case-img(src="img/case.png", alt="case") 
-					a.case.gradient-6(href="#")
-						img.case-img(src="img/case.png", alt="case") 
-					a.case.gradient-7(href="#")
-						img.case-img(src="img/case.png", alt="case") 
-					a.case.gradient-8(href="#")
-						img.case-img(src="img/case.png", alt="case") 
+			.flex-center-center.h-100
+				.container 
+					h2.title_2.c-white SHOWCASE
+						span.line.line-left.line-white
+						span.line.line-right.line-white
+					.flex-wrap.cases
+						a.case.gradient-1(href="#")
+							img.case-img(src="img/case.png", alt="case") 
+						a.case.gradient-2(href="#")
+							img.case-img(src="img/case.png", alt="case") 
+						a.case.gradient-3(href="#")
+							img.case-img(src="img/case.png", alt="case") 
+						a.case.gradient-4(href="#")
+							img.case-img(src="img/case.png", alt="case") 
+						a.case(href="#")
+							img.case-img_all(src="img/all-works.svg", alt="all works") 
+						a.case.gradient-5(href="#")
+							img.case-img(src="img/case.png", alt="case") 
+						a.case.gradient-6(href="#")
+							img.case-img(src="img/case.png", alt="case") 
+						a.case.gradient-7(href="#")
+							img.case-img(src="img/case.png", alt="case") 
+						a.case.gradient-8(href="#")
+							img.case-img(src="img/case.png", alt="case") 
 		section.eight.section
-			.container 
-				.eight-top
-					div 
-						h2.title_2 People are saying
-							span.line.line-left 
-							span.line.line-right
-						.slider
-							each review in [{bgColor: 'bg-blue', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.'}, {bgColor: 'bg-purple', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-red', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-yellow', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-green', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'},{bgColor: 'bg-blue', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.'}, {bgColor: 'bg-purple', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-red', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-yellow', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-green', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}]
-								.slider-item(class=review.bgColor)
-									.align-items-end.relative 
-										+icon("quotes")
-										.avatar
-											img(src=review.avatar, alt="img")
-										div.text-center.c-white
-											p.fs-20.fw-medium=review.name
-											p.fs-16.fw-black=review.post
-									p.fs-14.text-center.c-white=review.text
-				.eight-bottom 	
-					div 		
-						h2.title_2 Our Clients
-							span.line.line-left 
-							span.line.line-right
-						.slider-client 
-							each clients in [{src: 'img/clients/unnamed.svg', alt: 'unnamed'}, {src: 'img/clients/gopro_logo.svg', alt: 'gopro'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'},{src: 'img/clients/logo-black.svg', alt: 'black'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'}, {src: 'img/clients/gopro_logo.svg', alt: 'gopro'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'},{src: 'img/clients/logo-black.svg', alt: 'black'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'}]
-								.slider-img
-									img(src=clients.src, alt=clients.alt)
+			.flex-center-center.h-100
+				.container 
+					.eight-top
+						div 
+							h2.title_2 People are saying
+								span.line.line-left 
+								span.line.line-right
+							.slider
+								each review in [{bgColor: 'bg-blue', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.'}, {bgColor: 'bg-purple', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-red', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-yellow', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-green', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'},{bgColor: 'bg-blue', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.'}, {bgColor: 'bg-purple', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-red', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-yellow', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-green', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}]
+									.slider-item(class=review.bgColor)
+										.align-items-end.relative 
+											+icon("quotes")
+											.avatar
+												img(src=review.avatar, alt="img")
+											div.text-center.c-white
+												p.fs-20.fw-medium=review.name
+												p.fs-16.fw-black=review.post
+										p.fs-14.text-center.c-white=review.text
+					.eight-bottom 	
+						div 		
+							h2.title_2 Our Clients
+								span.line.line-left 
+								span.line.line-right
+							.slider-client 
+								each clients in [{src: 'img/clients/unnamed.svg', alt: 'unnamed'}, {src: 'img/clients/gopro_logo.svg', alt: 'gopro'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'},{src: 'img/clients/logo-black.svg', alt: 'black'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'}, {src: 'img/clients/gopro_logo.svg', alt: 'gopro'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'},{src: 'img/clients/logo-black.svg', alt: 'black'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'}]
+									.slider-img
+										img(src=clients.src, alt=clients.alt)
 		section.ninth.section
-			.container
-				h2.title_2.c-white About Us
-					span.line.line-left.line-white 
-					span.line.line-right.line-white
-				.flex-wrap 
-					.col-50 
-						.about-item
-							h3.about-title Who 
-								span.c-purple we are
-							p.about-text INLIGHT is an Mobile and Web Applications development studio.
-							p.about-text We have extensive experience in native mobile applications development, allowing us to carry out complex projects and meet any specifications required.
-							p.about-text Keeping our focus on the result and we’ve been focused solely on our customers’ needs for years now.
-							p.about-text INLIGHT achieves high-end results with meticulous attention to every single detail using the most up-to-date technologies in existence. 
-							.about-action.bg-purple 
-								h4.fs-32.c-white.fw-bold Start your project
-								p.fs-24.c-white Let’s work together
-								a.btn-send.bg-white(href="#")
-									span.c-purple Send A request
-									+icon("send", "c-purple")
-					.col-50 
-						.about-item
-							h3.about-title our  
-								span.c-orange philosophy
-							p.about-text We are powered by ideas that change the world, delivering our experience for different clients and industries all over the world.
-							p.about-text World-changing ideas are sometimes complex, even overwhelming and we’re glad to explore them for ambitious projects.
-							p.about-text We’ve inspired by what our clients do, and we strive to provide all the necessary technology and skills to turn their dreams into reality.
-							p.about-text That’s why your success is our main goal. We believe that together, we can help you achieve great things.
-							.about-action.bg-orange 
-								h4.fs-32.c-white.fw-bold Lack of resources?
-								p.fs-24.c-white We hire IT talents
-								a.btn-send.bg-white(href="#")
-									span.c-orange Send A request
-									+icon("send", "c-orange")
+			.flex-center-center.h-100
+				.container
+					h2.title_2.c-white About Us
+						span.line.line-left.line-white 
+						span.line.line-right.line-white
+					.flex-wrap 
+						.col-50 
+							.about-item
+								h3.about-title Who 
+									span.c-purple we are
+								p.about-text INLIGHT is an Mobile and Web Applications development studio.
+								p.about-text We have extensive experience in native mobile applications development, allowing us to carry out complex projects and meet any specifications required.
+								p.about-text Keeping our focus on the result and we’ve been focused solely on our customers’ needs for years now.
+								p.about-text INLIGHT achieves high-end results with meticulous attention to every single detail using the most up-to-date technologies in existence. 
+								.about-action.bg-purple 
+									h4.fs-32.c-white.fw-bold Start your project
+									p.fs-24.c-white Let’s work together
+									a.btn-send.bg-white(href="#")
+										span.c-purple Send A request
+										+icon("send", "c-purple")
+						.col-50 
+							.about-item
+								h3.about-title our  
+									span.c-orange philosophy
+								p.about-text We are powered by ideas that change the world, delivering our experience for different clients and industries all over the world.
+								p.about-text World-changing ideas are sometimes complex, even overwhelming and we’re glad to explore them for ambitious projects.
+								p.about-text We’ve inspired by what our clients do, and we strive to provide all the necessary technology and skills to turn their dreams into reality.
+								p.about-text That’s why your success is our main goal. We believe that together, we can help you achieve great things.
+								.about-action.bg-orange 
+									h4.fs-32.c-white.fw-bold Lack of resources?
+									p.fs-24.c-white We hire IT talents
+									a.btn-send.bg-white(href="#")
+										span.c-orange Send A request
+										+icon("send", "c-orange")
 		section.tenth.section
 			.container 
 				h2.title_2.c-white HQ Team

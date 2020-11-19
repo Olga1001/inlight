@@ -18,8 +18,6 @@ body
   font-style: normal
   font-weight: normal
   background-color: $bg-color
-  overflow-x: hidden
-  overflow-y: auto
 
 *, *::before, *::after
   box-sizing: border-box
@@ -76,6 +74,7 @@ section
   // overflow-y: auto
   // overflow-x: hidden
   // height: 100vh
+  overflow-x: hidden
 
 input, select, button 
   outline: none
@@ -86,60 +85,68 @@ a
 input
   appearance: none
 
-.pp-tableCell
+// .pp-tableCell
   // width: 100%!important
   // height: 100vh!important
-// .first
-//   z-index: 1!important
-//   &.pp-easing
-//     z-index: 10!important
-// .second
-//   z-index: 2!important
-//   &.pp-easing
-//     z-index: 9!important
-// .third
-//   z-index: 3!important
-//   &.pp-easing
-//     z-index: 8!important
-// .fourth
-//   z-index: 4!important
-//   &.pp-easing
-//     z-index: 7!important
-// .fiveth
-//   z-index: 5!important
-//   &.pp-easing
-//     z-index: 6!important
-// .sixth
-//   z-index: 6!important
-//   &.pp-easing
-//     z-index: 5!important
-// .seventh
-//   z-index: 7!important
-//   &.pp-easing
-//     z-index: 4!important
-// .eight
-//   z-index: 8!important
-//   &.pp-easing
-//     z-index: 3!important
-// .ninth
-//   z-index: 9!important
-//   &.pp-easing
-//     z-index: 2!important
-// .tenth
-//   z-index: 10!important
-//   &.pp-easing
-//     z-index: 1!important
+.first
+  z-index: 1!important
+  &.pp-easing
+    z-index: 10!important
+.second
+  z-index: 2!important
+  &.pp-easing
+    z-index: 9!important
+.third
+  z-index: 3!important
+  &.pp-easing
+    z-index: 8!important
+.fourth
+  z-index: 4!important
+  &.pp-easing
+    z-index: 7!important
+.fiveth
+  z-index: 5!important
+  &.pp-easing
+    z-index: 6!important
+.sixth
+  z-index: 6!important
+  &.pp-easing
+    z-index: 5!important
+.seventh
+  z-index: 7!important
+  &.pp-easing
+    z-index: 4!important
+.eight
+  z-index: 8!important
+  &.pp-easing
+    z-index: 3!important
+.ninth
+  z-index: 9!important
+  &.pp-easing
+    z-index: 2!important
+.tenth
+  z-index: 10!important
+  &.pp-easing
+    z-index: 1!important
 
-.section 
-  position: fixed
-  top: 0
-  left: 0
+.fullpage
+  overflow: hidden
   width: 100% 
   height: 100vh
+.section 
+  position: absolute
+  top: 0
+  // left: 0
+  width: 100% 
+  height: 100vh
+  overflow-y: auto
   // transform: translate3d(100%)!important
   transition: all 1s ease
+  // position: sticky 
+  transform: translateY(100%)
   
   &.active
+    transform: translateY(0)
   //   z-index: 999!important
   //   transform: translateY(0)!important
   &.pp-easing
@@ -166,15 +173,15 @@ input
   flex-shrink: 0
 
 .fixed 
-  height: 100vh
-  width: 100% 
-  // position: fixed 
-  top: 0
-  left: 0
-  z-index: -1
-  +d-flex(center,center)
+  // height: 100vh
+  // width: 100% 
+  // position: sticky 
+  // top: 0
+  // z-index: 1
+  // +d-flex(center,center)
 
 .first 
+  transform: translateY(0)!important
   &__left
     position: relative
     padding: 20px 0 30px
@@ -233,7 +240,8 @@ input
   width: 160px 
   height: 160px
   margin-right: 30px
-  margin: 25px 15px 0
+  margin: 0 15px
+  padding-top: 30px
   &:last-child
     margin-right: 0
   img
@@ -369,6 +377,9 @@ canvas
   &:last-child
     margin-right: 0
   &__img
+    width: 100%
+    height: 100%
+  &__item
     margin: -48px auto 20px
     height: 224px 
     object-fit: contain
@@ -405,7 +416,8 @@ canvas
 
 .fourth 
   background-color: #0A1226
-  padding: 20px 0 
+  .container
+    padding: 20px
   .title_2 
     text-align: left
     padding: 15px 0 0 0
@@ -704,7 +716,6 @@ canvas
 
 .ninth 
   background: linear-gradient(rgba(#0A1226,0.8)), url("../img/photo.png") no-repeat center / cover
-  position: relative
   &:before 
     content: ''
     position: absolute 
@@ -727,7 +738,7 @@ canvas
     background: rgba(#0A1226, 0.6)
     border-radius: 10px
     padding: 30px 47px 53px
-    margin: 35px 0
+    margin: 35px 0 0
   &-title 
     font-weight: bold
     font-size: 36px
@@ -754,9 +765,8 @@ canvas
 
 .tenth 
   background: linear-gradient(rgba(#0A1226,0.8)), url("../img/photo-1.png") no-repeat center / cover
-  .pp-tableCell
-    +d-flex(space-between, center)
-    flex-direction: column
+  +d-flex(space-between, center)
+  flex-direction: column
   .title_2
     margin-top: 55px
   .teams
@@ -919,6 +929,9 @@ canvas
 
 .overflow-h
   overflow: hidden
+
+.h-100
+  height: 100vh 
 
 .w-100
   width: 100%

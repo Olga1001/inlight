@@ -1,24 +1,23 @@
 $(document).ready(function () {
-  new WOW().init();
-  $('#fullpage').pagepiling({
-    direction: 'vertical',
-    verticalCentered: true,
-    scrollable: true,
-    navigation: false,
-    easing: 'linear',
-    scrollBar: true,
-    onLeave: function(){
-      new WOW().init();
-    },
+  // $('#fullpage').pagepiling({
+  //   direction: 'vertical',
+  //   verticalCentered: true,
+  //   scrollable: true,
+  //   navigation: false,
+  //   easing: 'linear',
+  //   scrollBar: true,
+  //   onLeave: function(){
+  //     new WOW().init();
+  //   },
    
-    // afterRender: function(){
+  //   // afterRender: function(){
       
-    //   new WOW().init();
-    // },
-    //  afterLoad: function(anchorLink, index){
-    //   new WOW().init();
-    // },
-  });
+  //   //   new WOW().init();
+  //   // },
+  //   //  afterLoad: function(anchorLink, index){
+  //   //   new WOW().init();
+  //   // },
+  // });
 
   $(".slider").slick({
     slidesToShow: 5,
@@ -47,6 +46,57 @@ $(document).ready(function () {
   });
  
   // initialization animation - wow
+  new WOW().init();
 
- 
-}); 
+  function checkReading () {
+    if (checkReading.read) {
+      return; 
+    }
+    checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
+    document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
+    checkReading.noticeBox.innerHTML = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
+  }
+
+  // $(".section").scroll(function() {
+  
+     
+  //     let _this_sh = $(_this)[0].scrollHeight;
+  //     let _this_h = _this.height();
+
+    
+      // if (_this.scrollTop() >= _this_sh - _this_h) {
+      //   console.log('прокрутил до конца');
+        $(".section").on("mousewheel", function(event) {
+          let _this = $(this);
+          
+          _this.onscroll = checkReading;
+          if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0 ) {
+            _this.removeClass('active');
+            console.log("up");
+          
+          } else {
+            _this.next().addClass('active');
+            console.log("down");
+          }
+        }); 
+      // }
+      // else {
+      //   console.log('не прокрутил до конца');
+      // }
+
+    // if(!_this.hasClass('sixth')) {
+    //   if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0 ) {
+    //     _this.removeClass('active');
+    //     console.log("up");
+      
+    //   } else {
+    //     _this.next().addClass('active');
+    //     console.log("down");
+    //   }
+
+    //     return false;
+    // }
+  // });
+   
+
+});

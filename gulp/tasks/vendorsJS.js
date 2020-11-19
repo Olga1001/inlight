@@ -3,7 +3,7 @@ const concat = require('gulp-concat');
 
 const vendorsScripts = [
   'dev/js/vendor/slick.min.js',
-  'dev/js/vendor/jquery.pagepiling.min.js',
+  // 'dev/js/vendor/jquery.pagepiling.min.js',
   'dev/js/vendor/wow.min.js',
 ];
 

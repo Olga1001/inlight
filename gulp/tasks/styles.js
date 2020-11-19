@@ -9,7 +9,7 @@ const gulpif = require('gulp-if');
 
 // Работаем со стилями
 const vendorsStyles = [
-  'dev/styles/vendor/jquery.pagepiling.css',
+  // 'dev/styles/vendor/jquery.pagepiling.css',
   'dev/styles/vendor/animate.css',
   'dev/styles/styles.sass',
 ];
