@@ -43,10 +43,15 @@ $(document).ready(function () {
     centerMode: true,
     focusOnSelect: true,
     centerPadding: '0px',
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+    ]
   });
- 
-  // initialization animation - wow
-  new WOW().init();
 
   function checkReading () {
     if (checkReading.read) {
@@ -57,46 +62,31 @@ $(document).ready(function () {
     checkReading.noticeBox.innerHTML = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
   }
 
-  // $(".section").scroll(function() {
-  
-     
-  //     let _this_sh = $(_this)[0].scrollHeight;
-  //     let _this_h = _this.height();
-
-    
-      // if (_this.scrollTop() >= _this_sh - _this_h) {
-      //   console.log('прокрутил до конца');
-        $(".section").on("mousewheel", function(event) {
-          let _this = $(this);
-          
-          _this.onscroll = checkReading;
-          if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0 ) {
-            _this.removeClass('active');
-            console.log("up");
-          
-          } else {
-            _this.next().addClass('active');
-            console.log("down");
-          }
-        }); 
-      // }
-      // else {
-      //   console.log('не прокрутил до конца');
-      // }
-
-    // if(!_this.hasClass('sixth')) {
-    //   if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0 ) {
-    //     _this.removeClass('active');
-    //     console.log("up");
-      
-    //   } else {
-    //     _this.next().addClass('active');
-    //     console.log("down");
-    //   }
-
-    //     return false;
-    // }
-  // });
+  // scroll on mousewhele
+  $(".section").on("mousewheel", function(event) {
+    let _this = $(this);
    
+    _this.onscroll = checkReading;
+    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0 ) {
+      _this.removeClass('active');
+      console.log("up");
+    } else {
+      _this.next().addClass('active');
+      console.log("down");
+    }
+  }); 
 
+   // scroll on swipe
+  $(".section").swipe({
+      swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+          if (direction == 'up'){
+            $(this).next().addClass('active');
+          } else if (direction == 'down'){
+            $(this).removeClass('active');
+          }
+      }
+  });
+ 
+  // initialization animation - wow
+  new WOW().init();
 });

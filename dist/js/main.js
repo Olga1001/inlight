@@ -39,10 +39,14 @@ $(document).ready(function () {
     arrows: false,
     centerMode: true,
     focusOnSelect: true,
-    centerPadding: '0px'
-  }); // initialization animation - wow
-
-  new WOW().init();
+    centerPadding: '0px',
+    responsive: [{
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3
+      }
+    }]
+  });
 
   function checkReading() {
     if (checkReading.read) {
@@ -52,11 +56,7 @@ $(document).ready(function () {
     checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
     document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
     checkReading.noticeBox.innerHTML = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
-  } // $(".section").scroll(function() {
-  //     let _this_sh = $(_this)[0].scrollHeight;
-  //     let _this_h = _this.height();
-  // if (_this.scrollTop() >= _this_sh - _this_h) {
-  //   console.log('прокрутил до конца');
+  } // scroll on mousewhele
 
 
   $(".section").on("mousewheel", function (event) {
@@ -73,19 +73,17 @@ $(document).ready(function () {
 
       console.log("down");
     }
-  }); // }
-  // else {
-  //   console.log('не прокрутил до конца');
-  // }
-  // if(!_this.hasClass('sixth')) {
-  //   if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0 ) {
-  //     _this.removeClass('active');
-  //     console.log("up");
-  //   } else {
-  //     _this.next().addClass('active');
-  //     console.log("down");
-  //   }
-  //     return false;
-  // }
-  // });
+  }); // scroll on swipe
+
+  $(".section").swipe({
+    swipe: function swipe(event, direction, distance, duration, fingerCount, fingerData) {
+      if (direction == 'up') {
+        $(this).next().addClass('active');
+      } else if (direction == 'down') {
+        $(this).removeClass('active');
+      }
+    }
+  }); // initialization animation - wow
+
+  new WOW().init();
 });

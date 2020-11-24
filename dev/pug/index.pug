@@ -52,21 +52,23 @@ block content
 		section.third.section
 			.relative.w-100.h-100.flex-center-center
 				.container
-					h2.title_3 Need a fast Time-to-market ?
+					h2.title_3 Need a fast <br class="d-lg-none d-block"> Time-to-market ?
 					.flex-center-between
 						.card.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0.5s")
-							p.fs-48.fw-bold.c-blue Prototype
-								span.fs-24 in 1-2  Weeks
-							p.fs-20.fw-medium Сlickable prototyping <br> with UX expertise
+							div
+								p.fs-48.fw-bold.c-blue Prototype
+									span.fs-24 in 1-2  Weeks
+								p.fs-20.fw-medium Сlickable prototyping <br> with UX expertise
 							a.btn-send.gradient__purple-blue(href="#")
 								|Send A request
 								+icon("send", "c-white")
-						.wow.slideInDownSmall.img-rocket(data-wow-duration="1s" data-wow-delay="0.5s")
-							img(src="img/fxemoji_rocket.png", alt="rocket")
+						.img-rocket
+							img.wow.slideInDownSmall(data-wow-duration="1s" data-wow-delay="0.5s" src="img/fxemoji_rocket.png", alt="rocket")
 						.card.wow.slideInRight(data-wow-duration="1s" data-wow-delay="0.5s")
-							p.fs-48.fw-bold.c-orange MVP
-								span.fs-24 in 2-3 Months
-							p.fs-20.fw-medium High-quality MVP uploaded <br> into app store
+							div
+								p.fs-48.fw-bold.c-orange MVP
+									span.fs-24 in 2-3 Months
+								p.fs-20.fw-medium High-quality MVP uploaded <br> into app store
 							a.btn-send.gradient__orange-yellow(href="#")
 								|Send A request
 								+icon("send", "c-white")
@@ -84,13 +86,14 @@ block content
 								p.fs-24.c-white We use the most up-to-date technologies in existence to deliver the best solutions to carry out complex projects. Basing on client needs and business goals we will line up the best technology stack to ensure smoothly run on any device and platform.
 								div.mobile-tech
 									p.fs-36.fw-bold.c-white.text-up Mobile
-									each mobTech in [{name: 'IOS', src1: 'img/ic/ic_swift.svg', src2: 'img/ic/ic_objectiveC.svg', lineColor: 'line-blue'}, {name: 'ANDROID', src1: 'img/ic/ic_java.svg', src2: 'img/ic/ic_Kotlin.svg', lineColor: 'line-green'}, {name: 'CROSS PLATFORM', src1: 'img/ic/ic_reactnative.svg', src2: 'img/ic/ic_flutter.svg', lineColor: 'line-yellow'}] 
-										
-										.align-items-center
-											p.fs-18.fw-medium.c-white.text-right.relative=mobTech.name
-												span.line.line-left(class=mobTech.lineColor)
-											img.block-ic(src=mobTech.src1, alt="icon")
-											img.block-ic(src=mobTech.src2, alt="icon")
+									.mobile-tech__row-lg
+										each mobTech in [{name: 'IOS', src1: 'img/ic/ic_swift.svg', src2: 'img/ic/ic_objectiveC.svg', lineColor: 'line-blue'}, {name: 'ANDROID', src1: 'img/ic/ic_java.svg', src2: 'img/ic/ic_Kotlin.svg', lineColor: 'line-green'}, {name: 'CROSS PLATFORM', src1: 'img/ic/ic_reactnative.svg', src2: 'img/ic/ic_flutter.svg', lineColor: 'line-yellow'}] 
+											
+											.align-items-center
+												p.fs-18.fw-medium.c-white.text-right.relative=mobTech.name
+													span.line.line-left(class=mobTech.lineColor)
+												img.block-ic(src=mobTech.src1, alt="icon")
+												img.block-ic(src=mobTech.src2, alt="icon")
 						.col-50
 							.web-tech
 								img.img-web(src="img/im_technologies.svg", alt="technologies")
@@ -253,7 +256,7 @@ block content
 									span.c-purple we are
 								p.about-text INLIGHT is an Mobile and Web Applications development studio.
 								p.about-text We have extensive experience in native mobile applications development, allowing us to carry out complex projects and meet any specifications required.
-								p.about-text Keeping our focus on the result and we’ve been focused solely on our customers’ needs for years now.
+								p.about-text Keeping our focus on the result and we’ve been focused solely on our customers’ needs <br> for years now.
 								p.about-text INLIGHT achieves high-end results with meticulous attention to every single detail using the most up-to-date technologies in existence. 
 								.about-action.bg-purple 
 									h4.fs-32.c-white.fw-bold Start your project
@@ -299,5 +302,6 @@ block content
 			
 block script 
 	script(type="text/javascript" src="js/canvas.js")
+	script(type="text/javascript" src="js/jquery.touchSwipe.min.js")
 	
 				

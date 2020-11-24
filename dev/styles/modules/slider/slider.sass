@@ -12,10 +12,13 @@
   margin: 50px auto 20px
   .slick-active, .slick-active + .slick-active + .slick-active + .slick-active + .slick-active  
     transform: scale(0.8) 
+    opacity: 0.6
   .slick-active + .slick-active, .slick-active + .slick-active + .slick-active + .slick-active 
     transform: scale(0.9)
-  .slick-active + .slick-active + .slick-active 
-    transform: scale(1)
+    opacity: 1
+  .slick-active.slick-center
+    transform: scale(1)!important
+    opacity: 1
 
 .slider
   max-width: 1140px 
