@@ -5,7 +5,9 @@
 /* Large Devices, Wide Screens */
 @media (min-width: 769px)
     .d-md-none 
-        display: none
+        display: none!important
+    .d-md-flex
+        display: flex!important
 
 @media (min-width: 1025px)
     body
@@ -365,6 +367,8 @@
         max-width: 18.5vw
     .team-img
         bottom: 0.67vw
+        height: 15.99vw
+        width: 21.82vw
     .team 
         max-width: 21.875vw
         margin: 9vh auto 1vw
@@ -801,11 +805,11 @@
             font-size: 1.95vw
             line-height: 2.14vw
     .team-img 
-        transform: translateX(-50%) scale(0.8)
-        bottom: -2vw
+        bottom: 0.9vw
+        width: 35.15vw
+        height: 25.78vw
     .tenth .title_2
         margin-top: 7vw
-
     .footer
         padding: 0.4vw 1vw 0.4vw 2vw
         .fs-14 
@@ -848,6 +852,12 @@
     body 
         font-size: 2.08vw
         line-height: 2.73vw
+    .fs-18 
+        font-size: 2.3vw
+        line-height: 3.125vw
+    .fs-12 
+        font-size: 1.56vw
+        line-height: 2.08vw
     .container
         padding: 0 5.2vw
     .navtop 
@@ -942,7 +952,7 @@
     .btn-send 
         border-radius: 5.2vw
         font-size: 1.82vw
-        line-height: 6.5vw
+        line-height: 7.5vw
         padding: 0 1.7vw
     .third 
         .h-100.flex-center-center
@@ -1017,3 +1027,235 @@
         padding: 3.25vw 1.95vw 0 0 
         font-size: 2.08vw
         line-height: 2.75vw
+    .circle-work
+        position: absolute
+        left: 50% 
+        top: 14.3vw
+        transform: translateX(-50%)
+    .fiveth-top 
+        min-height: auto
+        padding-top: 8vw
+    .fiveth-bottom 
+        min-height: auto
+        padding-top: 1.95vw
+    .fiveth-side 
+        max-width: 33.85vw
+        margin-top: 28vw
+        padding-bottom: 4vw
+    .circle-work
+        top: 14vw
+        width: 52vw
+        height: 52vw
+    .circle-work img
+        width: 34vw
+        height: 34vw
+        margin: 9vw auto
+    .fiveth-side .fs-16
+        margin-top: 3.5vw
+    .card-we__circle
+        width: 22.1vw
+        height: 22.1vw
+    .card-we__color
+        width: 13.9vw
+        height: 13.9vw
+    .card-we__color svg 
+        width: 6.5vw
+    .card-we__head
+        height: 22.1vw
+    .circle_v2
+        width: 1.56vw
+        height: 1.56vw
+    .mr-10
+        margin-right: 1.3vw
+    .card-we .fs-18 
+        padding-right: 1.3vw
+        max-width: 16.3vw
+        font-size: 1.5625vw
+        line-height: 2.08vw
+    .sixth .container 
+        padding: 12vw 0 0
+    .stages 
+        flex-direction: column
+        padding: 0 5.2vw
+        .fs-48 
+            font-size: 5.98vw
+            line-height: 7.94vw
+        .fs-24 
+            font-size: 2.86vw
+            line-height: 3.77vw
+        .line
+            width: calc(100% + 5.2vw)
+    .stages-right 
+        align-items: flex-end
+        .stages__gif
+            margin-right: auto
+    .stages-left
+        align-items: start
+        .stages__gif
+            margin-left: auto
+    .stages__gif
+        width: 48.17vw
+        height: 48.17vw
+        margin-top: 2.6vw
+    .sixth .title_4
+        margin-bottom: 14.97vw
+    .title_4 
+        font-size: 4.4vw
+        line-height: 5.85vw
+        padding: 3.125vw 1.3vw
+        max-width: 72.39vw
+        &:before
+            width: 79.8vw
+            height: 21.6vw
+        .line-left 
+            right: calc(100% + 2.21vw)
+        .line-right
+            left: calc(100% + 2.21vw)
+    .stages__amount 
+        right: calc(100% + 34px)
+        width: 8.46vw
+        height: 8.46vw
+        font-size: 4.6875vw
+        line-height: 8.46vw
+    .case 
+        width: calc(33.33% - 1.13vw)
+        height: 23.43vw
+        border-radius: 6.5vw
+        margin: 0 1.69vw 1.69vw 0
+    .cases
+        max-width: 73.7vw
+        margin: 16.5vw auto 3.25vw
+    .slider-item
+        border-radius: 1.3vw
+        padding: 2.6vw 
+        width: 38.23vw!important
+        margin-top: 0
+        position: relative
+        z-index: 0
+        min-height: 25.65vw!important
+        .fs-14 
+            margin-top: 4.25vw
+            font-size: 1.5625vw
+            line-height: 2.08vw
+    .avatar 
+        border-width: 0.78vw 
+        width: 15.625vw
+        height: 15.625vw
+    .slider 
+        max-width: 79.53vw
+        padding: 0
+        margin: 8vw auto 0
+        min-height: 44vw
+    .slider .slick-active
+        transform: scale(0.73) translateX(44%)
+    .slider .slick-active + .slick-active + .slick-active
+        transform: scale(0.73) translateX(-44%)
+    .slider .slick-active, .slider .slick-active + .slick-active + .slick-active
+        min-height: 25.65vw!important
+        margin-top: 2vw
+        z-index: 0
+    .slider .slick-slide.slick-active.slick-center
+        min-height: 35.15vw!important
+        transform: scale(1) translateX(0)
+        z-index: 3
+    .eight-top
+        align-items: center
+        min-height: 71vh
+        padding-bottom: 6.5vw
+    .eight-bottom 
+        min-height: 29vh
+    .slider-client 
+        max-width: 79.53vw
+        padding: 0
+        margin: 6.5vw auto 2.6vw
+    .slider-client .slick-active + .slick-active, .slider-client .slider-img
+        transform: scale(0.8)
+        opacity: 0.6
+    .slider-client .slick-active.slick-center
+        transform: scale(1)
+        opacity: 1
+    .about-item 
+        border-radius: 1.3vw
+        padding: 3.9vw
+        margin: 6vw 0 0
+    .about-title 
+        font-size: 4.16vw
+        line-height: 5.51vw
+        margin-bottom: 3vw
+        white-space: nowrap
+        letter-spacing: normal  
+    .about-text
+        font-size: 2.08vw
+        line-height: 2.75vw
+        margin-bottom: 2.6vw
+    .about-action 
+        border-radius: 1.95vw
+        padding: 6.2vw 3.25vw 3.9vw
+        margin-top: 5vw
+    .about-action .fs-32 
+        margin-bottom: 2.3vw
+        font-size: 3.125vw
+    .about-action .fs-24 
+        margin-bottom: 3vw
+        font-size: 2.34vw
+        line-height: 3.125vw
+    .btn-send svg 
+        right: 1.95vw
+        width: 2.6vw
+        height: 2.6vw
+    .team 
+        max-width: 39vw
+        margin: 9.5vw auto 2.6vw
+        .fs-24 
+            font-size: 2.6vw
+            line-height: 2.86vw
+    .team-border
+        border-radius: 2.6vw
+        padding: 1.17vw
+        height: 28.8vw
+        max-width: 46vw
+    .team-img
+        height: 34.375vw
+        width: 46.875vw
+        bottom: 1.35vw
+    .tenth .title_2 
+        margin-top: 8.46vw
+    .team-head
+        margin-bottom: 3.1vw
+    .footer 
+        padding: 4.4vw 0 3.6vw 0
+        .fs-14
+            font-size: 1.5625vw
+            line-height: 2.08vw
+    .footer__left 
+        margin: 0 auto
+    .footer-img 
+        margin: 0 auto 1.4vw
+        width: 14.9vw
+        height: 16.5vw
+    .navfooter
+        max-width: 73.125vw
+        margin: 0 auto
+        padding-bottom: 1.82vw
+    .menu-main
+        margin-bottom: 1vw
+        font-size: 1.82vw
+        line-height: 2.47vw
+    .menu-footer-link, .menu-footer-item 
+        font-size: 1.5625vw
+        line-height: 2.08vw
+    .circle 
+        width: 1.5625vw
+        height: 1.5625vw
+    .menu-footer-item 
+        margin-bottom: 2.47vw
+        padding-left: 2.86vw
+    .footer-copyright 
+        text-align: center
+    .social
+        margin: 2.86vw 5px 2vw
+
+@media (max-width: 568px)
+    // 
+@media (max-width: 360px)
+    // 

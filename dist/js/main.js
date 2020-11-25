@@ -27,7 +27,15 @@ $(document).ready(function () {
     centerMode: true,
     variableWidth: true,
     focusOnSelect: true,
-    vertical: false
+    vertical: false,
+    responsive: [{
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true
+      }
+    }]
   });
   $(".slider-client").slick({
     variableWidth: false,
@@ -47,6 +55,18 @@ $(document).ready(function () {
       }
     }]
   });
+
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    $(".slider-stages").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: true,
+      arrows: false,
+      focusOnSelect: true,
+      centerPadding: '0px'
+    });
+  }
 
   function checkReading() {
     if (checkReading.read) {

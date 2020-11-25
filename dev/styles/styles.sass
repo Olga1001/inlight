@@ -799,6 +799,11 @@ canvas
     left: 50% 
     bottom: 13px
     transform: translateX(-50%)
+    background-position: center bottom
+    background-repeat: no-repeat 
+    background-size: contain
+    height: 307px
+    width: 419px
   &-head
     position: relative
     margin-bottom: 5px
@@ -931,8 +936,11 @@ canvas
   min-height: 100vh
 @import "modules/modules";
 
+.d-none
+  display: none!important
+
 .d-block 
-  display: block 
+  display: block!important
   
 .centerY 
   +centerXY(0,50%)

@@ -148,7 +148,7 @@ block content
 					h2.title_4 PHASES OF MOBILE APP DEVELOPMENT
 						span.line.line-left
 						span.line.line-right
-					.stages.flex-center-between.relative
+					.stages.flex-center-between.relative.d-md-flex.d-none
 						.stages__info
 							p.fs-48.fw-bold.c-blue.text-up.relative inception
 								span.line.line-left.line-blue
@@ -156,7 +156,54 @@ block content
 							p.fs-24.c-gray.fw-medium Clarifying app’s vision <br> Defining product’s goals <br> Specifying MVP <br> Writing project description 
 						.stages__gif
 							img(src="img/gif.png", alt="gif")
-				.h-win
+					.slider-stages.d-md-none
+						div
+							.stages.flex-center-between.relative.stages-left
+								.stages__info
+									p.fs-48.fw-bold.c-blue.text-up.relative inception
+										span.line.line-left.line-blue
+										span.stages__amount.bg-blue 1
+									p.fs-24.c-gray.fw-medium Clarifying app’s vision <br> Defining product’s goals <br> Specifying MVP <br> Writing project description 
+								.stages__gif
+									img(src="img/gif.png", alt="gif")
+						div
+							.stages.flex-center-between.relative.stages-right
+								.stages__info
+									p.fs-48.fw-bold.c-purple.text-up.relative design
+										span.line.line-right.line-purple
+										span.stages__amount.bg-purple 1
+									p.fs-24.c-gray.fw-medium Prototyping <br> Mind mapping <br> Clicable wireframes <br> Visual User Interfaces <br>Motion design
+								.stages__gif
+									img(src="img/gif.png", alt="gif")
+						div
+							.stages.flex-center-between.relative.stages-left
+								.stages__info
+									p.fs-48.fw-bold.c-red.text-up.relative development
+										span.line.line-left.line-red
+										span.stages__amount.bg-red 3
+									p.fs-24.c-gray.fw-medium Coding<br>Testing <br>Bug detecting<br>Ensuring QA
+								.stages__gif
+									img(src="img/gif.png", alt="gif")
+						div
+							.stages.flex-center-between.relative.stages-right
+								.stages__info
+									p.fs-48.fw-bold.c-orange.text-up.relative deployment
+										span.line.line-right.line-orange
+										span.stages__amount.bg-orange 4
+									p.fs-24.c-gray.fw-medium Publishing App in to the stores<br>Content copywriting  <br>Beta testing <br>Optimizing the product page 
+								
+								.stages__gif
+									img(src="img/gif.png", alt="gif")
+						div
+							.stages.flex-center-between.relative.stages-left
+								.stages__info
+									p.fs-48.fw-bold.c-green.text-up.relative Maintenance
+										span.line.line-left.line-green
+										span.stages__amount.bg-green 5
+									p.fs-24.c-gray.fw-medium App support<br>Product enhancement  <br>Crash detecting  <br>monitoring statistics.
+								.stages__gif
+									img(src="img/gif.png", alt="gif")
+				.h-win.d-md-flex.d-none
 					.stages.flex-center-between.relative
 						.stages__gif
 							img(src="img/gif.png", alt="gif")
@@ -173,7 +220,7 @@ block content
 							p.fs-24.c-gray.fw-medium Coding<br>Testing <br>Bug detecting<br>Ensuring QA
 						.stages__gif
 							img(src="img/gif.png", alt="gif")
-				.h-win
+				.h-win.d-md-flex.d-none
 					.stages.flex-center-between.relative
 						.stages__gif
 							img(src="img/gif.png", alt="gif")
@@ -289,14 +336,14 @@ block content
 							.team-head
 								.team-border 
 									.team-colors.gradient__green-blue_v2
-								img.team-img(src="img/team1.png", alt="team" width="221px" height="307px")
+								.team-img(style="background-image: url(img/team1.png)")
 							p.fs-24.c-white.fw-medium.text-center YAN HO <br> Founding Partner
 					.col-50 
 						a.team(href="#")
 							.team-head
 								.team-border 
 									.team-colors.gradient__purple-blue 
-								img.team-img(src="img/team2.png", alt="team" width="419px" height="291px")
+								.team-img(style="background-image: url(img/team2.png)")
 							p.fs-24.c-white.fw-medium.text-center ALEX NABIL<br>Managing Partner
 			include modules/footer/footer
 			
