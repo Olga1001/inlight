@@ -24,10 +24,11 @@
                         <li class="menu-item"><a class="menu-link" href="#"><span class="circle wow fadeIn bg-green" data-wow-duration="0.8s" data-wow-delay="1.5s"></span>home</a></li>
                         <li class="menu-item"><a class="menu-link" href="#"><span class="circle wow fadeIn bg-blue" data-wow-duration="0.8s" data-wow-delay="1.6s"></span>SHOWCASE</a></li>
                         <li class="menu-item"><a class="menu-link" href="#"><span class="circle wow fadeIn bg-purple" data-wow-duration="0.8s" data-wow-delay="1.7s"></span>ABOUT</a></li>
-                        <li class="menu-item"><a class="menu-link" href="#"><span class="circle wow fadeIn bg-red" data-wow-duration="0.8s" data-wow-delay="1.8s"></span>TEAM</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#"><span class="circle wow fadeIn bg-red" data-wow-duration="0.8s" data-wow-delay="1.8s"></span>TEAM</a></li><a class="btn wow incline d-sm-none d-block" href="#" data-wow-duration="0.8s" data-wow-delay="1.8s">Contuct Us</a>
                       </ul>
-                    </nav><a class="btn wow incline" href="#" data-wow-duration="0.8s" data-wow-delay="1.8s">Contuct Us</a>
+                    </nav><a class="btn wow incline d-sm-block d-none" href="#" data-wow-duration="0.8s" data-wow-delay="1.8s">Contuct Us</a>
                   </div>
+                  <button class="burger d-sm-none d-block" type="button"><span class="burger-line burger-line-top"></span><span class="burger-line burger-line-center"></span><span class="burger-line burger-line-bottom"></span></button>
                 </div>
               </div>
             </header>
@@ -111,7 +112,7 @@
         <section class="third section">
           <div class="relative w-100 h-100 flex-center-center">
             <div class="container">
-              <h2 class="title_3">Need a fast <br class="d-lg-none d-block"> Time-to-market ?</h2>
+              <h2 class="title_3">Need a fast <br class="d-lg-none d-sm-block d-none"> Time-to-market ?</h2>
               <div class="flex-center-between">
                 <div class="card wow slideInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
                   <div>
@@ -126,7 +127,7 @@
                 <div class="card wow slideInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                   <div>
                     <p class="fs-48 fw-bold c-orange">MVP<span class="fs-24">in 2-3 Months</span></p>
-                    <p class="fs-20 fw-medium">High-quality MVP uploaded <br> into app store</p>
+                    <p class="fs-20 fw-medium">High-quality MVP uploaded <br class="d-sm-block d-none"> into app store</p>
                   </div><a class="btn-send gradient__orange-yellow" href="#">Send A request
                     <svg class="svg-sprite-icon icon-send c-white">
                       <use xlink:href="img/sprite/symbol/sprite.svg#send"></use>
@@ -139,7 +140,7 @@
         <section class="fourth section">
           <div class="flex-center-center h-100">
             <div class="container">
-              <div class="flex-center-between">
+              <div class="flex-sm-center-between flex-start-between">
                 <div class="col-50 justify-content-end">
                   <div class="max-460">
                     <h2 class="title_2 c-white">Technologies<span class="line line-left line-white"></span></h2>
@@ -147,14 +148,17 @@
                     <div class="mobile-tech">
                       <p class="fs-36 fw-bold c-white text-up">Mobile</p>
                       <div class="mobile-tech__row-lg">
-                        <div class="align-items-center">
-                          <p class="fs-18 fw-medium c-white text-right relative">IOS<span class="line line-left line-blue"></span></p><img class="block-ic" src="img/ic/ic_swift.svg" alt="icon"><img class="block-ic" src="img/ic/ic_objectiveC.svg" alt="icon">
+                        <div class="align-items-md-center">
+                          <p class="fs-18 fw-medium c-white text-right relative">IOS<span class="line line-left line-blue"></span></p>
+                          <div class="mobile-tech__row align-items-md-center"><img class="block-ic" src="img/ic/ic_swift.svg" alt="icon"><img class="block-ic" src="img/ic/ic_objectiveC.svg" alt="icon"></div>
                         </div>
-                        <div class="align-items-center">
-                          <p class="fs-18 fw-medium c-white text-right relative">ANDROID<span class="line line-left line-green"></span></p><img class="block-ic" src="img/ic/ic_java.svg" alt="icon"><img class="block-ic" src="img/ic/ic_Kotlin.svg" alt="icon">
+                        <div class="align-items-md-center">
+                          <p class="fs-18 fw-medium c-white text-right relative">ANDROID<span class="line line-left line-green"></span></p>
+                          <div class="mobile-tech__row align-items-md-center"><img class="block-ic" src="img/ic/ic_java.svg" alt="icon"><img class="block-ic" src="img/ic/ic_Kotlin.svg" alt="icon"></div>
                         </div>
-                        <div class="align-items-center">
-                          <p class="fs-18 fw-medium c-white text-right relative">CROSS PLATFORM<span class="line line-left line-yellow"></span></p><img class="block-ic" src="img/ic/ic_reactnative.svg" alt="icon"><img class="block-ic" src="img/ic/ic_flutter.svg" alt="icon">
+                        <div class="align-items-md-center">
+                          <p class="fs-18 fw-medium c-white text-right relative">CROSS PLATFORM<span class="line line-left line-yellow"></span></p>
+                          <div class="mobile-tech__row align-items-md-center"><img class="block-ic" src="img/ic/ic_reactnative.svg" alt="icon"><img class="block-ic" src="img/ic/ic_flutter.svg" alt="icon"></div>
                         </div>
                       </div>
                     </div>
@@ -164,21 +168,26 @@
                   <div class="web-tech"><img class="img-web" src="img/im_technologies.svg" alt="technologies">
                     <div class="relative"> 
                       <p class="fs-36 fw-bold c-white text-up">WEB</p>
-                      <div class="d-flex">
+                      <div class="d-sm-flex">
                         <div class="web-col">
-                          <p class="fs-18 fw-medium c-white text-right relative">FRONTEND<span class="line line-left line-yellow"></span></p><img class="block-ic" src="img/ic/ic_html5.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_reactnative.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_vuejs.svg" alt="icon web">
+                          <p class="fs-18 fw-medium c-white text-right relative">FRONTEND<span class="line line-left line-yellow"></span></p>
+                          <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_html5.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_reactnative.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_vuejs.svg" alt="icon web"></div>
                         </div>
                         <div class="web-col">
-                          <p class="fs-18 fw-medium c-white text-right relative">BACKEND<span class="line line-left line-red"></span></p><img class="block-ic" src="img/ic/ic_php.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_nodeJS.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_laravel.svg" alt="icon web">
+                          <p class="fs-18 fw-medium c-white text-right relative">BACKEND<span class="line line-left line-red"></span></p>
+                          <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_php.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_nodeJS.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_laravel.svg" alt="icon web"></div>
                         </div>
                         <div class="web-col">
-                          <p class="fs-18 fw-medium c-white text-right relative">DATABASES<span class="line line-left line-purple"></span></p><img class="block-ic" src="img/ic/ic_postgre.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_mongo.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_mysql.svg" alt="icon web">
+                          <p class="fs-18 fw-medium c-white text-right relative">DATABASES<span class="line line-left line-purple"></span></p>
+                          <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_postgre.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_mongo.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_mysql.svg" alt="icon web"></div>
                         </div>
                         <div class="web-col">
-                          <p class="fs-18 fw-medium c-white text-right relative">CMS<span class="line line-left line-blue"></span></p><img class="block-ic" src="img/ic/ic_wordpress.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_opencart.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_drupal.svg" alt="icon web">
+                          <p class="fs-18 fw-medium c-white text-right relative">CMS<span class="line line-left line-blue"></span></p>
+                          <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_wordpress.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_opencart.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_drupal.svg" alt="icon web"></div>
                         </div>
                         <div class="web-col">
-                          <p class="fs-18 fw-medium c-white text-right relative">INFRASTUCTURE<span class="line line-left line-green"></span></p><img class="block-ic" src="img/ic/ic_github.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_aws.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_git.svg" alt="icon web">
+                          <p class="fs-18 fw-medium c-white text-right relative">INFRASTUCTURE<span class="line line-left line-green"></span></p>
+                          <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_github.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_aws.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_git.svg" alt="icon web"></div>
                         </div>
                       </div>
                     </div>

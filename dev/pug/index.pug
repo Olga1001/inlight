@@ -52,7 +52,7 @@ block content
 		section.third.section
 			.relative.w-100.h-100.flex-center-center
 				.container
-					h2.title_3 Need a fast <br class="d-lg-none d-block"> Time-to-market ?
+					h2.title_3 Need a fast <br class="d-lg-none d-sm-block d-none"> Time-to-market ?
 					.flex-center-between
 						.card.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0.5s")
 							div
@@ -68,7 +68,7 @@ block content
 							div
 								p.fs-48.fw-bold.c-orange MVP
 									span.fs-24 in 2-3 Months
-								p.fs-20.fw-medium High-quality MVP uploaded <br> into app store
+								p.fs-20.fw-medium High-quality MVP uploaded <br class="d-sm-block d-none"> into app store
 							a.btn-send.gradient__orange-yellow(href="#")
 								|Send A request
 								+icon("send", "c-white")
@@ -78,7 +78,7 @@ block content
 		section.fourth.section
 			.flex-center-center.h-100
 				.container
-					.flex-center-between
+					.flex-sm-center-between.flex-start-between
 						.col-50.justify-content-end
 							div.max-460
 								h2.title_2.c-white Technologies
@@ -89,24 +89,26 @@ block content
 									.mobile-tech__row-lg
 										each mobTech in [{name: 'IOS', src1: 'img/ic/ic_swift.svg', src2: 'img/ic/ic_objectiveC.svg', lineColor: 'line-blue'}, {name: 'ANDROID', src1: 'img/ic/ic_java.svg', src2: 'img/ic/ic_Kotlin.svg', lineColor: 'line-green'}, {name: 'CROSS PLATFORM', src1: 'img/ic/ic_reactnative.svg', src2: 'img/ic/ic_flutter.svg', lineColor: 'line-yellow'}] 
 											
-											.align-items-center
+											.align-items-md-center
 												p.fs-18.fw-medium.c-white.text-right.relative=mobTech.name
 													span.line.line-left(class=mobTech.lineColor)
-												img.block-ic(src=mobTech.src1, alt="icon")
-												img.block-ic(src=mobTech.src2, alt="icon")
+												.mobile-tech__row.align-items-md-center
+													img.block-ic(src=mobTech.src1, alt="icon")
+													img.block-ic(src=mobTech.src2, alt="icon")
 						.col-50
 							.web-tech
 								img.img-web(src="img/im_technologies.svg", alt="technologies")
 								.relative 
 									p.fs-36.fw-bold.c-white.text-up WEB
-									.d-flex
+									.d-sm-flex
 										each webTech in [{name: 'FRONTEND', src1: 'img/ic/ic_html5.svg', src2: 'img/ic/ic_reactnative.svg', src3: 'img/ic/ic_vuejs.svg', lineColor: 'line-yellow'}, {name: 'BACKEND', src1: 'img/ic/ic_php.svg', src2: 'img/ic/ic_nodeJS.svg', src3: 'img/ic/ic_laravel.svg', lineColor: 'line-red'}, {name: 'DATABASES', src1: 'img/ic/ic_postgre.svg', src2: 'img/ic/ic_mongo.svg', src3: 'img/ic/ic_mysql.svg', lineColor: 'line-purple'}, {name: 'CMS', src1: 'img/ic/ic_wordpress.svg', src2: 'img/ic/ic_opencart.svg', src3: 'img/ic/ic_drupal.svg', lineColor: 'line-blue'}, {name: 'INFRASTUCTURE', src1: 'img/ic/ic_github.svg', src2: 'img/ic/ic_aws.svg', src3: 'img/ic/ic_git.svg', lineColor: 'line-green'}] 
 											.web-col
 												p.fs-18.fw-medium.c-white.text-right.relative=webTech.name
 													span.line.line-left(class=webTech.lineColor)
-												img.block-ic(src=webTech.src1, alt="icon web")
-												img.block-ic(src=webTech.src2, alt="icon web")
-												img.block-ic(src=webTech.src3, alt="icon web")
+												.flex-center-center.d-sm-block.web-tech__ices
+													img.block-ic(src=webTech.src1, alt="icon web")
+													img.block-ic(src=webTech.src2, alt="icon web")
+													img.block-ic(src=webTech.src3, alt="icon web")
 		section.fiveth.section
 			div.w-100
 				.fiveth-top

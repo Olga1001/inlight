@@ -106,9 +106,16 @@ $(document).ready(function () {
           } else if (direction == 'down'){
             $(this).removeClass('active');
           }
-      }
+      },
+      allowPageScroll: "vertical",
   });
  
   // initialization animation - wow
   new WOW().init();
+
+  // burger 
+  $(".burger").click(function() {
+    $(this).toggleClass('active');
+    $(".navtop").toggleClass('active');
+  });
 });

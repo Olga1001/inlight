@@ -19,7 +19,38 @@
             background-color: #ffffff
             color: #0F1930
 
-
+.burger
+    width: 24px 
+    height: 24px 
+    position: relative
+    z-index: 9
+    &-line
+        width: 18px 
+        height: 2px 
+        position: absolute
+        left: 50% 
+        transform: translateX(-50%)
+        border-radius: 4px
+        background-color: #fff
+        display: block
+        transition: all 0.3s ease
+        &-top
+            top: 6px
+        &-center 
+            top: 50%
+            transform: translate(-50%, -50%)
+        &-bottom
+            bottom: 6px
+    &.active 
+        .burger-line-top
+            top: 50%
+            transform: translate(-50%, -50%) rotate(225deg)
+        .burger-line-center
+            opacity: 0
+        .burger-line-bottom
+            bottom: 50%
+            transform: translate(-50%, 50%) rotate(-225deg)
+            
 .logo 
     +d-flex(start, center)
     &-icon 

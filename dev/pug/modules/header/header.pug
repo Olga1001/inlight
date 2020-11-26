@@ -13,4 +13,9 @@ header.header(class = dark ? 'dark' : '')
                                 a.menu-link(href="#")
                                     span.circle.wow.fadeIn(data-wow-duration="0.8s" data-wow-delay=menu.delay class=menu.color)
                                     =menu.val
-                a.btn.wow.incline(href="#" data-wow-duration="0.8s" data-wow-delay="1.8s") Contuct Us
+                        a.btn.wow.incline.d-sm-none.d-block(href="#" data-wow-duration="0.8s" data-wow-delay="1.8s") Contuct Us
+                a.btn.wow.incline.d-sm-block.d-none(href="#" data-wow-duration="0.8s" data-wow-delay="1.8s") Contuct Us
+            button.burger.d-sm-none.d-block(type="button")
+                span.burger-line.burger-line-top
+                span.burger-line.burger-line-center
+                span.burger-line.burger-line-bottom

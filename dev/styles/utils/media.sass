@@ -8,6 +8,21 @@
         display: none!important
     .d-md-flex
         display: flex!important
+    .align-items-md-center
+        display: flex!important
+        align-items: center!important
+@media (min-width: 569px)
+    .d-sm-none
+        display: none!important
+    .d-sm-block 
+        display: block!important
+    .align-items-sm-center
+        display: flex!important
+        align-items: center!important
+    .d-sm-flex
+        display: flex!important
+    .flex-sm-center-between
+        +d-flex(space-between, center)
 
 @media (min-width: 1025px)
     body
@@ -848,7 +863,7 @@
         height: 1.36vw
         margin-right: 0.48vw
 
-@media (min-width: 568px) and (max-width: 768px)
+@media (min-width: 569px) and (max-width: 768px)
     body 
         font-size: 2.08vw
         line-height: 2.73vw
@@ -979,9 +994,6 @@
             font-size: 4.42vw
             line-height: 5.85vw
             margin-bottom: 5px
-        .align-items-center 
-            display: block
-            width: 33.33%
         .fs-18 
             width: 100%
             height: 37.1vw
@@ -1256,6 +1268,210 @@
         margin: 2.86vw 5px 2vw
 
 @media (max-width: 568px)
-    // 
+    .container
+        padding: 0 5.28vw
+    .line:before 
+        width: 2.1vw
+        height: 2.1vw
+    .line 
+        height: 0.35vw
+    .navtop 
+        position: absolute 
+        right: 0 
+        top: 0 
+        z-index: 8
+        width: 100% 
+        height: 100vh 
+        overflow-y: auto 
+        background: rgba(#0A1226, 0.8)
+        opacity: 0 
+        pointer-events: none 
+        transition: all 0.3s ease
+        &.active 
+            opacity: 1
+            pointer-events: auto 
+            .menu 
+                transform: translateX(0)
+    .menu 
+        display: block
+        background: #0A1226
+        margin-left: auto
+        padding: 13vw 7vw 7vw
+        max-width: 46vw
+        height: 100%
+        position: relative
+        z-index: 2
+        transform: translateX(100px)
+        transition: all 0.3s ease
+        &:before 
+            content: ''
+            position: absolute
+            right: 100%
+            top: 0 
+            height: 100% 
+            width: 5px
+            z-index: -1
+            background: linear-gradient(184.47deg, #FFBE16 7.16%, #FB0010 29.24%, #9816FF 53.43%, #1C60F3 76.42%, #1FC74D 97.8%)
+        .btn 
+            margin-top: 5.28vw
+    .menu-link
+        justify-content: start
+        margin-bottom: 15px
+        margin-left: 0
+    .header
+        padding: 3.52vw 0
+    .logo-icon 
+        margin-right: 2.8vw
+        height: 7.92vw
+        width: 7.92vw
+    .logo-name 
+        height: 3.34vw
+    .title
+        font-size: 6.33vw
+        line-height: 8.45vw
+    .first__left
+        padding: 0.88vw 0 2vw
+    .first__left, .first__right
+        margin-top: 12vw
+    .btn 
+        border-radius: 7vw
+        font-size: 2.8vw
+        line-height: 7vw
+        padding: 0 2.6vw
+        min-width: 28.1vw
+    .second__top
+        padding: 8vw 0 13.2vw
+    .card-gadget 
+        width: calc(33.33% - 2.33vw)
+        margin-right: 3.5vw
+        border-radius: 2.6vw
+        padding: 0 2.7vw 2.4vw 2vw
+        min-height: 36.5vw
+        .fs-36 
+            font-size: 3.5vw
+            line-height: 3.8vw
+        .fs-24 
+            font-size: 2.46vw
+            line-height: 3vw
+        .fs-14 
+            font-size: 1.76vw
+            line-height: 2.46vw
+            margin-top: 1vw
+    .title_2 
+        font-size: 3.87vw
+        line-height: 5.1vw
+        padding: 0 7vw
+        min-width: 56vw
+    .card-gadget__item 
+        margin: -3.7vw auto 1vw
+        height: 17.6vw
+    .second__bottom .c-gray
+        font-size: 2.11vw
+        line-height: 2.81vw
+        margin: 1.76vw auto 8vw
+        max-width: 68.6vw
+    .ic 
+        width: 17vw
+        height: 17vw
+        margin: 0 0.5vw
+        padding-top: 3.1vw
+        img
+            height: 8.45vw
+            margin-bottom: 2vw
+        p 
+            font-size: 2.11vw
+            line-height: 2.8vw
+    .card 
+        width: 38vw
+        padding: 3.5vw 3.5vw
+        border-radius: 2.6vw
+        margin-top: 1.76vw
+        .fs-48 
+            font-size: 4.22vw
+            line-height: 5.6vw
+            margin-bottom: 1.7vw
+        .fs-24 
+            font-size: 2.81vw
+            line-height: 3.87vw
+        .fs-20
+            font-size: 2.46vw
+            line-height: 2.81vw
+            margin-bottom: 1.7vw
+    .btn-send
+        border-radius: 7vw
+        font-size: 2.1vw
+        line-height: 7vw
+        padding: 0 1.76vw
+    .btn-send svg 
+        right: 1.76vw
+        width: 2.46vw
+        height: 2.46vw
+    .img-rocket 
+        position: absolute
+        width: 100%
+        height: 22vw
+        margin-top: 0
+        flex-shrink: 0
+        left: 50%
+        transform: translateX(-50%)
+        top: 23%
+    .title_3 
+        font-size: 3.52vw
+        line-height: 10.5vw
+    .cloud-1
+        height: 17.8vw
+    .cloud-2 
+        height: 15.5vw
+    .fourth 
+        .fs-24 
+            font-size: 2.11vw
+            line-height: 2.81vw
+            margin: 8vw 0
+            max-width: 42.6vw
+        .fs-36 
+            margin-bottom: 3.52vw
+            font-size: 3.52vw
+            line-height: 4.57vw
+            text-align: center
+    .img-web 
+        margin: 0 0 3.9vw 0
+        max-width: 42.6vw
+    .mobile-tech__row
+        +d-flex(flex-end,center)
+        margin: 2vw 5vw 0 0
+    .mobile-tech .fs-18 
+        width: 100% 
+        text-align: left 
+        font-size: 1.76vw 
+        line-height: 2.28vw
+        padding: 0 5.28vw
+    .block-ic 
+        width: 10.56vw
+        height: 10.56vw
+    .web-tech .fs-36 
+        position: static
+        transform: none
+        writing-mode: horizontal-tb
+    .web-col
+        width: 100%
+    .web-tech .fs-18
+        transform: none
+        writing-mode: horizontal-tb
+        margin: 0
+        padding: 0 3.52vw
+        height: auto
+        font-size: 1.76vw
+        line-height: 2.28vw
+    .web-tech .line
+        width: 100%
+        top: auto
+        bottom: -1vw
+        left: 0
+        transform: none
+        &-left:before
+            left: 0 
+            right: auto
+    .web-tech__ices
+        margin: 2vw 0 0
 @media (max-width: 360px)
     // 

@@ -22,18 +22,17 @@
     justify-content: flex-end
 
 .flex-center-between
-    display: flex 
-    justify-content: space-between 
-    align-items: center
+    +d-flex(space-between , center)
 
 .flex-wrap 
     display: flex 
     flex-wrap: wrap
 
 .flex-center-center 
-    display: flex 
-    justify-content: center
-    align-items: center
+    +d-flex(center, center)
+
+.flex-start-between
+    +d-flex(space-between, start)
 
 .d-block
     display: block
