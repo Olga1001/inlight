@@ -118,19 +118,21 @@ block content
 							span.line.line-right
 						.flex-center-between
 							div.fiveth-side 
-								.block-icon.bg-blue 
-									+icon("cms")
-								p.fs-48.fw-medium.text-up What
-									span.c-blue.d-block.fw-black we do
+								.d-sm-block.d-flex
+									.block-icon.bg-blue 
+										+icon("cms")
+									p.fs-48.fw-medium.text-up What
+										span.c-blue.d-block.fw-black we do
 								p.fs-16.fw-medium.c-gray Our skilled developers create highest quality software for IOS, Android and other cross-platforms performing experiences across a wide range of connected IoT.
-							.circle-work 
+							.circle-work.d-sm-block.d-none 
 								img(src="img/img.jpg", alt="img")
 							div.fiveth-side  
-								.block-icon.bg-green.ml-auto
-									+icon("how-work")
-								p.fs-48.fw-medium.text-up.text-right how
-									span.c-green.d-block.fw-black we work
-								p.fs-16.fw-medium.c-gray.text-right We provide full-service software design and development from the beginning or at the late stages.  We  assist our clients until their ideas  achieves high technology results.
+								.d-sm-block.d-flex
+									.block-icon.bg-green.ml-sm-auto
+										+icon("how-work")
+									p.fs-48.fw-medium.text-up.text-sm-right how
+										span.c-green.d-block.fw-black we work
+								p.fs-16.fw-medium.c-gray.text-sm-right We provide full-service software design and development from the beginning or at the late stages.  We  assist our clients until their ideas  achieves high technology results.
 									
 				.fiveth-bottom
 					.container 
@@ -142,7 +144,7 @@ block content
 										.card-we__color(class=cardWe.bgColor)
 											+icon(cardWe.svg) 
 									.justify-content-center
-										.circle_v2.mr-10(class=cardWe.bgColor) 
+										.circle_v2.mr-10.d-sm-block.d-none(class=cardWe.bgColor) 
 										p.fs-18.fw-medium.c-white-100=cardWe.text
 		section.sixth.section
 			.container
@@ -173,7 +175,7 @@ block content
 								.stages__info
 									p.fs-48.fw-bold.c-purple.text-up.relative design
 										span.line.line-right.line-purple
-										span.stages__amount.bg-purple 1
+										span.stages__amount.bg-purple 2
 									p.fs-24.c-gray.fw-medium Prototyping <br> Mind mapping <br> Clicable wireframes <br> Visual User Interfaces <br>Motion design
 								.stages__gif
 									img(src="img/gif.png", alt="gif")
