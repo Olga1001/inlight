@@ -7,12 +7,13 @@ header.header(class = dark ? 'dark' : '')
                     img.logo-name.wow.slideInLeftSmall(data-wow-duration="0.8s" data-wow-delay="1.5s" src="img/logo-name.svg", alt="logo")
             .align-items-center
                 nav.navtop 
-                    ul.menu
-                        each menu in [{val: 'home', color: 'bg-green', delay: '1.5s'}, {val: 'SHOWCASE', color: 'bg-blue', delay: '1.6s'}, {val: 'ABOUT', color: 'bg-purple', delay: '1.7s'}, {val: 'TEAM', color: 'bg-red', delay: '1.8s'}] 
-                            li.menu-item
-                                a.menu-link(href="#")
-                                    span.circle.wow.fadeIn(data-wow-duration="0.8s" data-wow-delay=menu.delay class=menu.color)
-                                    =menu.val
+                    .menu
+                        ul.d-sm-flex
+                            each menu in [{val: 'home', color: 'bg-green', delay: '1.5s'}, {val: 'SHOWCASE', color: 'bg-blue', delay: '1.6s'}, {val: 'ABOUT', color: 'bg-purple', delay: '1.7s'}, {val: 'TEAM', color: 'bg-red', delay: '1.8s'}] 
+                                li.menu-item
+                                    a.menu-link(href="#")
+                                        span.circle.wow.fadeIn(data-wow-duration="0.8s" data-wow-delay=menu.delay class=menu.color)
+                                        =menu.val
                         a.btn.wow.incline.d-sm-none.d-block(href="#" data-wow-duration="0.8s" data-wow-delay="1.8s") Contuct Us
                 a.btn.wow.incline.d-sm-block.d-none(href="#" data-wow-duration="0.8s" data-wow-delay="1.8s") Contuct Us
             button.burger.d-sm-none.d-block(type="button")

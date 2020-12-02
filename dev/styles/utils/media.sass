@@ -3,7 +3,17 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media (min-width: 769px)
+@media (min-width: 561px)
+    .d-smm-none
+        display: none!important
+    .flex-smm-center-between
+        +d-flex(space-between, center)
+    .d-smm-block
+        display: block!important
+    .flex-smm-center-center
+        +d-flex(center, center)
+    
+@media (min-width: 769px) and (min-height: 415px)
     .d-md-none 
         display: none!important
     .d-md-flex
@@ -11,7 +21,7 @@
     .align-items-md-center
         display: flex!important
         align-items: center!important
-@media (min-width: 569px)
+@media screen and (min-width: 569px) and (min-height: 415px)
     .d-sm-none
         display: none!important
     .d-sm-block 
@@ -27,7 +37,10 @@
         margin-left: auto!important
     .text-sm-right
         text-align: right!important
-
+    .flex-sm-center-center
+        +d-flex(center,center)
+    .text-sm-left
+        text-align: left
 @media (min-width: 1025px)
     body
         line-height: 1.09vw
@@ -175,8 +188,10 @@
     .max-460 
         max-width: 23.95vw
     .fourth .fs-24 
-        margin: 4.32vw 0 5.2vw
+        margin: 4.32vw 0 0
         max-width: 23vw
+    .mobile-tech 
+        margin-top: 6.5vw
     .mobile-tech .fs-36 
         margin-bottom: 1vw
     .mobile-tech .fs-18 
@@ -585,9 +600,6 @@
 
     //fourth
     .fourth 
-        .col-50
-            &:last-child
-                width: 54%
         .title_2
             padding-top: 9.5vw
         .fs-24 
@@ -622,7 +634,8 @@
         top: 1.5vw
     .max-460
         max-width: 42.4vw
-
+    .mobile-tech
+        margin-top: 7.61vw
     //fiveth 
     .fiveth-side
         max-width: 22.5vw
@@ -839,7 +852,7 @@
     .footer-bottom
         +d-flex(space-between, center)
     .footer-socials
-        max-width: 165px 
+        max-width: 16.1vw
         +d-flex(center)
     .footer-copyright 
         max-width: 60vw
@@ -866,8 +879,12 @@
         width: 1.36vw
         height: 1.36vw
         margin-right: 0.48vw
-
-@media (min-width: 569px) and (max-width: 768px)
+    .social 
+        margin: 2.1vw 0.48vw
+    .social svg 
+        width: 2.3vw
+        height: 2.3vw
+@media (min-width: 569px) and (max-width: 768px) and (min-height: 415px)
     body 
         font-size: 2.08vw
         line-height: 2.73vw
@@ -911,8 +928,6 @@
         width: calc(33.33% - 2.6vw)
         margin-right: 3.9vw
         border-radius: 1.95vw
-    .second .flex-center-center.h-100
-        align-items: start 
     .second__top 
         padding: 12.5vw 0 8vw
     .second__bottom .c-gray
@@ -987,12 +1002,19 @@
         font-size: 2.08vw
         line-height: 2.75vw
         max-width: 35.15vw
+    .mobile-tech
+        margin-top: 0
     .max-460
         max-width: 38.15vw
     .fourth .title_2 .line-left
         right: 38%
     .fourth .title_2
         padding: 4.29vw 0 0 0
+    .web-tech
+        .fs-36
+            font-size: 4.42vw
+            line-height: 5.85vw
+            margin-bottom: 5px
     .mobile-tech
         .fs-36
             font-size: 4.42vw
@@ -1039,7 +1061,7 @@
         margin: 0 0 7.9vw 0
     .web-tech .fs-18
         height: 24.7vw
-        margin: 6.25vw 0 2.2vw 0
+        margin: 4.25vw 0 2.2vw 0
         padding: 3.25vw 1.95vw 0 0 
         font-size: 2.08vw
         line-height: 2.75vw
@@ -1270,18 +1292,26 @@
         text-align: center
     .social
         margin: 2.86vw 5px 2vw
-
-@media (max-width: 568px)
+@media screen and (max-width: 568px), screen and (max-height: 414px)
+    .fs-12 
+        // font-size: 2.1vw
+        // line-height: 2.8vw
+        font-size: 12px 
+        line-height: 16px
     .container
-        padding: 0 5.28vw
+        // padding: 0 5.28vw
+        padding: 0 30px
     .line:before 
-        width: 2.1vw
-        height: 2.1vw
+        // width: 2.1vw
+        // height: 2.1vw
+        width: 12px
+        height: 12px
     .line 
-        height: 0.35vw
+        // height: 0.35vw
+        height: 2px
     .navtop 
         position: absolute 
-        right: 0 
+        left: 0 
         top: 0 
         z-index: 8
         width: 100% 
@@ -1300,8 +1330,10 @@
         display: block
         background: #0A1226
         margin-left: auto
-        padding: 13vw 7vw 7vw
+        // padding: 13vw 7vw 7vw
+        padding: 75px 40px 40px
         max-width: 46vw
+        // max-width: 262px
         height: 100%
         position: relative
         z-index: 2
@@ -1317,141 +1349,238 @@
             z-index: -1
             background: linear-gradient(184.47deg, #FFBE16 7.16%, #FB0010 29.24%, #9816FF 53.43%, #1C60F3 76.42%, #1FC74D 97.8%)
         .btn 
-            margin-top: 5.28vw
+            // margin-top: 5.28vw
+            margin-top: 45px
     .menu-link
         justify-content: start
         margin-bottom: 15px
         margin-left: 0
     .header
-        padding: 3.52vw 0
+        // padding: 3.52vw 0
+        padding: 20px 0
     .logo-icon 
-        margin-right: 2.8vw
-        height: 7.92vw
-        width: 7.92vw
+        // margin-right: 2.8vw
+        // height: 7.92vw
+        // width: 7.92vw
+        height: 45px 
+        width: 45px
+        margin-right: 15px
     .logo-name 
-        height: 3.34vw
+        // height: 3.34vw
+        height: 19px
     .title
-        font-size: 6.33vw
-        line-height: 8.45vw
+        // font-size: 6.33vw
+        // line-height: 8.45vw
+        font-size: 36px
+        line-height: 48px
     .first__left
-        padding: 0.88vw 0 2vw
+        // padding: 0.88vw 0 2vw
+        padding: 5px 0 12px
     .first__left, .first__right
-        margin-top: 12vw
+        // margin-top: 12vw
+        margin-top: 65px
     .btn 
-        border-radius: 7vw
-        font-size: 2.8vw
-        line-height: 7vw
-        padding: 0 2.6vw
-        min-width: 28.1vw
+        // border-radius: 7vw
+        // font-size: 2.8vw
+        // line-height: 7vw
+        // padding: 0 2.6vw
+        // min-width: 28.1vw
+        border-radius: 40px
+        font-size: 16px
+        line-height: 40px
+        padding: 0 20px
+        min-width: 160px
     .second__top
-        padding: 8vw 0 13.2vw
+        // padding: 8vw 0
+        padding: 45px 0
     .card-gadget 
-        width: calc(33.33% - 2.33vw)
-        margin-right: 3.5vw
-        border-radius: 2.6vw
-        padding: 0 2.7vw 2.4vw 2vw
-        min-height: 36.5vw
+        // width: calc(33.33% - 2.33vw)
+        // margin-right: 3.5vw
+        // border-radius: 2.6vw
+        // padding: 0 2.7vw 2.4vw 2vw
+        // min-height: 36.5vw
+        width: calc(33.33% - 14px)
+        margin-right: 20px
+        border-radius: 15px
+        padding: 0 17px 10px 17px
+        min-height: 211px
         .fs-36 
-            font-size: 3.5vw
-            line-height: 3.8vw
+            // font-size: 3.5vw
+            // line-height: 3.8vw
+            font-size: 20px
+            line-height: 16px
         .fs-24 
-            font-size: 2.46vw
-            line-height: 3vw
+            // font-size: 2.46vw
+            // line-height: 3vw
+            font-size: 14px
+            line-height: 19px
         .fs-14 
-            font-size: 1.76vw
-            line-height: 2.46vw
-            margin-top: 1vw
+            // font-size: 1.76vw
+            // line-height: 2.46vw
+            // margin-top: 1vw
+            font-size: 10px
+            line-height: 14px
+            margin-top: 5.5px
     .title_2 
-        font-size: 3.87vw
-        line-height: 5.1vw
-        padding: 0 7vw
-        min-width: 56vw
+        // font-size: 3.87vw
+        // line-height: 5.1vw
+        // padding: 0 7vw
+        // min-width: 56vw
+        font-size: 22px
+        line-height: 30px
+        padding: 0 40px
+        min-width: 270px
     .card-gadget__item 
-        margin: -3.7vw auto 1vw
-        height: 17.6vw
+        // margin: -3.7vw auto 1vw
+        // height: 17.6vw
+        // width: 23.1vw
+        margin: -17px auto 5.5px
+        height: 99px
+        width: 132px
+    .second__bottom
+        padding-bottom: 20px
     .second__bottom .c-gray
-        font-size: 2.11vw
-        line-height: 2.81vw
-        margin: 1.76vw auto 8vw
-        max-width: 68.6vw
+        // font-size: 2.11vw
+        // line-height: 2.81vw
+        // margin: 1.76vw auto 8vw
+        // max-width: 68.6vw
+        font-size: 12px
+        line-height: 16px
+        margin: 10px auto 45px
+        max-width: 391px
     .ic 
-        width: 17vw
-        height: 17vw
-        margin: 0 0.5vw
-        padding-top: 3.1vw
+        // width: 17vw
+        // height: 17vw
+        // margin: 0 0.5vw
+        // padding-top: 3.1vw
+        width: 96px
+        height: 96px
+        margin: 0 2.7px
+        padding-top: 17px
         img
-            height: 8.45vw
-            margin-bottom: 2vw
+            // height: 8.45vw
+            // margin-bottom: 2vw
+            height: 48px
+            margin-bottom: 11px
         p 
-            font-size: 2.11vw
-            line-height: 2.8vw
+            // font-size: 2.11vw
+            // line-height: 2.8vw
+            font-size: 12px
+            line-height: 16px
     .card 
-        width: 38vw
-        padding: 3.5vw 3.5vw
-        border-radius: 2.6vw
-        margin-top: 1.76vw
+        // width: 38vw
+        // padding: 3.5vw
+        // border-radius: 2.6vw
+        // margin-top: 1.76vw
+        width: 216px
+        padding: 20px
+        border-radius: 15px
+        margin-top: 10px
+        min-height: auto
         .fs-48 
-            font-size: 4.22vw
-            line-height: 5.6vw
-            margin-bottom: 1.7vw
+            // font-size: 4.22vw
+            // line-height: 5.6vw
+            // margin-bottom: 1.7vw
+            font-size: 24px
+            line-height: 32px
+            margin-bottom: 12px
         .fs-24 
-            font-size: 2.81vw
-            line-height: 3.87vw
+            // font-size: 2.81vw
+            // line-height: 3.87vw
+            font-size: 16px
+            line-height: 22px
         .fs-20
-            font-size: 2.46vw
-            line-height: 2.81vw
-            margin-bottom: 1.7vw
+            // font-size: 2.46vw
+            // line-height: 2.81vw
+            font-size: 14px
+            line-height: 16px
+            margin-bottom: 12px
     .btn-send
-        border-radius: 7vw
-        font-size: 2.1vw
-        line-height: 7vw
-        padding: 0 1.76vw
+        // border-radius: 7vw
+        // font-size: 2.1vw
+        // line-height: 7vw
+        // padding: 0 1.76vw
+        border-radius: 40px
+        font-size: 12px
+        line-height: 40px
+        padding: 0 12px
     .btn-send svg 
-        right: 1.76vw
-        width: 2.46vw
-        height: 2.46vw
+        // right: 1.76vw
+        // width: 2.46vw
+        // height: 2.46vw
+        right: 12px
+        width: 14px
+        height: 14px
     .img-rocket 
         position: absolute
         width: 100%
-        height: 22vw
+        // height: 20vw
+        height: 105px
         margin-top: 0
         flex-shrink: 0
         left: 50%
         transform: translateX(-50%)
-        top: 23%
+        top: 36%
     .title_3 
-        font-size: 3.52vw
-        line-height: 10.5vw
+        // font-size: 3.52vw
+        // line-height: 10.5vw
+        font-size: 20px
+        line-height: 60px
+    
+    .third 
+        .h-100.flex-center-center
+            align-items: center
     .cloud-1
-        height: 17.8vw
+        // height: 15.14vw
+        height: 86px
     .cloud-2 
-        height: 15.5vw
+        // height: 12.85vw
+        height: 73px
+    .mobile-tech
+        margin-top: 0
     .fourth 
+        // padding: 3vw 0
+        padding: 25px 0
         .fs-24 
-            font-size: 2.11vw
-            line-height: 2.81vw
-            margin: 8vw 0
-            max-width: 42.6vw
+            // font-size: 2.11vw
+            // line-height: 2.81vw
+            // margin: 8vw 0 7.4vw
+            // max-width: 42.6vw
+            font-size: 12px
+            line-height: 16px
+            margin: 46px 0 42px
+            max-width: 242px
         .fs-36 
-            margin-bottom: 3.52vw
-            font-size: 3.52vw
-            line-height: 4.57vw
+            // margin-bottom: 3.52vw
+            // font-size: 3.52vw
+            // line-height: 4.57vw
+            margin-bottom: 20px
+            font-size: 20px
+            line-height: 27px
             text-align: center
-    .img-web 
-        margin: 0 0 3.9vw 0
-        max-width: 42.6vw
     .mobile-tech__row
         +d-flex(flex-end,center)
-        margin: 2vw 5vw 0 0
+        // margin: 2vw 5vw 0 0
+        margin: 12px 29px 0 0
+    .mobile-tech .fs-18 
+        margin-right: 24px
+        margin-left: -24px
+    .mobile-tech .fs-18 .line
+        writing-mode: horizontal-tb
     .mobile-tech .fs-18 
         width: 100% 
         text-align: left 
-        font-size: 1.76vw 
-        line-height: 2.28vw
-        padding: 0 5.28vw
+        // font-size: 1.76vw 
+        // line-height: 2.28vw
+        // padding: 0 5.28vw
+        font-size: 10px
+        line-height: 13px
+        padding: 0 30px
     .block-ic 
-        width: 10.56vw
-        height: 10.56vw
+        // width: 10.56vw
+        // height: 10.56vw
+        width: 60px
+        height: 60px
     .web-tech .fs-36 
         position: static
         transform: none
@@ -1462,55 +1591,81 @@
         transform: none
         writing-mode: horizontal-tb
         margin: 0
-        padding: 0 3.52vw
+        // padding: 0 3.52vw
+        padding: 0 30px
         height: auto
-        font-size: 1.76vw
-        line-height: 2.28vw
+        // font-size: 1.76vw
+        // line-height: 2.28vw
+        font-size: 10px
+        line-height: 13px
     .web-tech .line
         width: 100%
         top: auto
-        bottom: -1vw
+        // bottom: -1vw
+        bottom: -5.6px
         left: 0
         transform: none
         &-left:before
             left: 0 
             right: auto
     .web-tech__ices
-        margin: 2vw 0 0
+        // margin: 2vw 0 0
+        margin: 12px 0 0
     .block-icon 
-        width: 10.56vw
-        height: 10.56vw
+        // width: 10.56vw
+        // height: 10.56vw
         margin-bottom: 0
-        margin: 0 1.4vw 0 0
+        // margin: 0 1.4vw 0 0
+        width: 60px
+        height: 60px
+        margin: 0 7.5px 0 0
     .block-icon svg 
-        width: 5.1vw
+        // width: 5.1vw
+        width: 29px
     .fiveth
         .fs-48 
-            font-size: 5.63vw
-            line-height: 5.63vw
+            // font-size: 5.63vw
+            // line-height: 5.63vw
+            font-size: 32px
+            line-height: 32px
     .fiveth-side .fs-16
-        font-size: 2.11vw
-        line-height: 2.81vw
-        margin-top: 5.28vw
+        // font-size: 2.11vw
+        // line-height: 2.81vw
+        // margin-top: 5.28vw
+        font-size: 12px
+        line-height: 16px
+        margin-top: 30px
     .fiveth-side 
-        max-width: 42.25vw
-        margin-top: 7vw
+        // max-width: 42.25vw
+        // margin-top: 7vw
+        max-width: 240px
+        margin-top: 40px
+    .fiveth-top, .fiveth-bottom
+        padding: 35px 0
     .card-we
         width: 50%
         +d-flex(center)
         .fs-18
-            font-size: 2.1vw
-            line-height: 2.81vw
+            // font-size: 2.1vw
+            // line-height: 2.81vw
+            font-size: 12px
+            line-height: 16px
     .card-we__head
-        height: 22.18vw
+        // height: 22.18vw
+        height: 126px
     .card-we__circle 
-        width: 22vw
-        height: 22vw
+        // width: 22vw
+        // height: 22vw
+        width: 126px
+        height: 126px
     .card-we__color 
-        width: 14vw
-        height: 14vw
+        // width: 14vw
+        // height: 14vw
+        width: 80px
+        height: 80px
     .card-we__color svg 
-        width: 7vw
+        // width: 7vw
+        width: 40px
     .fiveth-top
         min-height: 50vh
     .fiveth-bottom
@@ -1518,57 +1673,502 @@
         +d-flex(center)
         min-height: 50vh
     .title_4 
-        font-size: 4.22vw
-        line-height: 5.63vw
-        max-width: 67.95vw
-        padding: 3vw
+        // font-size: 4.22vw
+        // line-height: 5.63vw
+        // max-width: 67.95vw
+        // padding: 3vw
+        font-size: 24px
+        line-height: 32px
+        max-width: 386px
+        padding: 17px
         &:before
-            width: 72.75vw
-            height: 20.38vw
+            // width: 72.75vw
+            // height: 20.38vw
+            width: 413px
+            height: 116px
     .sixth .line-left
-        right: calc(100% + 2.3vw)
+        // right: calc(100% + 2.3vw)
+        right: calc(100% + 12px)
     .sixth .line-right 
-        left: calc(100% + 2vw)
+        // left: calc(100% + 2vw)
+        left: calc(100% + 12px)
     .sixth 
         .line:before
-            width: 1.23vw 
-            height: 1.23vw
+            // width: 1.23vw 
+            // height: 1.23vw
+            width: 7px
+            height: 7px
     .sixth .container 
-        padding: 16.72vw 0 20vw
+        // padding: 16.72vw 0 20vw
+        padding: 94px 0 60px
     .stages__gif
-        width: 42.25vw 
-        height: 42.25vw 
+        // width: 42.25vw 
+        // height: 42.25vw 
+        width: 240px
+        height: 240px
     .stages__amount 
-        right: calc(100% + 2.8vw)
-        width: 7.3vw
-        height: 7.3vw
-        font-size: 4.2vw
-        line-height: 7.3vw
+        // right: calc(100% + 2.8vw)
+        // width: 7.3vw
+        // height: 7.3vw
+        // font-size: 4.2vw
+        // line-height: 7.3vw
+        right: calc(100% + 16px)
+        width: 42px
+        height: 42px
+        font-size: 24px
+        line-height: 42px
     .stages__info 
-        padding-left: 10.1vw
+        // padding-left: 10.1vw
+        padding-left: 58px
     .stages 
         overflow-x: hidden
-        padding: 0 5.28vw
+        // padding: 0 5.28vw
+        padding: 0 30px
         .fs-48 
-            margin-bottom: 6.5vw
-            font-size: 4.2vw
-            line-height: 5.6vw
+            // margin-bottom: 6.5vw
+            // font-size: 4.2vw
+            // line-height: 5.6vw
+            margin-bottom: 37px
+            font-size: 24px
+            line-height: 32px
         .fs-24
-            font-size: 2.11vw
-            line-height: 2.81vw
+            // font-size: 2.11vw
+            // line-height: 2.81vw
+            font-size: 12px
+            line-height: 16px
     .stages-right
         flex-direction: row-reverse
     .slick-dots li 
-        amrgin: 0 0.88vw
+        margin: 0 6px
         button
-            width: 1.4vw
-            height: 1.4vw
+            // width: 1.4vw
+            // height: 1.4vw
+            width: 8px
+            height: 8px
     .case 
-        width: calc(33.33% - 1.13vw)
-        height: 28.69vw
-        border-radius: 8vw
-        margin: 0 1.7vw 1.7vw 0
+        // width: calc(33.33% - 1.13vw)
+        // height: 28.69vw
+        // border-radius: 8vw
+        // margin: 0 1.7vw 1.7vw 0
+        width: calc(33.33% - 7px)
+        height: 163px
+        border-radius: 50px
+        margin: 0 10px 10px 0
     .cases
-        margin: 10.5vw auto 5vw
-@media (max-width: 360px)
-    // 
+        // margin: 10.5vw auto 5vw
+        margin: 50px auto 30px
+    .slider-item 
+        // border-radius: 1.76vw
+        // padding: 1.76vw
+        // width: 28.1vw !important
+        transform: scale(0.73)
+        // margin-top: 5.28vw
+        // min-height: 26.2vw!important
+        border-radius: 10px
+        padding: 10px
+        width: 160px!important
+        margin-top: 30px
+        min-height: 150px!important
+        .fs-20
+            // font-size: 2.1vw
+            // line-height: 2.81vw
+            font-size: 12px
+            line-height: 16px
+        .fs-16 
+            // font-size: 1.4vw
+            // line-height: 1.93vw
+            font-size: 8px
+            line-height: 11px
+        .fs-14 
+            // margin-top: 2.3vw
+            // font-size: 1.4vw
+            // line-height: 1.93vw
+            margin-top: 13px
+            font-size: 8px
+            line-height: 11px
+    .avatar 
+        // border-width: 1.05vw
+        // width: 11.61vw
+        // height: 11.61vw
+        border-width: 6px
+        width: 65px
+        height: 65px
+    .slider-item svg
+        // width: 2.6vw
+        // height: 2.6vw
+        width: 15px
+        height: 15px
+    .slider .slick-active + .slick-active, .slider .slick-active + .slick-active + .slick-active + .slick-active 
+        // margin-top: 2.6vw
+        // min-height: 19vw!important
+        margin-top: 0
+        min-height: 107px!important
+    .slider .slick-active, .slider .slick-active + .slick-active + .slick-active + .slick-active + .slick-active 
+        // margin-top: 4.6vw
+        // min-height: 19vw!important
+        margin-top: 23px
+        min-height: 107px!important
+    .slider .slick-active + .slick-active + .slick-active 
+        // min-height: 26.2vw!important
+        margin-top: 0
+        min-height: 150px!important
+    .slider 
+        // padding: 5.6vw 5.28vw
+        margin: 0 auto
+        // min-height: 28.5vw
+        padding: 30px 0
+        min-height: 183px
+    .eight-top, .eight-bottom
+        // min-height: auto
+        +d-flex(center)
+    .slider-item:before
+        // left: 2.28vw
+        // top: calc(100% - 2.46vw)
+        // border-width: 3.87vw 1.76vw 0 1.76vw
+        left: 14px
+        top: calc(100% - 13px)
+        border-width: 22px 10px 0 10px
+    .slider-img 
+        // height: 13.7vw!important
+        height: 78px!important
+        margin: 0
+    .slider-client 
+        // padding: 0 2.6vw
+        // margin: 5vw auto 3.5vw
+        padding: 0 30px
+        margin: 29px auto 20px
+    .ninth .col-50 
+        width: 100%
+        margin: 0
+        min-height: 40vh
+    .about-item 
+        background-color: transparent
+        padding: 0
+        // margin: 1.7vw 0 0
+        margin: 10px 0 0 0
+    .about-title 
+        // font-size: 4.22vw
+        // line-height: 5.63vw
+        // margin-bottom: 1.7vw
+        font-size: 24px
+        line-height: 32px
+        margin-bottom: 10px
+    .about-text 
+        // font-size: 2.11vw
+        // line-height: 2.8vw
+        // margin-bottom: 4vw
+        font-size: 12px
+        line-height: 16px
+        margin-bottom: 22px
+    .third .container
+        margin-bottom: 22px
+        padding-bottom: 22px
+        padding-top: 22px
+    .img-web
+        max-width: 100%
+        margin: 0 0 9px 0
+        height: 225px
+    // .fourth .fs-24
+    //     margin-bottom: 0
+    .fourth .title_2 .line-left
+        right: 25%
+    .fourth .title_2
+        padding: 20px 0 0 0
+    .mobile-tech .fs-36, .web-tech .fs-36
+        // font-size: 3.52vw
+        // line-height: 4.75vw
+        // margin-bottom: 3.5vw
+        font-size: 20px
+        line-height: 27px
+        margin-bottom: 20px
+        margin-top: 40px
+    .fourth-two 
+        // padding: 3.5vw 0
+        padding: 20px 0
+    .mobile-tech .fs-18 .line
+        bottom: -5.6px
+    .fiveth-top, .fiveth-bottom
+        // min-height: 100vh
+    .sixth .title_4
+        // margin-bottom: 7vw
+        margin-bottom: 40px
+    .sixth 
+        // +d-flex(center)
+        // .container
+        //     padding: 0 5.28vw
+    .stages
+        min-height: auto
+        // margin-bottom: 2.2vw
+        margin-bottom: 13px
+    .sixth-two, .eight, .ninth
+        // padding: 4vw 0
+        padding: 23px 0
+    .seventh 
+        // padding: 3vw 0
+        padding: 17px 0
+    .eight-two
+        background-color: #fff
+    .ninth-two
+        background: linear-gradient(rgba(#0A1226,0.8)), url("../img/photo.png") no-repeat center / cover
+    .ninth-two, .ninth-tree
+        &:before 
+            content: ''
+            position: absolute 
+            left: 0
+            bottom: 0
+            width: 100% 
+            height: 80vh 
+            background: linear-gradient(180deg, rgba(10, 18, 38, 0) 50%, #0A1226 83.85%)
+            pointer-events: none 
+            z-index: -1
+    .ninth-tree
+        +d-flex(center)
+    .ninth-tree .col-50
+        max-width: 42.2vw
+    .about-action
+        // padding: 7vw 4.4vw 5.28vw
+        padding: 40px 25px 30px
+        .btn-send
+            // font-size: 2.46vw
+            // line-height: 8vw
+            font-size: 14px
+            line-height: 45px
+    .about-action .fs-32 
+        // margin-bottom: 3.52vw
+        // font-size: 3.52vw
+        // line-height: 4.75vw
+        margin-bottom: 20px
+        font-size: 20px
+        line-height: 26px
+    .about-action .fs-24 
+        // margin-bottom: 4.4vw
+        // font-size: 2.46vw
+        // line-height: 3.3vw
+        margin-bottom: 25px
+        font-size: 14px
+        line-height: 19px
+    .second-two
+        +d-flex(center)
+    .team 
+        // max-width: 37.6vw
+        // margin: 6.3vw auto 2.6vw
+        max-width: 214px
+        margin: 50px auto 15px
+        .fs-24 
+            // font-size: 2.8vw
+            // line-height: 2.8vw
+            font-size: 16px
+            line-height: 16px
+    .tenth .title_2
+        // margin-top: 6vw
+        margin-top: 34px
+    .team-head 
+        // margin-bottom: 1.7vw
+        margin-bottom: 10px
+    .team-border 
+        // border-radius: 3.52vw
+        // padding: 0.9vw
+        // height: 27.46vw
+        border-radius: 20px
+        padding: 5.1px
+        height: 142px
+    .team-img
+        // bottom: 1.2vw
+        // height: 32.5vw
+        // width: 44.3vw
+        bottom: 7px
+        height: 185px
+        width: 252px
+    .footer__left
+        width: 100%
+    .footer-img 
+        // margin: 0 auto 1.5vw
+        // width: 15.3vw
+        // height: 19.2vw
+        margin: 0 auto 8.5px
+        width: 87px
+        height: 109px
+    .footer
+        // padding: 7.5vw 0 2vw 0 
+        padding: 42px 0 12px 0 
+        .fs-14
+            // font-size: 2.11vw
+            // line-height: 2.81vw
+            font-size: 12px
+            line-height: 16px
+    .footer__left p
+        margin-bottom: 0
+    .menu-main 
+        // font-size: 2.46vw
+        // line-height: 3.3vw
+        // margin-bottom: 2.6vw
+        font-size: 14px
+        line-height: 19px
+        margin-bottom: 15px
+    .menu-footer-link, .menu-footer-item 
+        // font-size: 2.1vw
+        // line-height: 2.8vw
+        font-size: 12px
+        line-height: 16px
+    .menu-footer-item 
+        margin-bottom: 15px
+        padding-left: 23px
+    .mr-10 
+        // margin-right: 1.76vw
+        margin-right: 10px
+    .circle 
+        // width: 2.1vw
+        // height: 2.1vw
+        width: 12px
+        height: 12px
+    .social 
+        // margin: 2.6vw 0.9vw
+        margin: 15px 5px
+    .social svg 
+        // width: 4.22vw
+        // height: 4.22vw
+        width: 24px
+        height: 24px
+    .navfooter
+        max-width: 100%
+        // padding-top: 4vw
+        padding-top: 23px
+    .icon-copyright 
+        // width: 2.4vw
+        // height: 2.4vw
+        // margin-right: 0.9vw
+        width: 14px
+        height: 14px
+        margin-right: 5px
+@media (max-height: 414px)  and (orientation: landscape)
+    .second
+        .flex-center-center
+            align-items: start
+    .fourth, .ninth , .seventh  
+        .flex-center-center.h-100
+            align-items: start
+@media (max-width: 560px)
+    .first .container 
+        padding: 0 20px
+    .menu
+        max-width: 240px
+        +d-flex(space-between, start)
+        flex-direction: column
+    .second__top
+        display: block
+        padding: 0 10px
+    .second .container
+        display: flex
+        flex-direction: column-reverse
+        padding: 0 20px
+    .second__bottom
+        padding: 50px 0
+    .title_2
+        font-size: 20px
+        line-height: 22px
+        min-width: 190px
+    .second__bottom .c-gray
+        margin: 20px 0
+    .ic
+        width: 57px 
+        height: 57px
+        padding-top: 7px
+        margin: 0
+    .ic img
+        height: 27px
+    .ic p
+        font-size: 8px
+        line-height: 11px
+    .card-gadget
+        width: 100%
+        margin: 43px 0 0 0
+        padding: 20px 40px
+    .card-gadget__item 
+        margin: -50px auto 10.5px
+        height: 135px
+        width: 179px
+    .title_3
+        line-height: 20px
+    .third
+        .title_3
+            padding-bottom: 20px
+    .card
+        margin: 22px auto
+    .fourth .col-50
+        width: 100%
+    .mobile-tech__row-lg
+        +d-flex(center)
+        .mobile-tech__item
+            width: 33.33%
+            padding: 0 10px
+    .mobile-tech__row
+        display: block
+        width: 100%
+    .mobile-tech .fs-18 .line
+        width: 100%
+        right: 0
+        &:before 
+            width: 8px
+            height: 8px
+
+        &:after 
+            content: ''
+            width: 8px
+            height: 8px
+            position: absolute
+            top: 50%
+            right: 100%
+            transform: translateY(-50%)
+            border-radius: 50%
+    .mobile-tech .fs-18
+        margin: 0 
+        padding: 0
+        text-align: center
+    .block-ic
+        margin: 0 auto
+    .mobile-tech .fs-18
+        min-height: 26px
+        +d-flex(center, flex-end)
+    .fourth .col-50
+        margin-top: 0
+    .web-tech .fs-18
+        text-align: center
+    .web-tech .line:after 
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 0
+        border-radius: 50%
+        width: 8px
+        height: 8px
+    .web-tech .line-left:before
+        width: 8px
+        height: 8px
+    .web-tech__ices
+        margin: 12px 0 20px
+    .card-we
+        width: 100%
+    .card-we__head
+        width: 126px
+        flex-shrink: 0
+        margin-right: 15px
+    .title_4 
+        font-size: 20px
+        line-height: 27px
+        max-width: 261px
+        padding: 5px
+    .title_4:before 
+        width: 280px
+        height: 80px
+    .stages__gif
+        margin: 10px auto
+    .case
+        height: 25.52vw
+        width: calc(33.33% - 5px)
+        margin: 0 7px 7px 0
+        border-radius: 30px
+    .eight .title_2
+        font-size: 22px
+        line-height: 30px
+    

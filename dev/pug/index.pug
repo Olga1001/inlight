@@ -7,7 +7,7 @@ block variables
 
 block content
 	#fullpage.fullpage
-		section.first.section.active
+		section.first.section
 			.flex-center-center.h-100
 				include modules/header/header
 				.container
@@ -26,7 +26,7 @@ block content
 						.first__right 
 							.gif-phone
 		section.second.section
-			.relative.flex-center-center.h-100
+			.relative.flex-sm-center-center.h-100
 				.container
 					.second__top
 						.canvas-dots-gray.absolute-dots
@@ -40,7 +40,7 @@ block content
 									p.fs-24=card.span
 									p.fs-14=card.text
 					.second__bottom
-						h2.title_2.wow.zoomOut(data-wow-duration="1s" data-wow-delay="0.5s") The World  has gone mobile
+						h2.title_2.wow.zoomOut(data-wow-duration="1s" data-wow-delay="0.5s") The World <br class="d-sm-none"> has gone mobile
 							span.line.line-left.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0.5s")
 							span.line.line-right.wow.slideInRight(data-wow-duration="1s" data-wow-delay="0.5s")
 						p.c-gray.text-center.wow.slideInUpSmallOpacity(data-wow-duration="1s" data-wow-delay="0.5s") Mobile Apps became a indispensable tool for daily interactions between business and users. Digital technologies have advanced more rapidly than any innovation in our history. Every day the numerous of new services and IoT appear to make our life more usable, fast, mobile and gainful.
@@ -52,8 +52,8 @@ block content
 		section.third.section
 			.relative.w-100.h-100.flex-center-center
 				.container
-					h2.title_3 Need a fast <br class="d-lg-none d-sm-block d-none"> Time-to-market ?
-					.flex-center-between
+					h2.title_3 Need a fast <br class="d-lg-none d-sm-block d-smm-none d-block"> Time-to-market ?
+					.flex-smm-center-between
 						.card.wow.slideInLeft(data-wow-duration="1s" data-wow-delay="0.5s")
 							div
 								p.fs-48.fw-bold.c-blue Prototype
@@ -62,7 +62,7 @@ block content
 							a.btn-send.gradient__purple-blue(href="#")
 								|Send A request
 								+icon("send", "c-white")
-						.img-rocket
+						.img-rocket.d-smm-block.d-none
 							img.wow.slideInDownSmall(data-wow-duration="1s" data-wow-delay="0.5s" src="img/fxemoji_rocket.png", alt="rocket")
 						.card.wow.slideInRight(data-wow-duration="1s" data-wow-delay="0.5s")
 							div
@@ -72,24 +72,30 @@ block content
 							a.btn-send.gradient__orange-yellow(href="#")
 								|Send A request
 								+icon("send", "c-white")
-				img.bg-circle.wow.findIn(src="img/circle.svg", alt="circle" data-wow-duration="1s" data-wow-delay="0.5s")
-				img.cloud.cloud-1(src="img/cloud.png", alt="cloud")
-				img.cloud.cloud-2(src="img/cloud-1.png", alt="cloud")
+				img.d-smm-block.d-none.bg-circle.wow.findIn(src="img/circle.svg", alt="circle" data-wow-duration="1s" data-wow-delay="0.5s")
+				img.d-smm-block.d-none.cloud.cloud-1(src="img/cloud.png", alt="cloud")
+				img.d-smm-block.d-none.cloud.cloud-2(src="img/cloud-1.png", alt="cloud")
 		section.fourth.section
-			.flex-center-center.h-100
+			.flex-smm-center-center.h-100
 				.container
-					.flex-sm-center-between.flex-start-between
+					.flex-sm-center-between.flex-start-between.flex-wrap
 						.col-50.justify-content-end
 							div.max-460
 								h2.title_2.c-white Technologies
 									span.line.line-left.line-white
 								p.fs-24.c-white We use the most up-to-date technologies in existence to deliver the best solutions to carry out complex projects. Basing on client needs and business goals we will line up the best technology stack to ensure smoothly run on any device and platform.
+								
+						.col-50
+							.web-tech
+								img.img-web(src="img/im_technologies.svg", alt="technologies")
+						.col-50.justify-content-end
+							div.max-460
 								div.mobile-tech
 									p.fs-36.fw-bold.c-white.text-up Mobile
 									.mobile-tech__row-lg
 										each mobTech in [{name: 'IOS', src1: 'img/ic/ic_swift.svg', src2: 'img/ic/ic_objectiveC.svg', lineColor: 'line-blue'}, {name: 'ANDROID', src1: 'img/ic/ic_java.svg', src2: 'img/ic/ic_Kotlin.svg', lineColor: 'line-green'}, {name: 'CROSS PLATFORM', src1: 'img/ic/ic_reactnative.svg', src2: 'img/ic/ic_flutter.svg', lineColor: 'line-yellow'}] 
 											
-											.align-items-md-center
+											.align-items-md-center.mobile-tech__item
 												p.fs-18.fw-medium.c-white.text-right.relative=mobTech.name
 													span.line.line-left(class=mobTech.lineColor)
 												.mobile-tech__row.align-items-md-center
@@ -97,7 +103,6 @@ block content
 													img.block-ic(src=mobTech.src2, alt="icon")
 						.col-50
 							.web-tech
-								img.img-web(src="img/im_technologies.svg", alt="technologies")
 								.relative 
 									p.fs-36.fw-bold.c-white.text-up WEB
 									.d-sm-flex
@@ -116,7 +121,7 @@ block content
 						h2.title_2 Why We
 							span.line.line-left
 							span.line.line-right
-						.flex-center-between
+						.flex-smm-center-between
 							div.fiveth-side 
 								.d-sm-block.d-flex
 									.block-icon.bg-blue 
@@ -162,7 +167,7 @@ block content
 							img(src="img/gif.png", alt="gif")
 					.slider-stages.d-md-none
 						div
-							.stages.flex-center-between.relative.stages-left
+							.stages.flex-smm-center-between.relative.stages-left
 								.stages__info
 									p.fs-48.fw-bold.c-blue.text-up.relative inception
 										span.line.line-left.line-blue
@@ -171,7 +176,7 @@ block content
 								.stages__gif
 									img(src="img/gif.png", alt="gif")
 						div
-							.stages.flex-center-between.relative.stages-right
+							.stages.flex-smm-center-between.relative.stages-right
 								.stages__info
 									p.fs-48.fw-bold.c-purple.text-up.relative design
 										span.line.line-right.line-purple
@@ -180,7 +185,7 @@ block content
 								.stages__gif
 									img(src="img/gif.png", alt="gif")
 						div
-							.stages.flex-center-between.relative.stages-left
+							.stages.flex-smm-center-between.relative.stages-left
 								.stages__info
 									p.fs-48.fw-bold.c-red.text-up.relative development
 										span.line.line-left.line-red
@@ -189,7 +194,7 @@ block content
 								.stages__gif
 									img(src="img/gif.png", alt="gif")
 						div
-							.stages.flex-center-between.relative.stages-right
+							.stages.flex-smm-center-between.relative.stages-right
 								.stages__info
 									p.fs-48.fw-bold.c-orange.text-up.relative deployment
 										span.line.line-right.line-orange
@@ -199,7 +204,7 @@ block content
 								.stages__gif
 									img(src="img/gif.png", alt="gif")
 						div
-							.stages.flex-center-between.relative.stages-left
+							.stages.flex-smm-center-between.relative.stages-left
 								.stages__info
 									p.fs-48.fw-bold.c-green.text-up.relative Maintenance
 										span.line.line-left.line-green
@@ -266,8 +271,8 @@ block content
 							img.case-img(src="img/case.png", alt="case") 
 						a.case.gradient-8(href="#")
 							img.case-img(src="img/case.png", alt="case") 
-		section.eight.section
-			.flex-center-center.h-100
+		section.eight.section.active
+			.flex-sm-center-center.h-100
 				.container 
 					.eight-top
 						div 
@@ -295,7 +300,7 @@ block content
 									.slider-img
 										img(src=clients.src, alt=clients.alt)
 		section.ninth.section
-			.flex-center-center.h-100
+			.flex-sm-center-center.h-100
 				.container
 					h2.title_2.c-white About Us
 						span.line.line-left.line-white 
