@@ -21,6 +21,8 @@
     .align-items-md-center
         display: flex!important
         align-items: center!important
+    .text-md-left
+        text-align: left!important
 @media screen and (min-width: 569px) and (min-height: 415px)
     .d-sm-none
         display: none!important
@@ -40,8 +42,10 @@
     .flex-sm-center-center
         +d-flex(center,center)
     .text-sm-left
-        text-align: left
+        text-align: left!important
 @media (min-width: 1025px)
+    .text-lg-center 
+        text-align: center!important
     body
         line-height: 1.09vw
         font-size: 0.83vw
@@ -1639,7 +1643,7 @@
         // max-width: 42.25vw
         // margin-top: 7vw
         max-width: 240px
-        margin-top: 40px
+        margin: 40px auto 0 
     .fiveth-top, .fiveth-bottom
         padding: 35px 0
     .card-we
@@ -1901,9 +1905,10 @@
         // margin-bottom: 2.2vw
         margin-bottom: 13px
     .sixth-two, .eight, .ninth
-        // padding: 4vw 0
-        padding: 23px 0
-    .seventh 
+        .h-100
+            // padding: 4vw 0
+            padding: 23px 0
+    .seventh .h-100 
         // padding: 3vw 0
         padding: 17px 0
     .eight-two
@@ -2040,6 +2045,9 @@
         width: 14px
         height: 14px
         margin-right: 5px
+    .h-100
+        height: auto
+        min-height: 100vh
 @media (max-height: 414px)  and (orientation: landscape)
     .second
         .flex-center-center
@@ -2048,6 +2056,9 @@
         .flex-center-center.h-100
             align-items: start
 @media (max-width: 560px)
+    .section
+        min-height: 100vh
+        height: 100%
     .first .container 
         padding: 0 20px
     .menu
@@ -2056,7 +2067,7 @@
         flex-direction: column
     .second__top
         display: block
-        padding: 0 10px
+        padding: 0 10px 60px
     .second .container
         display: flex
         flex-direction: column-reverse
@@ -2154,10 +2165,10 @@
         flex-shrink: 0
         margin-right: 15px
     .title_4 
-        font-size: 20px
-        line-height: 27px
+        font-size: 18px
+        line-height: 24px
         max-width: 261px
-        padding: 5px
+        padding: 8px
     .title_4:before 
         width: 280px
         height: 80px
@@ -2171,4 +2182,67 @@
     .eight .title_2
         font-size: 22px
         line-height: 30px
-    
+    .sixth .container
+        padding: 44px 0
+    .sixth .line:before 
+        width: 5px
+        height: 5px
+    .sixth .line-right 
+        left: calc(100% + 9px)
+    .sixth .line-left 
+        right: calc(100% + 9px)
+    .swipe-read
+        display: flex
+        flex-wrap: nowrap
+        margin-top: 15px
+        position: relative
+        overflow-x: auto
+        min-height: calc(100vh - 100px)
+        margin-right: -30px
+        width: calc(100% + 30px)
+        padding-right: 10px
+        .col-50 
+            width: 260px
+            flex-shrink: 0
+            position: absolute 
+            left: 270px
+            top: 0
+            overflow: hidden
+            margin-right: 10px
+            &:first-child
+                left: 0
+    .about-action
+        padding: 20px 30px
+    .about-action .fs-32
+        margin-bottom: 5px
+    .about-action .fs-24 
+        margin-bottom: 17px
+    .tenth .teams 
+        padding-bottom: 15px
+        .col-50 
+            width: 100%
+    .team 
+        margin: 65px auto 0
+    .footer
+        padding: 30px 0 60px
+    .footer-img
+        margin: 0 auto
+    .menu-footer
+        width: 100%
+    .menu-main
+        justify-content: center
+        margin-bottom: 7px
+    .menu-footer
+        margin-bottom: 20px
+    .navfooter
+        padding: 5px 0 0 0
+    .menu-footer-item
+        padding: 0 
+        text-align: center
+        margin-bottom: 0
+    .social
+        margin-top: 0
+    .max-460
+        max-width: 100%
+    .eight-top
+        min-height: 50vh
