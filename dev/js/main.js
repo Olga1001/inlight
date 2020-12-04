@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  //sliders
   let option = {
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -89,55 +91,36 @@ $(document).ready(function () {
     });
   }
 
-  function checkReading () {
-    if (checkReading.read) {
-      return; 
-    }
-    checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-    document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-    checkReading.noticeBox.innerHTML = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
-  }
-
   // scroll on mousewhele
-  $(".section").on("mousewheel", function(event) {
-    let _this = $(this);
-    
-    _this.onscroll = checkReading;
-    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0 ) {
-      _this.removeClass('active');
-      console.log("up");
-    } else {
-      _this.next().addClass('active');
-      console.log("down");
-    }
-    
-  }); 
+  $(".section").on("mousewheel", function(e) {
+    let _this = $(this),
+        delta = parseInt(e.originalEvent.wheelDelta || -e.originalEvent.detail);
 
-  // scroll on swipe
-  //  $(".fullpage").scroll(function() {
-  //   var scroll = $(".section").scrollTop() + $(".section").height();
-  //   //Если скролл до конца елемента
-  //   //var offset = $element.offset().top + $element.height();
-  //   //Если скролл до начала елемента
-  //   var offset = $element.offset().top
-   
-  //   if (scroll > offset && counter == 0) {
-  //     console.log("ss");
-  //     counter = 1;
-  //   }
-  // });
+    if (delta >= 0) {
+      if (this.scrollTop === 0) {
+        _this.removeClass('active');
+        console.log("up");
+      }
+    } else{ 
+      if (this.scrollHeight - this.scrollTop === this.clientHeight) {
+        _this.next().addClass('active');
+        console.log("down");
+      }
+    }
+  }); 
   
+  // swipe
   $(".section").swipe({
-   
       swipe:function(event, direction, distance, phase, duration, fingerCount, fingerData) {
+
+        let _this = $(this);
         if (direction == 'up'){
-          $(this).next().addClass('active');
-          if ($(this).hasClass('active')) {
-            new WOW().init();
-          }
-          
+          _this.next().addClass('active');
+          console.log("down");
+         
         } else if (direction == 'down'){
-          $(this).removeClass('active');
+          _this.removeClass('active');
+          console.log("up");
         }
       },
       allowPageScroll: "vertical",
@@ -145,28 +128,6 @@ $(document).ready(function () {
       
       // triggerOnTouchLeave: false
   });
-
-
-//   function swipeScroll(c,b,pd,f){
-//     $(c).swipe({//c style must be position:absolute;top:0; b style must be position:relative;
-//       swipeStatus:function(event, phase, direction, distance, fingerCount) {
-//         if(phase=="start"){pd=0;}
-//         // if(phase=="end"){return false;}
-//         if(phase=="move" && pd!=distance){
-//           var t = parseInt($(c).css("top"),10);
-//           var u = (pd-distance);
-//           if(direction=="up" && t != u){ t+=u; }else if(direction=="down" && t != -u){ t-=u; }
-//           pd=distance;
-//           if(t > 0 || $(b).height() > $(c).height()){t=0;}//top of content
-//           else if(($(b).height()-t) >= $(c).height()){//bottom of content
-//             t=$(b).height()-$(c).height();
-//             if(typeof f != "undefined"){f();}
-//           }
-//           $(c).css("top",t);
-//         }
-//       }
-//     });
-// }
 
   // $(".swipe-read").swipe({
   //   swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
@@ -184,8 +145,7 @@ $(document).ready(function () {
   //   },
   // });
  
-
-  // burger 
+  // burger menu
   $(".burger").click(function() {
     $(this).toggleClass('active');
     $(".navtop").toggleClass('active');
@@ -193,6 +153,7 @@ $(document).ready(function () {
 
 });
 
+// added animation first section at onload 
 function funonload() {
   $(".first").addClass('active');
 } 

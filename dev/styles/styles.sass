@@ -86,9 +86,6 @@ a
 input
   appearance: none
 
-// .pp-tableCell
-  // width: 100%!important
-  // height: 100vh!important
 .first
   z-index: 1!important
 .second
@@ -134,25 +131,17 @@ input
 
 .section 
   position: absolute
-  top: 100%
+  top: 0
   left: 0
   width: 100% 
   height: 100vh
   overflow-y: auto
-  // transform: translateY(100%)!important
+  transform: translateY(100%)!important
   transition: all 1s ease
-  // position: sticky 
-  
   &.active
-    top: 0
-    // transform: translateY(0)!important
-    // z-index: 999!important
-  //   transform: translateY(0)!important
+    transform: translateY(0)!important
   &.first 
-    top: 0
-  &.pp-easing
-  //   transform: translateY(0)!important
-  //   transform: translateY(-100%)!important
+    transform: translateY(0)!important
 
 .container 
   max-width: $desktop

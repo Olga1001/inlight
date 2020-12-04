@@ -78,32 +78,25 @@ $(document).ready(function () {
       focusOnSelect: true,
       centerPadding: '0px'
     });
-  }
-
-  function checkReading() {
-    if (checkReading.read) {
-      return;
-    }
-
-    checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-    document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-    checkReading.noticeBox.innerHTML = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
   } // scroll on mousewhele
 
 
-  $(".section").on("mousewheel", function (event) {
-    var _this = $(this);
+  $(".section").on("mousewheel", function (e) {
+    var _this = $(this),
+        delta = parseInt(e.originalEvent.wheelDelta || -e.originalEvent.detail);
 
-    _this.onscroll = checkReading;
+    if (delta >= 0) {
+      if (this.scrollTop === 0) {
+        _this.removeClass('active');
 
-    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-      _this.removeClass('active');
-
-      console.log("up");
+        console.log("up");
+      }
     } else {
-      _this.next().addClass('active');
+      if (this.scrollHeight - this.scrollTop === this.clientHeight) {
+        _this.next().addClass('active');
 
-      console.log("down");
+        console.log("down");
+      }
     }
   }); // scroll on swipe
   //  $(".fullpage").scroll(function() {
@@ -120,40 +113,24 @@ $(document).ready(function () {
 
   $(".section").swipe({
     swipe: function swipe(event, direction, distance, phase, duration, fingerCount, fingerData) {
-      if (direction == 'up') {
-        $(this).next().addClass('active');
+      var _this = $(this); // let delta = parseInt(event.originalEvent.touches);
+      // console.log(delta);
 
-        if ($(this).hasClass('active')) {
-          new WOW().init();
-        }
+
+      if (direction == 'up') {
+        _this.next().addClass('active');
+
+        console.log("down");
       } else if (direction == 'down') {
-        $(this).removeClass('active');
+        _this.removeClass('active');
+
+        console.log("up");
       }
     },
     allowPageScroll: "vertical" // swipeStatus: null,
     // triggerOnTouchLeave: false
 
-  }); //   function swipeScroll(c,b,pd,f){
-  //     $(c).swipe({//c style must be position:absolute;top:0; b style must be position:relative;
-  //       swipeStatus:function(event, phase, direction, distance, fingerCount) {
-  //         if(phase=="start"){pd=0;}
-  //         // if(phase=="end"){return false;}
-  //         if(phase=="move" && pd!=distance){
-  //           var t = parseInt($(c).css("top"),10);
-  //           var u = (pd-distance);
-  //           if(direction=="up" && t != u){ t+=u; }else if(direction=="down" && t != -u){ t-=u; }
-  //           pd=distance;
-  //           if(t > 0 || $(b).height() > $(c).height()){t=0;}//top of content
-  //           else if(($(b).height()-t) >= $(c).height()){//bottom of content
-  //             t=$(b).height()-$(c).height();
-  //             if(typeof f != "undefined"){f();}
-  //           }
-  //           $(c).css("top",t);
-  //         }
-  //       }
-  //     });
-  // }
-  // $(".swipe-read").swipe({
+  }); // $(".swipe-read").swipe({
   //   swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
   //     let thisItem =  $(this);
   //     let maxscroll = thisItem[0].scrollWidth;
