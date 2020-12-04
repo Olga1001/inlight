@@ -1,23 +1,6 @@
 "use strict";
 
 $(document).ready(function () {
-  // $('#fullpage').pagepiling({
-  //   direction: 'vertical',
-  //   verticalCentered: true,
-  //   scrollable: true,
-  //   navigation: false,
-  //   easing: 'linear',
-  //   scrollBar: true,
-  //   onLeave: function(){
-  //     new WOW().init();
-  //   },
-  //   // afterRender: function(){
-  //   //   new WOW().init();
-  //   // },
-  //   //  afterLoad: function(anchorLink, index){
-  //   //   new WOW().init();
-  //   // },
-  // });
   var option = {
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -123,16 +106,33 @@ $(document).ready(function () {
       console.log("down");
     }
   }); // scroll on swipe
+  //  $(".fullpage").scroll(function() {
+  //   var scroll = $(".section").scrollTop() + $(".section").height();
+  //   //Если скролл до конца елемента
+  //   //var offset = $element.offset().top + $element.height();
+  //   //Если скролл до начала елемента
+  //   var offset = $element.offset().top
+  //   if (scroll > offset && counter == 0) {
+  //     console.log("ss");
+  //     counter = 1;
+  //   }
+  // });
 
   $(".section").swipe({
     swipe: function swipe(event, direction, distance, phase, duration, fingerCount, fingerData) {
       if (direction == 'up') {
         $(this).next().addClass('active');
+
+        if ($(this).hasClass('active')) {
+          new WOW().init();
+        }
       } else if (direction == 'down') {
         $(this).removeClass('active');
       }
     },
-    allowPageScroll: "vertical"
+    allowPageScroll: "vertical" // swipeStatus: null,
+    // triggerOnTouchLeave: false
+
   }); //   function swipeScroll(c,b,pd,f){
   //     $(c).swipe({//c style must be position:absolute;top:0; b style must be position:relative;
   //       swipeStatus:function(event, phase, direction, distance, fingerCount) {
@@ -168,29 +168,16 @@ $(document).ready(function () {
   //     }
   //   },
   // });
-  // initialization animation - wow
-
-  new WOW().init(); // burger 
+  // burger 
 
   $(".burger").click(function () {
     $(this).toggleClass('active');
     $(".navtop").toggleClass('active');
   });
-
-  function is_mobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  }
-
-  ;
-
-  function fix100vh() {
-    var winHeight = $(window).height();
-
-    if (is_mobile()) {
-      $('.section').css('min-height', winHeight);
-    }
-  }
-
-  ;
-  fix100vh();
 });
+
+function funonload() {
+  $(".first").addClass('active');
+}
+
+window.onload = funonload;

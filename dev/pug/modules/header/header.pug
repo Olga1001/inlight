@@ -4,18 +4,18 @@ header.header(class = dark ? 'dark' : '')
             a.logo(href="#")
                 img.logo-icon(src="img/logo-icon.svg", alt="logo")
                 .overflow-h
-                    img.logo-name.wow.slideInLeftSmall(data-wow-duration="0.8s" data-wow-delay="1.5s" src="img/logo-name.svg", alt="logo")
+                    img.logo-name.slideInLeftSmall.duraction-0_8.delay-1_5(src="img/logo-name.svg", alt="logo")
             .align-items-center
                 nav.navtop 
                     .menu
                         ul.d-sm-flex
-                            each menu in [{val: 'home', color: 'bg-green', delay: '1.5s'}, {val: 'SHOWCASE', color: 'bg-blue', delay: '1.6s'}, {val: 'ABOUT', color: 'bg-purple', delay: '1.7s'}, {val: 'TEAM', color: 'bg-red', delay: '1.8s'}] 
+                            each menu in [{val: 'home', color: 'bg-green', delay: '1_5'}, {val: 'SHOWCASE', color: 'bg-blue', delay: '1_6'}, {val: 'ABOUT', color: 'bg-purple', delay: '1_7'}, {val: 'TEAM', color: 'bg-red', delay: '1_8'}] 
                                 li.menu-item
                                     a.menu-link(href="#")
-                                        span.circle.wow.fadeIn(data-wow-duration="0.8s" data-wow-delay=menu.delay class=menu.color)
+                                        span.circle.fadeIn.duraction-0_8(class="delay-" + menu.delay + ' ' + menu.color)
                                         =menu.val
-                        a.btn.wow.incline.d-sm-none.d-block(href="#" data-wow-duration="0.8s" data-wow-delay="1.8s") Contuct Us
-                a.btn.wow.incline.d-sm-block.d-none(href="#" data-wow-duration="0.8s" data-wow-delay="1.8s") Contuct Us
+                        a.btn.incline.d-sm-none.d-block.delay-1_8.duraction-0_8(href="#") Contuct Us
+                a.btn.incline.d-sm-block.d-none.delay-1_8.duraction-0_8 Contuct Us
             button.burger.d-sm-none.d-block(type="button")
                 span.burger-line.burger-line-top
                 span.burger-line.burger-line-center

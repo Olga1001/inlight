@@ -124,6 +124,9 @@ input
 .tenth
   z-index: 17!important
 
+.seventh  
+  overflow: hidden!important
+
 .fullpage
   overflow: hidden
   width: 100% 
@@ -131,20 +134,22 @@ input
 
 .section 
   position: absolute
-  top: 0
+  top: 100%
   left: 0
   width: 100% 
   height: 100vh
   overflow-y: auto
-  transform: translateY(100%)!important
+  // transform: translateY(100%)!important
   transition: all 1s ease
   // position: sticky 
   
   &.active
-    // top: 0
-    transform: translateY(0)!important
+    top: 0
+    // transform: translateY(0)!important
     // z-index: 999!important
   //   transform: translateY(0)!important
+  &.first 
+    top: 0
   &.pp-easing
   //   transform: translateY(0)!important
   //   transform: translateY(-100%)!important
@@ -330,8 +335,10 @@ canvas
       background: #0A1226
     &-right 
       left: 100%
+      transform: translate(2000px, -50%)
     &-left 
       right: 100%
+      transform: translate(-2000px, -50%)
 
 .title_3
   font-weight: bold
@@ -362,6 +369,8 @@ canvas
     background: url("../img/border.svg") no-repeat center / contain
     width: 678px
     height: 190px
+  .line 
+    top: 50%
   .line-left
     right: calc(100% + 20px)
   .line-right 
@@ -590,7 +599,7 @@ canvas
     position: absolute
     left: 50%
     top: 50%
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%) rotate(-120.68deg)
     width: 267.97px
     height: 266.14px
     background: url("../img/circle-white.png") no-repeat center / contain
@@ -750,6 +759,7 @@ canvas
     text-transform: uppercase
     color: #FFFFFF
     margin-bottom: 35px 
+    width: fit-content
   &-text 
     font-weight: 500
     font-size: 20px

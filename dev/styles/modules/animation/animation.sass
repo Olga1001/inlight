@@ -1,82 +1,124 @@
-@keyframes incline 
-  0% 
-    transform: rotate(-7.66deg)
-
-  100% 
-    transform: rotate(0deg)
-
 .incline
-  animation-name: incline
+  transform: rotate(-7.66deg)
+  transition-property: all
 
-@keyframes slideInLeftSmall 
-  0% 
-    transform: translateX(-100%)
+.slideInLeft
+  opacity: 0
+  transform: translateX(-2000px)
+  transition-property: all
 
-  100% 
-    transform: translateX(0)
+.slideInRight 
+  opacity: 0
+  transform: translateX(2000px)
+  transition-property: all
+
+.slideInUp
+  opacity: 0
+  transform: translateY(-2000px)
+  transition-property: all
+
+.slideInDown
+  opacity: 0
+  transform: translateY(2000px)
+  transition-property: all
+
+.slideInLeftTop
+  opacity: 0
+  transform: translate(-2000px,-2000px)
+  transition-property: all
+
+.slideInRightTop
+  opacity: 0
+  transform: translate(2000px,-2000px)
+  transition-property: all
+
+.slideInLeftBottom
+  opacity: 0
+  transform: translate(-2000px,2000px)
+  transition-property: all
+
+.slideInRightBottom
+  opacity: 0
+  transform: translate(2000px,2000px)
+  transition-property: all
 
 .slideInLeftSmall 
-  animation-name: slideInLeftSmall
-
-@keyframes slideInUpSmallOpacity 
-  0% 
-    transform: translateY(-100%)
-    opacity: 0
-
-  100% 
-    transform: translateY(0)
-    opacity: 1
+  transform: translateX(-100%)
+  transition-property: transform
 
 .slideInUpSmallOpacity 
-  animation-name: slideInUpSmallOpacity
-
-@keyframes slideInUpSmall 
-  0% 
-    transform: translateY(-50%)
-
-  100% 
-    transform: translateY(0)
+  transform: translateY(-100%)
+  opacity: 0
+  transition-property: all
 
 .slideInUpSmall 
-  animation-name: slideInUpSmall
-
-@keyframes slideInDownSmall 
-  0% 
-    transform: translateY(50%)
-
-  100% 
-    transform: translateY(0)
+  transform: translateY(-50%)
+  transition-property: transform
 
 .slideInDownSmall 
-  animation-name: slideInDownSmall
-
-@keyframes zoomOut 
-  0% 
-    transform: scale(2)
-
-  100% 
-    transform: scale(1)
+  transform: translateY(50%)
+  transition-property: transform
 
 .zoomOut 
-  animation-name: zoomOut
-
-@keyframes zoomIn
-  0% 
-    transform: scale(0.5)
-
-  100% 
-    transform: scale(1)
+  transform: scale(2)
+  transition-property: transform
 
 .zoomIn 
-    animation-name: zoomIn
+  transform: scale(0.5)
+  transition-property: transform
 
-// .section 
-//   &.active
-//     animation-duration: 1s
-//     animation-fill-mode: both
-//     .zoomIn 
-//       animation-name: zoomIn
-//     .slideInRight
-//       animation-name: slideInRight
+.zoomOutSmall
+  transform: scale(1.3)
+  transition-property: transform
+
+.fadeIn
+  opacity: 0
 
 
+.duraction-0_8
+  transition-duration: 0.8s
+.duraction-1
+  transition-duration: 1s
+.duraction-1_5
+  transition-duration: 1.5s
+
+.delay-0_5
+  transition-delay: 0.5s
+.delay-0_6
+  transition-delay: 0.6s
+.delay-1
+  transition-delay: 1s
+.delay-1_5
+  transition-delay: 1.5s
+.delay-1_6
+  transition-delay: 1.6s
+.delay-1_7
+  transition-delay: 1.7s
+.delay-1_8
+  transition-delay: 1.8s
+
+.section.active 
+  .zoomIn, .zoomOut, .zoomOutSmall 
+    transform: scale(1)
+  .slideInDownSmall, .slideInUpSmall  
+    transform: translateY(0)
+  .slideInUpSmallOpacity 
+    transform: translateY(0)
+    opacity: 1
+  .slideInLeftSmall 
+    transform: translateX(0)
+  .slideInLeft, .slideInRight 
+    transform: translateX(0)
+    opacity: 1
+  .fadeIn
+    opacity: 1
+  .incline
+    transform: rotate(0)
+  .slideInUp, .slideInDown
+    opacity: 1
+    transform: translateY(0)
+  .card-we__circle
+    transform: translate(-50%, -50%) rotate(0)
+  .slideInLeftTop, .slideInRightTop, .slideInLeftBottom, .slideInRightBottom
+    opacity: 1
+    transform: translate(0,0)
