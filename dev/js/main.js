@@ -11,45 +11,33 @@ $(document).ready(function () {
     variableWidth: true,
     focusOnSelect: true,
     vertical: false,
+    centerPadding: '0px',
   };
-
-  if (window.matchMedia("(min-width: 569px) and (min-height: 415px)").matches) {
-    $(".slider").slick(option,{
-      responsive: [
-        {
-          breakpoint: 769,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            centerMode: true,
-          }
-        
-        },
-        {
-          breakpoint: 569,
-          settings: {
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            centerMode: true,
-          }
-        
-        },
-      ]
   
-    });
-  } else {
-    $(".slider").slick(option, {
-      responsive: [
-        {
-          breakpoint: 562,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
-          }
-        },
-      ]
-    });
-  }
+  $(".slider").slick(option,{
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: true,
+          variableWidth: false
+        }
+      
+      },
+      {
+        breakpoint: 569,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: true,
+        }
+      
+      },
+    ]
+
+  });
 
   $(".slider-client").slick({
     variableWidth: false,
@@ -67,13 +55,16 @@ $(document).ready(function () {
         breakpoint: 1025,
         settings: {
           slidesToShow: 3,
+          slidesToScroll: 1,
+          variableWidth: false,
         }
       },
       {
         breakpoint: 569,
         settings: {
           slidesToShow: 3,
-          variableWidth: true
+          slidesToScroll: 1,
+          variableWidth: false,
         }
       },
     ]
@@ -92,7 +83,7 @@ $(document).ready(function () {
   }
 
   // scroll on mousewhele
-  $(".section").on("mousewheel", function(e) {
+  $(".section").on("mousewheel DOMMouseScroll", function(e) {
     let _this = $(this),
         delta = parseInt(e.originalEvent.wheelDelta || -e.originalEvent.detail);
 
@@ -108,42 +99,6 @@ $(document).ready(function () {
       }
     }
   }); 
-  
-  // swipe
-  $(".section").swipe({
-      swipe:function(event, direction, distance, phase, duration, fingerCount, fingerData) {
-
-        let _this = $(this);
-        if (direction == 'up'){
-          _this.next().addClass('active');
-          console.log("down");
-         
-        } else if (direction == 'down'){
-          _this.removeClass('active');
-          console.log("up");
-        }
-      },
-      allowPageScroll: "vertical",
-      // swipeStatus: null,
-      
-      // triggerOnTouchLeave: false
-  });
-
-  // $(".swipe-read").swipe({
-  //   swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-  //     let thisItem =  $(this);
-  //     let maxscroll = thisItem[0].scrollWidth;
-  //     if (direction == 'left'){
-  //       thisItem.animate({
-  //         scrollLeft: -1 * maxscroll
-  //       }, 500);
-  //     } else if (direction == 'right'){
-  //       thisItem.animate({
-  //         scrollLeft: maxscroll
-  //       }, 500);
-  //     }
-  //   },
-  // });
  
   // burger menu
   $(".burger").click(function() {
@@ -156,5 +111,8 @@ $(document).ready(function () {
 // added animation first section at onload 
 function funonload() {
   $(".first").addClass('active');
+  $(".header").addClass('active');
+  $(".showcase").addClass('active');
+  $(".showcases").addClass('active');
 } 
 window.onload = funonload;

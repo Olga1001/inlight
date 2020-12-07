@@ -490,6 +490,9 @@
     .fs-16 
         font-size: 1.56vw
         line-height: 2.06vw
+    .fs-36
+        font-size: 3.5vw
+        line-height: 2.98vw
     .d-lg-none
         display: none
     .container
@@ -888,6 +891,49 @@
     .social svg 
         width: 2.3vw
         height: 2.3vw
+    .showcase-item:after 
+        width: calc(100% - 24px)
+        height: calc(100% - 60px)
+    .showcase__content p
+        line-height: 18px
+        font-size: 14px
+    .showcase-first .fs-18
+        line-height: 21px 
+        font-size: 16px
+    .card-case
+        width: calc(50% - 2.73vw)
+        margin-right: 5.46vw
+        border-radius: 4.88vw
+        padding: 4.88vw 4.49vw 3.2vw
+        margin-bottom: 5.85vw
+    .card-case__bg 
+        left: 2.14vw
+        top: 2.14vw
+        border-radius: 4.88vw
+    .card-case img
+        height: 39vw
+        margin-bottom: 0.97vw
+    .card-case__content 
+        padding: 0 0 0 2.44vw
+    .card-case .fs-36 
+        margin-bottom: 1.95vw
+    .card-case .line
+        top: calc(100% + 0.48vw)
+        width: calc(80% + 6.93vw)
+    .card-case svg 
+        width: 1.75vw
+        height: 1.75vw
+@media (max-width: 980px)
+    .showcase-item
+        height: 57.85vw
+        width: calc(33.33% - 3.1vw)
+        margin: -190px 4.7vw 70px 0
+    .showcase-item img 
+        width: calc(100% - 3.36vw)
+        height: calc(100% - 0.71vw)
+    .showcase-item:after
+        width: calc(100% - 2.44vw)
+        height: calc(100% - 8.12vw)
 @media (min-width: 569px) and (max-width: 768px) and (min-height: 415px)
     body 
         font-size: 2.08vw
@@ -898,12 +944,19 @@
     .fs-12 
         font-size: 1.56vw
         line-height: 2.08vw
+    .fs-36 
+        font-size: 4.68vw
+        line-height: 3.9vw
     .container
         padding: 0 5.2vw
     .navtop 
         position: absolute 
         left: 15.8vw
         bottom: 3.64vw
+    .header.dark .navtop
+        bottom: 2.9vw
+        .menu-item:first-child .menu-link
+            margin-left: 0
     .header 
         padding: 4vw 0
     .logo-icon 
@@ -1296,6 +1349,39 @@
         text-align: center
     .social
         margin: 2.86vw 5px 2vw
+    .showcases-first
+        padding-top: 30px
+    .showcases-title 
+        font-size: 18px
+        line-height: 21px
+    .first__left 
+        padding: 2.6vw 0 3.9vw
+    .mt-50 
+        margin-top: 6.5vw
+    .card-case 
+        width: calc(50% - 3vw)
+        margin-right: 6vw
+        border-radius: 6.5vw
+        padding: 6.5vw 4vw 0.4vw
+        margin-bottom: 7.8vw
+    .card-case__bg
+        left: 2vw
+        top: 2vw
+    .card-case img 
+        height: 32vw
+    .card-case__content 
+        padding: 0 0 0 2vw
+    .card-case 
+        .fs-36 
+            margin-bottom: 2vw
+            font-size: 3.68vw
+            line-height: 3.9vw
+        .fs-16 
+            font-size: 1.82vw
+            line-height: 2.5vw
+    .card-case .line 
+        top: calc(100% + 0.2vw)
+        width: calc(80% + 6vw)
 @media screen and (max-width: 568px), screen and (max-height: 414px)
     .fs-12 
         // font-size: 2.1vw
@@ -1362,14 +1448,14 @@
     .header
         // padding: 3.52vw 0
         padding: 20px 0
-    .logo-icon 
+    .logo-icon, .header.dark .logo-icon 
         // margin-right: 2.8vw
         // height: 7.92vw
         // width: 7.92vw
         height: 45px 
         width: 45px
         margin-right: 15px
-    .logo-name 
+    .logo-name, .header.dark .logo-name
         // height: 3.34vw
         height: 19px
     .title
@@ -1802,6 +1888,7 @@
         // height: 2.6vw
         width: 15px
         height: 15px
+
     .slider .slick-active + .slick-active, .slider .slick-active + .slick-active + .slick-active + .slick-active 
         // margin-top: 2.6vw
         // min-height: 19vw!important
@@ -1835,7 +1922,7 @@
     .slider-img 
         // height: 13.7vw!important
         height: 78px!important
-        margin: 0
+        margin: 0 10px
     .slider-client 
         // padding: 0 2.6vw
         // margin: 5vw auto 3.5vw
@@ -2048,6 +2135,55 @@
     .h-100
         height: auto
         min-height: 100vh
+
+@media screen and (max-width: 568px)
+    .slider .slick-active
+        transform: scale(0.73) 
+    .slider .slick-active + .slick-active
+        transform: scale(0.73) translateX(80%)
+    .slider .slick-active + .slick-active + .slick-active + .slick-active
+        transform: scale(0.73) translateX(-80%)
+    .slider .slick-active + .slick-active + .slick-active + .slick-active + .slick-active
+        transform: scale(0.73) 
+    .slider .slick-active + .slick-active + .slick-active
+        transform: scale(1) 
+    .eight .container 
+        padding: 0
+    .showcase-first .fs-18 
+        font-size: 14px 
+        line-height: 18px
+    .showcase__content p 
+        font-size: 14px 
+        line-height: 18px
+    .showcase-first 
+        padding: 0 0 120px
+    .showcase-item
+        margin: -100px 4.7vw 70px 0
+        height: 100%
+    .card-case
+        width: 100% 
+        margin: 0 10px 30px 0
+        padding: 30px 20px
+        .fs-36
+            font-size: 24px 
+            line-height: 20px
+        .fs-16 
+            font-size: 14px 
+            line-height: 16px
+    .card-case:nth-child(odd)
+        transform: none
+    .showcases-second
+        padding: 40px 0
+    .card-case img
+        height: 200px
+    .card-case__content
+        padding: 0
+    .card-case__bg
+        left: 10px 
+        top: 10px
+    .card-case .line
+        width: calc(80% + 20px)
+
 @media (max-height: 414px)  and (orientation: landscape)
     .second
         .flex-center-center
@@ -2057,8 +2193,8 @@
             align-items: start
 @media (max-width: 560px)
     .section
-        min-height: 100vh
-        height: 100%
+        min-height: 100vh 
+        height: 100vh
     .first .container 
         padding: 0 20px
     .menu
@@ -2224,7 +2360,9 @@
     .team 
         margin: 65px auto 0
     .footer
-        padding: 30px 0 60px
+        padding: 30px 0
+    .section .footer
+        padding: 30px 0 120px
     .footer-img
         margin: 0 auto
     .menu-footer
