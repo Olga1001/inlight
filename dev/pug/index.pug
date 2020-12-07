@@ -311,8 +311,8 @@ block content
 						span.d-block.slideInUp.duraction-1.delay-0_5 About Us
 						span.line.line-left.line-white.slideInLeft.duraction-1.delay-0_5  
 						span.line.line-right.line-white.slideInRight.duraction-1.delay-0_5
-					.flex-wrap.swipe-read 
-						.col-50.active 
+					.flex-wrap.swipe-read.flip-book#demoBookExample 
+						.col-50.active.page.page-cover.page-cover-bottom(data-density="hard")   
 							.about-item
 								h3.about-title.zoomOutSmall.duraction-1.delay-0_5 Who 
 									span.c-purple we are
@@ -326,9 +326,9 @@ block content
 									a.btn-send.bg-white(href="#")
 										span.c-purple Send A request
 										+icon("send", "c-purple")
-						.col-50 
+						.col-50.page.page-cover.page-cover-bottom(data-density="hard")  
 							.about-item
-								h3.about-title.zoomOut.duraction-1.delay-0_5 our  
+								h3.about-title.zoomOutSmall.duraction-1.delay-0_5 our  
 									span.c-orange philosophy
 								p.about-text We are powered by ideas that change the world, delivering our experience for different clients and industries all over the world.
 								p.about-text World-changing ideas are sometimes complex, even overwhelming and we’re glad to explore them for ambitious projects.
@@ -367,6 +367,7 @@ block script
 	script(src="js/canvas.js")
 	//- script(src="js/canvas2.js")
 	script(src="js/jquery.touchSwipe.min.js")
+	//- script(src="js/page-flip.browser.js")
 	script(src="js/swipe.js")
 	
 				
