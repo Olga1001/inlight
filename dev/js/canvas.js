@@ -1,4 +1,3 @@
-
 var stage        = document.querySelector('.stage'),
     cb           = stage.getBoundingClientRect(),
     ctx          = stage.getContext('2d'),
@@ -13,7 +12,7 @@ var stage        = document.querySelector('.stage'),
     elemOffTop   = elemOff.top,
     elemOffLeft  = elemOff.left,
     elemWidth    = document.querySelector(".canvas-dots").offsetWidth * ratio;
-
+    
     // console.log(elemWidth);
 
     window.onmousemove = function(e){

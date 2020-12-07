@@ -30,7 +30,7 @@ block content
 				.container
 					.second__top
 						.canvas-dots-gray.absolute-dots
-							canvas(class="stage" width="321" height="262")
+							canvas(class="stage2" width="321" height="262")
 						each card in [{bgcolor: 'gradient__green-blue', src: 'img/im_mobile_development.png', name: 'MOBILE', span: 'Development', text: 'We create applications that delivers outstanding customer experience and reach business goals.'}, {bgcolor: 'gradient__blue-pink', src: 'img/il_web.png', name: 'WEB APP', span: 'Development', text: 'We provide ultimate solutions for custom website development which will be tailored to all client needs.'}, {bgcolor: 'gradient__pink-orange', src: 'img/ux.png', name: 'UI/UX', span: 'Design', text: 'We have extensive experience in UI/UX designing which will bring your business to new levels of growth and success.'}] 
 							.card-gadget(class=card.bgcolor)
 								.card-gadget__item
@@ -365,6 +365,7 @@ block content
 			
 block script 
 	script(src="js/canvas.js")
+	//- script(src="js/canvas2.js")
 	script(src="js/jquery.touchSwipe.min.js")
 	script(src="js/swipe.js")
 	
