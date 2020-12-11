@@ -106,6 +106,11 @@ $(document).ready(function () {
     $(".navtop").toggleClass('active');
   });
 
+  // dot for btn - stop animation
+  setTimeout(function () {
+    $(".dot").css("display","none");
+  }, 3900);
+
 });
 
 // added animation first section at onload 

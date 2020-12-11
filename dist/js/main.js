@@ -95,7 +95,11 @@ $(document).ready(function () {
   $(".burger").click(function () {
     $(this).toggleClass('active');
     $(".navtop").toggleClass('active');
-  });
+  }); // dot for btn - stop animation
+
+  setTimeout(function () {
+    $(".dot").css("display", "none");
+  }, 3900);
 }); // added animation first section at onload 
 
 function funonload() {

@@ -13,16 +13,16 @@ block content
 				.container
 					.flex-center-between 
 						.first__left
-							.line.line-right.slideInRight.duraction-1_5
+							.line.line-right.slideInRight.duraction-1_8
 							.centerY.d-lg-none
-								.slideInLeft.duraction-1_5
+								.slideInLeft.duraction-1_8
 									.canvas-dots.absolute-dots
 										canvas(class="stage" width="321" height="262")
-							h1.title.zoomOut.duraction-1_5
+							h1.title.zoomOut.duraction-1_8
 								span.text-gradient bright
 								span APPS
 								span STUDIO
-							.line.line-left.slideInLeft.duraction-1_5
+							.line.line-left.slideInLeft.duraction-1_8
 						.first__right 
 							.gif-phone
 		section.second.section
@@ -34,16 +34,16 @@ block content
 						each card in [{bgcolor: 'gradient__green-blue', src: 'img/im_mobile_development.png', name: 'MOBILE', span: 'Development', text: 'We create applications that delivers outstanding customer experience and reach business goals.'}, {bgcolor: 'gradient__blue-pink', src: 'img/il_web.png', name: 'WEB APP', span: 'Development', text: 'We provide ultimate solutions for custom website development which will be tailored to all client needs.'}, {bgcolor: 'gradient__pink-orange', src: 'img/ux.png', name: 'UI/UX', span: 'Design', text: 'We have extensive experience in UI/UX designing which will bring your business to new levels of growth and success.'}] 
 							.card-gadget(class=card.bgcolor)
 								.card-gadget__item
-									img.card-gadget__img.zoomIn.duraction-1.delay-0_5(src=card.src, alt="img")
+									img.card-gadget__img.zoomIn.duraction-2.delay-0_5(src=card.src, alt="img")
 								.c-white.fw-medium.text-center
 									p.fs-36.fw-bold=card.name
 									p.fs-24=card.span
 									p.fs-14=card.text
 					.second__bottom
-						h2.title_2.zoomOut.duraction-1.delay-0_5 The World <br class="d-sm-none"> has gone mobile
-							span.line.line-left.slideInLeft.duraction-1.delay-0_5
-							span.line.line-right.slideInRight.duraction-1.delay-0_5
-						p.c-gray.text-center.slideInUpSmallOpacity.duraction-1.delay-0_5 Mobile Apps became a indispensable tool for daily interactions between business and users. Digital technologies have advanced more rapidly than any innovation in our history. Every day the numerous of new services and IoT appear to make our life more usable, fast, mobile and gainful.
+						h2.title_2.zoomOut.duraction-2.delay-0_5 The World <br class="d-sm-none"> has gone mobile
+							span.line.line-left.slideInLeft.duraction-2.delay-0_5
+							span.line.line-right.slideInRight.duraction-2.delay-0_5
+						p.c-gray.text-center.slideInUpSmallOpacity.duraction-2.delay-0_5 Mobile Apps became a indispensable tool for daily interactions between business and users. Digital technologies have advanced more rapidly than any innovation in our history. Every day the numerous of new services and IoT appear to make our life more usable, fast, mobile and gainful.
 						.flex-center-center 
 							each ic, index in [{color: 'c-green', src: 'img/ic/android.svg', name: 'ANDROID'}, {color: 'c-blue', src: 'img/ic/ios.svg', name: 'IOS'}, {color: 'c-purple', src: 'img/ic/admin-panel.svg', name: 'ADMIN PANEL'}, {color: 'c-red', src: 'img/ic/iot.svg', name: 'IOT'}, {color: 'c-orange', src: 'img/ic/smartwatch.svg', name: 'WEARABLES'}] 
 								.ic.duraction-1.delay-0_5(class=index % 2 ? 'slideInUpSmall '+ic.color: 'slideInDownSmall ' +ic.color )
@@ -119,7 +119,7 @@ block content
 				.fiveth-top
 					.container 
 						h2.title_2
-							span.d-block.slideInUp.duraction-1.delay-0_5 Why We
+							span.d-block.slideInUp.duraction-1.delay-0_5 Why Us
 							span.line.line-left.slideInLeft.duraction-1.delay-0_5
 							span.line.line-right.slideInRight.duraction-1.delay-0_5
 						.flex-smm-center-between

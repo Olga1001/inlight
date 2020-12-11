@@ -74,13 +74,18 @@
 .fadeIn
   opacity: 0
 
-
 .duraction-0_8
   transition-duration: 0.8s
 .duraction-1
   transition-duration: 1s
 .duraction-1_5
   transition-duration: 1.5s
+.duraction-1_6
+  transition-duration: 1.6s
+.duraction-1_8
+  transition-duration: 1.8s
+.duraction-2
+  transition-duration: 2s
 
 .delay-0_5
   transition-delay: 0.5s
@@ -100,6 +105,12 @@
   transition-delay: 1.7s
 .delay-1_8
   transition-delay: 1.8s
+.delay-1_9
+  transition-delay: 1.9s
+.delay-2
+  transition-delay: 2s
+.delay-2_1
+  transition-delay: 2.1s
 
 .section.active, .header.active, .showcase.active, .showcases.active  
   .zoomIn, .zoomOut, .zoomOutSmall 
@@ -126,3 +137,14 @@
   .slideInLeftTop, .slideInRightTop, .slideInLeftBottom, .slideInRightBottom
     opacity: 1
     transform: translate(0,0)
+  .dot
+    display: block
+    animation: dot 1.6s linear 2.1s
+  .path rect
+    stroke-dasharray: 390
+    stroke-dashoffset: 0
+    transition: all 1.6s linear 2.1s
+  
+.path rect
+  stroke-dasharray: 390
+  stroke-dashoffset: 390

@@ -4,18 +4,24 @@ header.header(class = dark ? 'dark' : '')
             a.logo(href="#")
                 img.logo-icon(src="img/logo-icon.svg", alt="logo")
                 .overflow-h
-                    img.logo-name.slideInLeftSmall.duraction-0_8.delay-1_5(src="img/logo-name.svg", alt="logo")
+                    img.logo-name.slideInLeftSmall.duraction-1.delay-1_5(src="img/logo-name.svg", alt="logo")
             .align-items-center
                 nav.navtop 
                     .menu
                         ul.d-sm-flex
-                            each menu in [{val: 'home', color: 'bg-green', delay: '1_5'}, {val: 'SHOWCASE', color: 'bg-blue', delay: '1_6'}, {val: 'ABOUT', color: 'bg-purple', delay: '1_7'}, {val: 'TEAM', color: 'bg-red', delay: '1_8'}] 
+                            each menu in [{val: 'home', color: 'bg-green', delay: '1_8'}, {val: 'SHOWCASE', color: 'bg-blue', delay: '1_9'}, {val: 'ABOUT', color: 'bg-purple', delay: '2'}, {val: 'TEAM', color: 'bg-red', delay: '2_1'}] 
                                 li.menu-item
                                     a.menu-link(href="#")
-                                        span.circle.fadeIn.duraction-0_8(class="delay-" + menu.delay + ' ' + menu.color)
+                                        span.circle.fadeIn.duraction-1_6(class="delay-" + menu.delay + ' ' + menu.color)
                                         =menu.val
-                        a.btn.incline.d-sm-none.d-block.delay-1_8.duraction-0_8(href="#") Contuct Us
-                a.btn.incline.d-sm-block.d-none.delay-1_8.duraction-0_8 Contuct Us
+                        a.btn.d-sm-none.d-block(href="#") Contuct Us
+                       
+                a.btn.d-sm-block.d-none(href="#") Contact Us
+                    span.dot
+                    svg.path(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' version='1.1' baseprofile='full' width='100%' height='100%' onload='init()' onmouseover='setHighlight()' onmouseout='removeHighlight()' onmousedown='pressButton()' onmouseup='releaseButton()' onclick='doAction()')
+                        rect(style='fill: none;' x='1px' y='1px' width='158px' height='40' rx='20px')
+                       
+                     
             button.burger.d-sm-none.d-block(type="button")
                 span.burger-line.burger-line-top
                 span.burger-line.burger-line-center
