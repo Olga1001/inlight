@@ -167,7 +167,7 @@ block content
 							p.fs-24.c-gray.fw-medium Clarifying app’s vision <br> Defining product’s goals <br> Specifying MVP <br> Writing project description 
 						.stages__gif
 							img(src="img/gif.png", alt="gif")
-					.slider-stages.d-md-none
+					.slider-stages.d-md-none.stop-propagation
 						div
 							.stages.flex-smm-center-between.relative.stages-left
 								.stages__info
@@ -221,7 +221,7 @@ block content
 						.stages__info
 							p.fs-48.fw-bold.c-purple.text-up.relative design
 								span.line.line-right.line-purple
-								span.stages__amount.bg-purple 1
+								span.stages__amount.bg-purple 2
 							p.fs-24.c-gray.fw-medium Prototyping <br> Mind mapping <br> Clicable wireframes <br> Visual User Interfaces <br>Motion design
 					.stages.flex-center-between.relative
 						.stages__info
@@ -283,7 +283,7 @@ block content
 								span.d-block.slideInUp.duraction-1.delay-0_5 People are saying
 								span.line.line-left.slideInLeft.duraction-1.delay-0_5 
 								span.line.line-right.slideInRight.duraction-1.delay-0_5
-							.slider
+							.slider.stop-propagation
 								each review in [{bgColor: 'bg-blue', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.'}, {bgColor: 'bg-purple', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-red', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-yellow', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-green', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'},{bgColor: 'bg-blue', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.'}, {bgColor: 'bg-purple', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-red', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-yellow', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}, {bgColor: 'bg-green', avatar: 'img/img.jpg', name: 'Antony Gex', post: 'Stars media SRL', text: 'INLIGHT  is  Mobile and Web Applications development company.'}]
 									.slider-item(class=review.bgColor)
 										.align-items-end.relative 
@@ -300,7 +300,7 @@ block content
 								span.d-block.slideInUp.duraction-1.delay-0_5 Our Clients
 								span.line.line-left.slideInLeft.duraction-1.delay-0_5 
 								span.line.line-right.slideInRight.duraction-1.delay-0_5
-							.slider-client 
+							.slider-client.stop-propagation 
 								each clients in [{src: 'img/clients/unnamed.svg', alt: 'unnamed'}, {src: 'img/clients/gopro_logo.svg', alt: 'gopro'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'},{src: 'img/clients/logo-black.svg', alt: 'black'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'}, {src: 'img/clients/gopro_logo.svg', alt: 'gopro'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'},{src: 'img/clients/logo-black.svg', alt: 'black'},{src: 'img/clients/unnamed.svg', alt: 'unnamed'}]
 									.slider-img
 										img(src=clients.src, alt=clients.alt)
@@ -311,8 +311,8 @@ block content
 						span.d-block.slideInUp.duraction-1.delay-0_5 About Us
 						span.line.line-left.line-white.slideInLeft.duraction-1.delay-0_5  
 						span.line.line-right.line-white.slideInRight.duraction-1.delay-0_5
-					.flex-wrap.swipe-read.flip-book#demoBookExample 
-						.col-50.active.page.page-cover.page-cover-bottom(data-density="hard")   
+					.flex-wrap.swipe-read.stop-propagation 
+						.col-50.active 
 							.about-item
 								h3.about-title.zoomOutSmall.duraction-1.delay-0_5 Who 
 									span.c-purple we are
@@ -326,7 +326,7 @@ block content
 									a.btn-send.bg-white(href="#")
 										span.c-purple Send A request
 										+icon("send", "c-purple")
-						.col-50.page.page-cover.page-cover-bottom(data-density="hard")  
+						.col-50
 							.about-item
 								h3.about-title.zoomOutSmall.duraction-1.delay-0_5 our  
 									span.c-orange philosophy
@@ -367,7 +367,6 @@ block script
 	script(src="js/canvas.js")
 	//- script(src="js/canvas2.js")
 	script(src="js/jquery.touchSwipe.min.js")
-	//- script(src="js/page-flip.browser.js")
 	script(src="js/swipe.js")
 	
 				

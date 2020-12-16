@@ -68,19 +68,33 @@ $(document).ready(function () {
       dots: true,
       arrows: false,
       focusOnSelect: true,
+      centerPadding: '0px',
+      centerMode: true
+    });
+  }
+
+  if (window.matchMedia("(max-width: 560px)").matches) {
+    $(".swipe-read").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: true,
+      arrows: false,
+      focusOnSelect: true,
       centerPadding: '0px'
     });
   } // scroll on mousewhele
 
 
-  $(".section").on("mousewheel DOMMouseScroll", function (e) {
+  $(".section").on("mousewheel DOMMouseScroll ", function (e) {
     var _this = $(this),
         delta = parseInt(e.originalEvent.wheelDelta || -e.originalEvent.detail);
 
-    if (delta >= 0) {
+    if (delta >= 100) {
       if (this.scrollTop === 0) {
         _this.removeClass('active');
 
+        $(".section.first").addClass('active');
         console.log("up");
       }
     } else {

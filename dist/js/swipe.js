@@ -2,23 +2,73 @@
 
 $(document).ready(function () {
   // swipe
-  $(".section").swipe({
-    swipe: function swipe(event, direction, distance, phase, duration, fingerCount, fingerData) {
-      var _this = $(this);
+  // $(".section").swipe({
+  //     swipe:function(event, direction, distance, phase, duration, fingerCount, fingerData) {
+  //         let _this = $(this);
+  //         if (direction == 'up'){
+  //             _this.next().addClass('active');
+  //             console.log("down");
+  //         } else if (direction == 'down'){
+  //             _this.removeClass('active');
+  //             console.log("up");
+  //         }
+  //     },
+  //     allowPageScroll: "vertical",
+  //     // swipeStatus: null,
+  //     // triggerOnTouchLeave: false
+  // });
+  // $(".section").on('touchmove', function () {
+  //     let _this = $(this);
+  //     if (this.scrollHeight - this.scrollTop === this.clientHeight) {
+  //         _this.next().addClass('active');
+  //     }
+  // });
+  // var lastY;
+  // $(".section").on('touchstart', function(e) {
+  //     lastY = e.originalEvent.touches ? e.originalEvent.touches[0].pageY : e.pageY;
+  //     console.log(lastY);
+  // });
+  // $(".section").on('touchmove', function(e) {
+  //     var currentY = e.originalEvent.touches ? e.originalEvent.touches[0].pageY : e.pageY;
+  //     let _this = $(this);
+  //     //console.log(“CurY: “+currentY+” / LasY: “+lastY);
+  //     if (Math.abs(currentY-lastY) < 10) { return; }
+  //     if (currentY > lastY) {
+  //         if (this.scrollTop === 0) {
+  //             console.log('down');
+  //             _this.removeClass('active');
+  //             $(".section.first").addClass('active');
+  //         }
+  //     } else {
+  //         console.log('up');
+  //         if (this.scrollHeight - this.scrollTop === this.clientHeight) {
+  //             _this.next().addClass('active');
+  //         }
+  //     }
+  // });
+  var ts;
+  $(".section").bind('touchstart', function (e) {
+    ts = e.originalEvent.touches[0].clientY;
+  });
+  $(".section").bind('touchmove touchstart', function (e) {
+    var _this = $(this);
 
-      if (direction == 'up') {
+    var te = e.originalEvent.changedTouches[0].clientY;
+
+    if (ts > te + 5) {
+      if (this.scrollHeight - this.scrollTop === this.clientHeight) {
         _this.next().addClass('active');
-
-        console.log("down");
-      } else if (direction == 'down') {
+      }
+    } else if (ts < te - 5) {
+      if (this.scrollTop === 0) {
         _this.removeClass('active');
 
-        console.log("up");
+        $(".section.first").addClass('active');
       }
-    },
-    allowPageScroll: "vertical" // swipeStatus: null,
-    // triggerOnTouchLeave: false
-
+    }
+  });
+  $(".stop-propagation").bind('touchmove touchstart', function (e) {
+    e.stopPropagation();
   }); // $(".swipe-read").swipe({
   //   swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
   //     let thisItem =  $(this);

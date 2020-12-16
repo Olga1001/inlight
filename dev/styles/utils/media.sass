@@ -98,13 +98,13 @@
         border-radius: 2vw
         font-size: 0.83vw
         padding: 0.1vw
-        // min-width: 8.43vw
+        // min-width: 8.4375vw
         line-height: 1.979vw
         svg 
             // width: 8.33vw
             height: 2.29vw
     .dot 
-        // width: calc(8.33vw*.2)
+        // width: calc(8.22vw*.2)
     .dot:after 
         top: -0.2vw
         height: 0.625vw
@@ -1858,7 +1858,7 @@
         margin: 0 10px 10px 0
     .cases
         // margin: 10.5vw auto 5vw
-        margin: 50px auto 30px
+        margin: 50px auto
     .slider-item 
         // border-radius: 1.76vw
         // padding: 1.76vw
@@ -2198,6 +2198,48 @@
     .card-case .line
         width: calc(80% + 20px)
 
+@media screen and (max-width: 1441px)
+    .btn 
+        border-radius: 30px
+        font-size: 12px
+        padding: 2px
+        min-width: 122px
+        line-height: 28px
+        svg 
+            width: 120px
+            height: 33px
+    .dot 
+        width: calc(122px*.2)
+        left: 5px
+    .dot:after 
+        top: -4px
+        height: 9px
+        width: 9px
+    .path rect
+        // width: 8.22vw 
+        width: 118px
+        // height: 2.083vw
+        height: 30px
+        rx: 15px
+    @keyframes dot 
+        0% 
+                transform: translateX(0) rotate(0)
+        30%
+                transform: translateX(95px) rotate(0)
+        50% 
+                transform: translateX(80px) rotate(180deg)
+        80% 
+                transform: translateX(-5px) rotate(180deg)
+        100% 
+                transform: translateX(0) rotate(330deg)
+            
+    .section.active .path rect, .header.active .path rect, .showcase.active .path rect, .showcases.active .path rect
+        stroke-dasharray: 275        
+        stroke-dashoffset: 0
+    
+    .path rect
+        stroke-dasharray: 275
+        stroke-dashoffset: 275
 @media (max-height: 414px)  and (orientation: landscape)
     .second
         .flex-center-center
@@ -2206,9 +2248,9 @@
         .flex-center-center.h-100
             align-items: start
 @media (max-width: 560px)
-    .section
-        min-height: 100vh 
-        height: 100vh
+    // .section
+    //     min-height: 100vh 
+    //     height: 100vh
     .first .container 
         padding: 0 20px
     .menu
@@ -2217,7 +2259,9 @@
         flex-direction: column
     .second__top
         display: block
-        padding: 0 10px 60px
+        padding: 0 10px 120px
+    .fourth .container, .fiveth-bottom
+        padding-bottom: 120px
     .second .container
         display: flex
         flex-direction: column-reverse
@@ -2261,13 +2305,14 @@
         +d-flex(center)
         .mobile-tech__item
             width: 33.33%
-            padding: 0 10px
+            padding: 0 15px
     .mobile-tech__row
         display: block
         width: 100%
     .mobile-tech .fs-18 .line
-        width: 100%
-        right: 0
+        width: calc(100% - 15px)
+        right: 50%
+        transform: translateX(50%)
         &:before 
             width: 8px
             height: 8px
@@ -2289,7 +2334,7 @@
         margin: 0 auto
     .mobile-tech .fs-18
         min-height: 26px
-        +d-flex(center, flex-end)
+        +d-flex(center, center)
     .fourth .col-50
         margin-top: 0
     .web-tech .fs-18
@@ -2342,25 +2387,16 @@
     .sixth .line-left 
         right: calc(100% + 9px)
     .swipe-read
-        display: flex
-        flex-wrap: nowrap
         margin-top: 15px
         position: relative
-        overflow-x: auto
-        min-height: calc(100vh - 100px)
-        margin-right: -30px
-        width: calc(100% + 30px)
-        padding-right: 10px
+        width: 100%
+        display: block
         .col-50 
             width: 260px
-            flex-shrink: 0
-            position: absolute 
-            left: 270px
-            top: 0
-            overflow: hidden
-            margin-right: 10px
-            &:first-child
-                left: 0
+            margin: 0 0 30px 0!important
+            padding: 0 30px
+    .ninth .container 
+        padding: 0
     .about-action
         padding: 20px 30px
     .about-action .fs-32

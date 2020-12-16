@@ -4,694 +4,692 @@
     <meta charset="utf-8">
     <title>inlight</title><!--[if IE]>
     <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, height=device-height">
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
-  <body class="overflow-h">
-    <div class="wrapper">
-      <div class="fullpage" id="fullpage">
-        <section class="first section">
-          <div class="flex-center-center h-100">
-            <header class="header">
-              <div class="container">
-                <div class="flex-center-between"> <a class="logo" href="#"><img class="logo-icon" src="img/logo-icon.svg" alt="logo">
-                    <div class="overflow-h"><img class="logo-name slideInLeftSmall duraction-1 delay-1_5" src="img/logo-name.svg" alt="logo"></div></a>
-                  <div class="align-items-center">
-                    <nav class="navtop"> 
-                      <div class="menu">
-                        <ul class="d-sm-flex">
-                          <li class="menu-item"><a class="menu-link" href="#"><span class="circle fadeIn duraction-1_6 delay-1_8 bg-green"></span>home</a></li>
-                          <li class="menu-item"><a class="menu-link" href="#"><span class="circle fadeIn duraction-1_6 delay-1_9 bg-blue"></span>SHOWCASE</a></li>
-                          <li class="menu-item"><a class="menu-link" href="#"><span class="circle fadeIn duraction-1_6 delay-2 bg-purple"></span>ABOUT</a></li>
-                          <li class="menu-item"><a class="menu-link" href="#"><span class="circle fadeIn duraction-1_6 delay-2_1 bg-red"></span>TEAM</a></li>
-                        </ul><a class="btn d-sm-none d-block" href="#">Contuct Us</a>
+  <body class="overflow-h-fix">
+    <div class="fullpage" id="fullpage">
+      <section class="first section">
+        <div class="flex-center-center h-100">
+          <header class="header">
+            <div class="container">
+              <div class="flex-center-between"> <a class="logo" href="#"><img class="logo-icon" src="img/logo-icon.svg" alt="logo">
+                  <div class="overflow-h"><img class="logo-name slideInLeftSmall duraction-1 delay-1_8" src="img/logo-name.svg" alt="logo"></div></a>
+                <div class="align-items-center">
+                  <nav class="navtop"> 
+                    <div class="menu">
+                      <ul class="d-sm-flex">
+                        <li class="menu-item"><a class="menu-link" href="#"><span class="circle fadeIn duraction-1_6 delay-1_8 bg-green"></span>home</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#"><span class="circle fadeIn duraction-1_6 delay-1_9 bg-blue"></span>SHOWCASE</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#"><span class="circle fadeIn duraction-1_6 delay-2 bg-purple"></span>ABOUT</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#"><span class="circle fadeIn duraction-1_6 delay-2_1 bg-red"></span>TEAM</a></li>
+                      </ul><a class="btn d-sm-none d-block" href="#">Contuct Us</a>
+                    </div>
+                  </nav><a class="btn d-sm-block d-none" href="#">Contact Us<span class="dot"></span>
+                    <svg class="path" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" version="1.1" baseprofile="full" width="100%" height="100%" onload="init()" onmouseover="setHighlight()" onmouseout="removeHighlight()" onmousedown="pressButton()" onmouseup="releaseButton()" onclick="doAction()">
+                      <rect style="fill: none;" x="1px" y="1px" width="158px" height="40" rx="1.04vw"></rect>
+                    </svg></a>
+                </div>
+                <button class="burger d-sm-none d-block" type="button"><span class="burger-line burger-line-top"></span><span class="burger-line burger-line-center"></span><span class="burger-line burger-line-bottom"></span></button>
+              </div>
+            </div>
+          </header>
+          <div class="container">
+            <div class="flex-center-between"> 
+              <div class="first__left">
+                <div class="line line-right slideInRight duraction-1_8"></div>
+                <div class="centerY d-lg-none">
+                  <div class="slideInLeft duraction-1_8">
+                    <div class="canvas-dots absolute-dots">
+                      <canvas class="stage" width="321" height="262"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <h1 class="title zoomOut duraction-1_8"><span class="text-gradient">bright</span><span>APPS</span><span>STUDIO</span></h1>
+                <div class="line line-left slideInLeft duraction-1_8"></div>
+              </div>
+              <div class="first__right"> 
+                <div class="gif-phone"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="second section">
+        <div class="relative flex-sm-center-center h-100">
+          <div class="container">
+            <div class="second__top">
+              <div class="canvas-dots-gray absolute-dots">
+                <canvas class="stage2" width="321" height="262"></canvas>
+              </div>
+              <div class="card-gadget gradient__green-blue">
+                <div class="card-gadget__item"><img class="card-gadget__img zoomIn duraction-2 delay-0_5" src="img/im_mobile_development.png" alt="img"></div>
+                <div class="c-white fw-medium text-center">
+                  <p class="fs-36 fw-bold">MOBILE</p>
+                  <p class="fs-24">Development</p>
+                  <p class="fs-14">We create applications that delivers outstanding customer experience and reach business goals.</p>
+                </div>
+              </div>
+              <div class="card-gadget gradient__blue-pink">
+                <div class="card-gadget__item"><img class="card-gadget__img zoomIn duraction-2 delay-0_5" src="img/il_web.png" alt="img"></div>
+                <div class="c-white fw-medium text-center">
+                  <p class="fs-36 fw-bold">WEB APP</p>
+                  <p class="fs-24">Development</p>
+                  <p class="fs-14">We provide ultimate solutions for custom website development which will be tailored to all client needs.</p>
+                </div>
+              </div>
+              <div class="card-gadget gradient__pink-orange">
+                <div class="card-gadget__item"><img class="card-gadget__img zoomIn duraction-2 delay-0_5" src="img/ux.png" alt="img"></div>
+                <div class="c-white fw-medium text-center">
+                  <p class="fs-36 fw-bold">UI/UX</p>
+                  <p class="fs-24">Design</p>
+                  <p class="fs-14">We have extensive experience in UI/UX designing which will bring your business to new levels of growth and success.</p>
+                </div>
+              </div>
+            </div>
+            <div class="second__bottom">
+              <h2 class="title_2 zoomOut duraction-2 delay-0_5">The World <br class="d-sm-none"> has gone mobile<span class="line line-left slideInLeft duraction-2 delay-0_5"></span><span class="line line-right slideInRight duraction-2 delay-0_5"></span></h2>
+              <p class="c-gray text-center slideInUpSmallOpacity duraction-2 delay-0_5">Mobile Apps became a indispensable tool for daily interactions between business and users. Digital technologies have advanced more rapidly than any innovation in our history. Every day the numerous of new services and IoT appear to make our life more usable, fast, mobile and gainful.</p>
+              <div class="flex-center-center"> 
+                <div class="ic duraction-1 delay-0_5 slideInDownSmall c-green"><img src="img/ic/android.svg" alt="icon ic">
+                  <p class="fw-bold text-center c-green">ANDROID</p>
+                </div>
+                <div class="ic duraction-1 delay-0_5 slideInUpSmall c-blue"><img src="img/ic/ios.svg" alt="icon ic">
+                  <p class="fw-bold text-center c-blue">IOS</p>
+                </div>
+                <div class="ic duraction-1 delay-0_5 slideInDownSmall c-purple"><img src="img/ic/admin-panel.svg" alt="icon ic">
+                  <p class="fw-bold text-center c-purple">ADMIN PANEL</p>
+                </div>
+                <div class="ic duraction-1 delay-0_5 slideInUpSmall c-red"><img src="img/ic/iot.svg" alt="icon ic">
+                  <p class="fw-bold text-center c-red">IOT</p>
+                </div>
+                <div class="ic duraction-1 delay-0_5 slideInDownSmall c-orange"><img src="img/ic/smartwatch.svg" alt="icon ic">
+                  <p class="fw-bold text-center c-orange">WEARABLES</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="third section">
+        <div class="relative w-100 h-100 flex-center-center">
+          <div class="container">
+            <h2 class="title_3">Need a fast <br class="d-lg-none d-sm-block d-smm-none d-block"> Time-to-market ?</h2>
+            <div class="flex-smm-center-between">
+              <div class="card slideInLeft duraction-1 delay-0_5">
+                <div>
+                  <p class="fs-48 fw-bold c-blue">Prototype<span class="fs-24">in 1-2  Weeks</span></p>
+                  <p class="fs-20 fw-medium">Сlickable prototyping <br> with UX expertise</p>
+                </div><a class="btn-send gradient__purple-blue" href="#">Send A request
+                  <svg class="svg-sprite-icon icon-send c-white">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#send"></use>
+                  </svg></a>
+              </div>
+              <div class="img-rocket d-smm-block d-none"><img class="slideInDownSmall duraction-1 delay-0_5" src="img/fxemoji_rocket.png" alt="rocket"></div>
+              <div class="card wow slideInRight duraction-1 delay-0_5">
+                <div>
+                  <p class="fs-48 fw-bold c-orange">MVP<span class="fs-24">in 2-3 Months</span></p>
+                  <p class="fs-20 fw-medium">High-quality MVP uploaded <br class="d-sm-block d-none"> into app store</p>
+                </div><a class="btn-send gradient__orange-yellow" href="#">Send A request
+                  <svg class="svg-sprite-icon icon-send c-white">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#send"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </div><img class="d-smm-block d-none bg-circle findIn duraction-1 delay-0_5" src="img/circle.svg" alt="circle"><img class="d-smm-block d-none cloud cloud-1" src="img/cloud.png" alt="cloud"><img class="d-smm-block d-none cloud cloud-2" src="img/cloud-1.png" alt="cloud">
+        </div>
+      </section>
+      <section class="fourth section">
+        <div class="flex-smm-center-center h-100">
+          <div class="container">
+            <div class="flex-sm-center-between flex-start-between flex-wrap">
+              <div class="col-50 justify-content-end">
+                <div class="max-460">
+                  <h2 class="title_2 c-white slideInLeft duraction-1 delay-0_5">Technologies<span class="line line-left line-white"></span></h2>
+                  <p class="fs-24 c-white slideInUp duraction-1 delay-0_5">We use the most up-to-date technologies in existence to deliver the best solutions to carry out complex projects. Basing on client needs and business goals we will line up the best technology stack to ensure smoothly run on any device and platform.</p>
+                </div>
+              </div>
+              <div class="col-50">
+                <div class="web-tech"><img class="img-web slideInRight duraction-1 delay-0_5" src="img/im_technologies.svg" alt="technologies"></div>
+              </div>
+              <div class="col-50 justify-content-end">
+                <div class="max-460">
+                  <div class="mobile-tech slideInLeft duraction-1 delay-0_5">
+                    <p class="fs-36 fw-bold c-white text-up">Mobile</p>
+                    <div class="mobile-tech__row-lg">
+                      <div class="align-items-md-center mobile-tech__item">
+                        <p class="fs-18 fw-medium c-white text-right relative">IOS<span class="line line-left line-blue"></span></p>
+                        <div class="mobile-tech__row align-items-md-center"><img class="block-ic" src="img/ic/ic_swift.svg" alt="icon"><img class="block-ic" src="img/ic/ic_objectiveC.svg" alt="icon"></div>
                       </div>
-                    </nav><a class="btn d-sm-block d-none" href="#">Contact Us<span class="dot"></span>
-                      <svg class="path" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" version="1.1" baseprofile="full" width="100%" height="100%" onload="init()" onmouseover="setHighlight()" onmouseout="removeHighlight()" onmousedown="pressButton()" onmouseup="releaseButton()" onclick="doAction()">
-                        <rect style="fill: none;" x="1px" y="1px" width="158px" height="40" rx="20px"></rect>
+                      <div class="align-items-md-center mobile-tech__item">
+                        <p class="fs-18 fw-medium c-white text-right relative">ANDROID<span class="line line-left line-green"></span></p>
+                        <div class="mobile-tech__row align-items-md-center"><img class="block-ic" src="img/ic/ic_java.svg" alt="icon"><img class="block-ic" src="img/ic/ic_Kotlin.svg" alt="icon"></div>
+                      </div>
+                      <div class="align-items-md-center mobile-tech__item">
+                        <p class="fs-18 fw-medium c-white text-right relative">CROSS PLATFORM<span class="line line-left line-yellow"></span></p>
+                        <div class="mobile-tech__row align-items-md-center"><img class="block-ic" src="img/ic/ic_reactnative.svg" alt="icon"><img class="block-ic" src="img/ic/ic_flutter.svg" alt="icon"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-50">
+                <div class="web-tech">
+                  <div class="relative slideInUp duraction-1 delay-0_5"> 
+                    <p class="fs-36 fw-bold c-white text-up">WEB</p>
+                    <div class="d-sm-flex">
+                      <div class="web-col">
+                        <p class="fs-18 fw-medium c-white text-right relative">FRONTEND<span class="line line-left line-yellow"></span></p>
+                        <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_html5.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_reactnative.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_vuejs.svg" alt="icon web"></div>
+                      </div>
+                      <div class="web-col">
+                        <p class="fs-18 fw-medium c-white text-right relative">BACKEND<span class="line line-left line-red"></span></p>
+                        <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_php.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_nodeJS.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_laravel.svg" alt="icon web"></div>
+                      </div>
+                      <div class="web-col">
+                        <p class="fs-18 fw-medium c-white text-right relative">DATABASES<span class="line line-left line-purple"></span></p>
+                        <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_postgre.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_mongo.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_mysql.svg" alt="icon web"></div>
+                      </div>
+                      <div class="web-col">
+                        <p class="fs-18 fw-medium c-white text-right relative">CMS<span class="line line-left line-blue"></span></p>
+                        <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_wordpress.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_opencart.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_drupal.svg" alt="icon web"></div>
+                      </div>
+                      <div class="web-col">
+                        <p class="fs-18 fw-medium c-white text-right relative">INFRASTUCTURE<span class="line line-left line-green"></span></p>
+                        <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_github.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_aws.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_git.svg" alt="icon web"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fiveth section">
+        <div class="w-100">
+          <div class="fiveth-top">
+            <div class="container"> 
+              <h2 class="title_2"><span class="d-block slideInUp duraction-1 delay-0_5">Why Us</span><span class="line line-left slideInLeft duraction-1 delay-0_5"></span><span class="line line-right slideInRight duraction-1 delay-0_5"></span></h2>
+              <div class="flex-smm-center-between">
+                <div class="fiveth-side"> 
+                  <div class="d-sm-block d-flex">
+                    <div class="block-icon bg-blue fadeIn duraction-1 delay-0_5"> 
+                      <svg class="svg-sprite-icon icon-cms">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#cms"></use>
+                      </svg>
+                    </div>
+                    <p class="fs-48 fw-medium text-up slideInLeft duraction-1 delay-0_5">What<span class="c-blue d-block fw-black">we do</span></p>
+                  </div>
+                  <p class="fs-16 fw-medium c-gray fadeIn duraction-1 delay-0_6">Our skilled developers create highest quality software for IOS, Android and other cross-platforms performing experiences across a wide range of connected IoT.</p>
+                </div>
+                <div class="circle-work d-sm-block d-none fadeIn duraction-1 delay-0_5"> <img src="img/img.jpg" alt="img"></div>
+                <div class="fiveth-side"> 
+                  <div class="d-sm-block d-flex">
+                    <div class="block-icon bg-green ml-sm-auto fadeIn duraction-1 delay-0_5">
+                      <svg class="svg-sprite-icon icon-how-work">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#how-work"></use>
+                      </svg>
+                    </div>
+                    <p class="fs-48 fw-medium text-up text-sm-right slideInRight duraction-1 delay-0_5">how<span class="c-green d-block fw-black">we work</span></p>
+                  </div>
+                  <p class="fs-16 fw-medium c-gray text-sm-right fadeIn duraction-1 delay-0_6">We provide full-service software design and development from the beginning or at the late stages.  We  assist our clients until their ideas  achieves high technology results.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fiveth-bottom">
+            <div class="container"> 
+              <div class="flex-wrap"> 
+                <div class="card-we">
+                  <div class="card-we__head"> 
+                    <div class="card-we__circle delay-0_5 duraction-1"></div>
+                    <div class="card-we__color fadeIn duraction-1 delay-0_6 bg-yellow">
+                      <svg class="svg-sprite-icon icon-stack">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#stack"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="justify-content-center">
+                    <div class="circle_v2 mr-10 d-sm-block d-none bg-yellow"> </div>
+                    <p class="fs-18 fw-medium c-white-100">Platform-agnostic approach with the perfect stack chosen for your</p>
+                  </div>
+                </div>
+                <div class="card-we">
+                  <div class="card-we__head"> 
+                    <div class="card-we__circle delay-0_5 duraction-1"></div>
+                    <div class="card-we__color fadeIn duraction-1 delay-0_6 bg-orange">
+                      <svg class="svg-sprite-icon icon-leader">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#leader"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="justify-content-center">
+                    <div class="circle_v2 mr-10 d-sm-block d-none bg-orange"> </div>
+                    <p class="fs-18 fw-medium c-white-100">Polished business processes to ensure a reliable performance</p>
+                  </div>
+                </div>
+                <div class="card-we">
+                  <div class="card-we__head"> 
+                    <div class="card-we__circle delay-0_5 duraction-1"></div>
+                    <div class="card-we__color fadeIn duraction-1 delay-0_6 bg-red">
+                      <svg class="svg-sprite-icon icon-conversation">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#conversation"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="justify-content-center">
+                    <div class="circle_v2 mr-10 d-sm-block d-none bg-red"> </div>
+                    <p class="fs-18 fw-medium c-white-100">Fully transparent, open, and frequent communication</p>
+                  </div>
+                </div>
+                <div class="card-we">
+                  <div class="card-we__head"> 
+                    <div class="card-we__circle delay-0_5 duraction-1"></div>
+                    <div class="card-we__color fadeIn duraction-1 delay-0_6 bg-purple">
+                      <svg class="svg-sprite-icon icon-partnership">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#partnership"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="justify-content-center">
+                    <div class="circle_v2 mr-10 d-sm-block d-none bg-purple"> </div>
+                    <p class="fs-18 fw-medium c-white-100">Significant added value with a partnership approach</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sixth section">
+        <div class="container">
+          <div class="h-win-first">
+            <h2 class="title_4"> <span class="d-block slideInUp duraction-1 delay-0_5">PHASES OF MOBILE APP DEVELOPMENT</span><span class="line line-left slideInLeft duraction-1 delay-0_5"></span><span class="line line-right slideInRight duraction-1 delay-0_5"></span></h2>
+            <div class="stages flex-center-between relative d-md-flex d-none">
+              <div class="stages__info">
+                <p class="fs-48 fw-bold c-blue text-up relative">inception<span class="line line-left line-blue"></span><span class="stages__amount bg-blue">1</span></p>
+                <p class="fs-24 c-gray fw-medium">Clarifying app’s vision <br> Defining product’s goals <br> Specifying MVP <br> Writing project description </p>
+              </div>
+              <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
+            </div>
+            <div class="slider-stages d-md-none stop-propagation">
+              <div>
+                <div class="stages flex-smm-center-between relative stages-left">
+                  <div class="stages__info">
+                    <p class="fs-48 fw-bold c-blue text-up relative">inception<span class="line line-left line-blue"></span><span class="stages__amount bg-blue">1</span></p>
+                    <p class="fs-24 c-gray fw-medium">Clarifying app’s vision <br> Defining product’s goals <br> Specifying MVP <br> Writing project description </p>
+                  </div>
+                  <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
+                </div>
+              </div>
+              <div>
+                <div class="stages flex-smm-center-between relative stages-right">
+                  <div class="stages__info">
+                    <p class="fs-48 fw-bold c-purple text-up relative">design<span class="line line-right line-purple"></span><span class="stages__amount bg-purple">2</span></p>
+                    <p class="fs-24 c-gray fw-medium">Prototyping <br> Mind mapping <br> Clicable wireframes <br> Visual User Interfaces <br>Motion design</p>
+                  </div>
+                  <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
+                </div>
+              </div>
+              <div>
+                <div class="stages flex-smm-center-between relative stages-left">
+                  <div class="stages__info">
+                    <p class="fs-48 fw-bold c-red text-up relative">development<span class="line line-left line-red"></span><span class="stages__amount bg-red">3</span></p>
+                    <p class="fs-24 c-gray fw-medium">Coding<br>Testing <br>Bug detecting<br>Ensuring QA</p>
+                  </div>
+                  <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
+                </div>
+              </div>
+              <div>
+                <div class="stages flex-smm-center-between relative stages-right">
+                  <div class="stages__info">
+                    <p class="fs-48 fw-bold c-orange text-up relative">deployment<span class="line line-right line-orange"></span><span class="stages__amount bg-orange">4</span></p>
+                    <p class="fs-24 c-gray fw-medium">Publishing App in to the stores<br>Content copywriting  <br>Beta testing <br>Optimizing the product page </p>
+                  </div>
+                  <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
+                </div>
+              </div>
+              <div>
+                <div class="stages flex-smm-center-between relative stages-left">
+                  <div class="stages__info">
+                    <p class="fs-48 fw-bold c-green text-up relative">Maintenance<span class="line line-left line-green"></span><span class="stages__amount bg-green">5</span></p>
+                    <p class="fs-24 c-gray fw-medium">App support<br>Product enhancement  <br>Crash detecting  <br>monitoring statistics.</p>
+                  </div>
+                  <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="h-win d-md-flex d-none">
+            <div class="stages flex-center-between relative">
+              <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
+              <div class="stages__info">
+                <p class="fs-48 fw-bold c-purple text-up relative">design<span class="line line-right line-purple"></span><span class="stages__amount bg-purple">2</span></p>
+                <p class="fs-24 c-gray fw-medium">Prototyping <br> Mind mapping <br> Clicable wireframes <br> Visual User Interfaces <br>Motion design</p>
+              </div>
+            </div>
+            <div class="stages flex-center-between relative">
+              <div class="stages__info">
+                <p class="fs-48 fw-bold c-red text-up relative">development<span class="line line-left line-red"></span><span class="stages__amount bg-red">3</span></p>
+                <p class="fs-24 c-gray fw-medium">Coding<br>Testing <br>Bug detecting<br>Ensuring QA</p>
+              </div>
+              <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
+            </div>
+          </div>
+          <div class="h-win d-md-flex d-none">
+            <div class="stages flex-center-between relative">
+              <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
+              <div class="stages__info">
+                <p class="fs-48 fw-bold c-orange text-up relative">deployment<span class="line line-right line-orange"></span><span class="stages__amount bg-orange">4</span></p>
+                <p class="fs-24 c-gray fw-medium">Publishing App in to the stores<br>Content copywriting  <br>Beta testing <br>Optimizing the product page </p>
+              </div>
+            </div>
+            <div class="stages flex-center-between relative">
+              <div class="stages__info">
+                <p class="fs-48 fw-bold c-green text-up relative">Maintenance<span class="line line-left line-green"></span><span class="stages__amount bg-green">5</span></p>
+                <p class="fs-24 c-gray fw-medium">App support<br>Product enhancement  <br>Crash detecting  <br>monitoring statistics.</p>
+              </div>
+              <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="seventh section">
+        <div class="flex-center-center h-100">
+          <div class="container"> 
+            <h2 class="title_2 c-white"> <span class="d-block slideInUp duraction-1 delay-0_5">SHOWCASE</span><span class="line line-left line-white slideInLeft duraction-1 delay-0_5"></span><span class="line line-right line-white slideInRight duraction-1 delay-0_5"></span></h2>
+            <div class="flex-wrap cases"><a class="case gradient-1 slideInLeftTop duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case gradient-2 slideInUp duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case gradient-3 slideInRightTop duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case gradient-4 slideInLeft duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case fadeIn duraction-1 delay-1" href="#"><img class="case-img_all" src="img/all-works.svg" alt="all works"></a><a class="case gradient-5 slideInRight duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case gradient-6 slideInLeftBottom duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case gradient-7 slideInDown duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case gradient-8 slideInRightBottom duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a></div>
+          </div>
+        </div>
+      </section>
+      <section class="eight section">
+        <div class="flex-sm-center-center h-100">
+          <div class="w-100">
+            <div class="eight-top overflow-h">
+              <div class="container"> 
+                <h2 class="title_2"> <span class="d-block slideInUp duraction-1 delay-0_5">People are saying</span><span class="line line-left slideInLeft duraction-1 delay-0_5"> </span><span class="line line-right slideInRight duraction-1 delay-0_5"></span></h2>
+                <div class="slider stop-propagation">
+                  <div class="slider-item bg-blue">
+                    <div class="align-items-end relative"> 
+                      <svg class="svg-sprite-icon icon-quotes">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
+                      </svg>
+                      <div class="avatar"><img src="img/img.jpg" alt="img"></div>
+                      <div class="text-center c-white">
+                        <p class="fs-20 fw-medium">Antony Gex</p>
+                        <p class="fs-16 fw-black">Stars media SRL</p>
+                      </div>
+                    </div>
+                    <p class="fs-14 text-center c-white">INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.</p>
+                  </div>
+                  <div class="slider-item bg-purple">
+                    <div class="align-items-end relative"> 
+                      <svg class="svg-sprite-icon icon-quotes">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
+                      </svg>
+                      <div class="avatar"><img src="img/img.jpg" alt="img"></div>
+                      <div class="text-center c-white">
+                        <p class="fs-20 fw-medium">Antony Gex</p>
+                        <p class="fs-16 fw-black">Stars media SRL</p>
+                      </div>
+                    </div>
+                    <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
+                  </div>
+                  <div class="slider-item bg-red">
+                    <div class="align-items-end relative"> 
+                      <svg class="svg-sprite-icon icon-quotes">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
+                      </svg>
+                      <div class="avatar"><img src="img/img.jpg" alt="img"></div>
+                      <div class="text-center c-white">
+                        <p class="fs-20 fw-medium">Antony Gex</p>
+                        <p class="fs-16 fw-black">Stars media SRL</p>
+                      </div>
+                    </div>
+                    <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
+                  </div>
+                  <div class="slider-item bg-yellow">
+                    <div class="align-items-end relative"> 
+                      <svg class="svg-sprite-icon icon-quotes">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
+                      </svg>
+                      <div class="avatar"><img src="img/img.jpg" alt="img"></div>
+                      <div class="text-center c-white">
+                        <p class="fs-20 fw-medium">Antony Gex</p>
+                        <p class="fs-16 fw-black">Stars media SRL</p>
+                      </div>
+                    </div>
+                    <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
+                  </div>
+                  <div class="slider-item bg-green">
+                    <div class="align-items-end relative"> 
+                      <svg class="svg-sprite-icon icon-quotes">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
+                      </svg>
+                      <div class="avatar"><img src="img/img.jpg" alt="img"></div>
+                      <div class="text-center c-white">
+                        <p class="fs-20 fw-medium">Antony Gex</p>
+                        <p class="fs-16 fw-black">Stars media SRL</p>
+                      </div>
+                    </div>
+                    <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
+                  </div>
+                  <div class="slider-item bg-blue">
+                    <div class="align-items-end relative"> 
+                      <svg class="svg-sprite-icon icon-quotes">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
+                      </svg>
+                      <div class="avatar"><img src="img/img.jpg" alt="img"></div>
+                      <div class="text-center c-white">
+                        <p class="fs-20 fw-medium">Antony Gex</p>
+                        <p class="fs-16 fw-black">Stars media SRL</p>
+                      </div>
+                    </div>
+                    <p class="fs-14 text-center c-white">INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.</p>
+                  </div>
+                  <div class="slider-item bg-purple">
+                    <div class="align-items-end relative"> 
+                      <svg class="svg-sprite-icon icon-quotes">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
+                      </svg>
+                      <div class="avatar"><img src="img/img.jpg" alt="img"></div>
+                      <div class="text-center c-white">
+                        <p class="fs-20 fw-medium">Antony Gex</p>
+                        <p class="fs-16 fw-black">Stars media SRL</p>
+                      </div>
+                    </div>
+                    <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
+                  </div>
+                  <div class="slider-item bg-red">
+                    <div class="align-items-end relative"> 
+                      <svg class="svg-sprite-icon icon-quotes">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
+                      </svg>
+                      <div class="avatar"><img src="img/img.jpg" alt="img"></div>
+                      <div class="text-center c-white">
+                        <p class="fs-20 fw-medium">Antony Gex</p>
+                        <p class="fs-16 fw-black">Stars media SRL</p>
+                      </div>
+                    </div>
+                    <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
+                  </div>
+                  <div class="slider-item bg-yellow">
+                    <div class="align-items-end relative"> 
+                      <svg class="svg-sprite-icon icon-quotes">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
+                      </svg>
+                      <div class="avatar"><img src="img/img.jpg" alt="img"></div>
+                      <div class="text-center c-white">
+                        <p class="fs-20 fw-medium">Antony Gex</p>
+                        <p class="fs-16 fw-black">Stars media SRL</p>
+                      </div>
+                    </div>
+                    <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
+                  </div>
+                  <div class="slider-item bg-green">
+                    <div class="align-items-end relative"> 
+                      <svg class="svg-sprite-icon icon-quotes">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
+                      </svg>
+                      <div class="avatar"><img src="img/img.jpg" alt="img"></div>
+                      <div class="text-center c-white">
+                        <p class="fs-20 fw-medium">Antony Gex</p>
+                        <p class="fs-16 fw-black">Stars media SRL</p>
+                      </div>
+                    </div>
+                    <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="eight-bottom overflow-h">	
+              <div class="container">		
+                <h2 class="title_2"><span class="d-block slideInUp duraction-1 delay-0_5">Our Clients</span><span class="line line-left slideInLeft duraction-1 delay-0_5"> </span><span class="line line-right slideInRight duraction-1 delay-0_5"></span></h2>
+                <div class="slider-client stop-propagation"> 
+                  <div class="slider-img"><img src="img/clients/unnamed.svg" alt="unnamed"></div>
+                  <div class="slider-img"><img src="img/clients/gopro_logo.svg" alt="gopro"></div>
+                  <div class="slider-img"><img src="img/clients/unnamed.svg" alt="unnamed"></div>
+                  <div class="slider-img"><img src="img/clients/logo-black.svg" alt="black"></div>
+                  <div class="slider-img"><img src="img/clients/unnamed.svg" alt="unnamed"></div>
+                  <div class="slider-img"><img src="img/clients/unnamed.svg" alt="unnamed"></div>
+                  <div class="slider-img"><img src="img/clients/gopro_logo.svg" alt="gopro"></div>
+                  <div class="slider-img"><img src="img/clients/unnamed.svg" alt="unnamed"></div>
+                  <div class="slider-img"><img src="img/clients/logo-black.svg" alt="black"></div>
+                  <div class="slider-img"><img src="img/clients/unnamed.svg" alt="unnamed"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ninth section">
+        <div class="flex-sm-center-center h-100">
+          <div class="container">
+            <h2 class="title_2 c-white"> <span class="d-block slideInUp duraction-1 delay-0_5">About Us</span><span class="line line-left line-white slideInLeft duraction-1 delay-0_5"> </span><span class="line line-right line-white slideInRight duraction-1 delay-0_5"></span></h2>
+            <div class="flex-wrap swipe-read stop-propagation"> 
+              <div class="col-50 active"> 
+                <div class="about-item">
+                  <h3 class="about-title zoomOutSmall duraction-1 delay-0_5">Who <span class="c-purple">we are</span></h3>
+                  <p class="about-text">INLIGHT is an Mobile and Web Applications development studio.</p>
+                  <p class="about-text">We have extensive experience in native mobile applications development, allowing us to carry out complex projects and meet any specifications required.</p>
+                  <p class="about-text">Keeping our focus on the result and we’ve been focused solely on our customers’ needs <br> for years now.</p>
+                  <p class="about-text">INLIGHT achieves high-end results with meticulous attention to every single detail using the most up-to-date technologies in existence. </p>
+                  <div class="about-action bg-purple fadeIn duraction-1 delay-0_6">
+                    <h4 class="fs-32 c-white fw-bold">Start your project</h4>
+                    <p class="fs-24 c-white">Let’s work together</p><a class="btn-send bg-white" href="#"><span class="c-purple">Send A request</span>
+                      <svg class="svg-sprite-icon icon-send c-purple">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#send"></use>
                       </svg></a>
                   </div>
-                  <button class="burger d-sm-none d-block" type="button"><span class="burger-line burger-line-top"></span><span class="burger-line burger-line-center"></span><span class="burger-line burger-line-bottom"></span></button>
                 </div>
               </div>
-            </header>
-            <div class="container">
-              <div class="flex-center-between"> 
-                <div class="first__left">
-                  <div class="line line-right slideInRight duraction-1_8"></div>
-                  <div class="centerY d-lg-none">
-                    <div class="slideInLeft duraction-1_8">
-                      <div class="canvas-dots absolute-dots">
-                        <canvas class="stage" width="321" height="262"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                  <h1 class="title zoomOut duraction-1_8"><span class="text-gradient">bright</span><span>APPS</span><span>STUDIO</span></h1>
-                  <div class="line line-left slideInLeft duraction-1_8"></div>
-                </div>
-                <div class="first__right"> 
-                  <div class="gif-phone"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="second section">
-          <div class="relative flex-sm-center-center h-100">
-            <div class="container">
-              <div class="second__top">
-                <div class="canvas-dots-gray absolute-dots">
-                  <canvas class="stage2" width="321" height="262"></canvas>
-                </div>
-                <div class="card-gadget gradient__green-blue">
-                  <div class="card-gadget__item"><img class="card-gadget__img zoomIn duraction-2 delay-0_5" src="img/im_mobile_development.png" alt="img"></div>
-                  <div class="c-white fw-medium text-center">
-                    <p class="fs-36 fw-bold">MOBILE</p>
-                    <p class="fs-24">Development</p>
-                    <p class="fs-14">We create applications that delivers outstanding customer experience and reach business goals.</p>
-                  </div>
-                </div>
-                <div class="card-gadget gradient__blue-pink">
-                  <div class="card-gadget__item"><img class="card-gadget__img zoomIn duraction-2 delay-0_5" src="img/il_web.png" alt="img"></div>
-                  <div class="c-white fw-medium text-center">
-                    <p class="fs-36 fw-bold">WEB APP</p>
-                    <p class="fs-24">Development</p>
-                    <p class="fs-14">We provide ultimate solutions for custom website development which will be tailored to all client needs.</p>
-                  </div>
-                </div>
-                <div class="card-gadget gradient__pink-orange">
-                  <div class="card-gadget__item"><img class="card-gadget__img zoomIn duraction-2 delay-0_5" src="img/ux.png" alt="img"></div>
-                  <div class="c-white fw-medium text-center">
-                    <p class="fs-36 fw-bold">UI/UX</p>
-                    <p class="fs-24">Design</p>
-                    <p class="fs-14">We have extensive experience in UI/UX designing which will bring your business to new levels of growth and success.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="second__bottom">
-                <h2 class="title_2 zoomOut duraction-2 delay-0_5">The World <br class="d-sm-none"> has gone mobile<span class="line line-left slideInLeft duraction-2 delay-0_5"></span><span class="line line-right slideInRight duraction-2 delay-0_5"></span></h2>
-                <p class="c-gray text-center slideInUpSmallOpacity duraction-2 delay-0_5">Mobile Apps became a indispensable tool for daily interactions between business and users. Digital technologies have advanced more rapidly than any innovation in our history. Every day the numerous of new services and IoT appear to make our life more usable, fast, mobile and gainful.</p>
-                <div class="flex-center-center"> 
-                  <div class="ic duraction-1 delay-0_5 slideInDownSmall c-green"><img src="img/ic/android.svg" alt="icon ic">
-                    <p class="fw-bold text-center c-green">ANDROID</p>
-                  </div>
-                  <div class="ic duraction-1 delay-0_5 slideInUpSmall c-blue"><img src="img/ic/ios.svg" alt="icon ic">
-                    <p class="fw-bold text-center c-blue">IOS</p>
-                  </div>
-                  <div class="ic duraction-1 delay-0_5 slideInDownSmall c-purple"><img src="img/ic/admin-panel.svg" alt="icon ic">
-                    <p class="fw-bold text-center c-purple">ADMIN PANEL</p>
-                  </div>
-                  <div class="ic duraction-1 delay-0_5 slideInUpSmall c-red"><img src="img/ic/iot.svg" alt="icon ic">
-                    <p class="fw-bold text-center c-red">IOT</p>
-                  </div>
-                  <div class="ic duraction-1 delay-0_5 slideInDownSmall c-orange"><img src="img/ic/smartwatch.svg" alt="icon ic">
-                    <p class="fw-bold text-center c-orange">WEARABLES</p>
+              <div class="col-50">
+                <div class="about-item">
+                  <h3 class="about-title zoomOutSmall duraction-1 delay-0_5">our  <span class="c-orange">philosophy</span></h3>
+                  <p class="about-text">We are powered by ideas that change the world, delivering our experience for different clients and industries all over the world.</p>
+                  <p class="about-text">World-changing ideas are sometimes complex, even overwhelming and we’re glad to explore them for ambitious projects.</p>
+                  <p class="about-text">We’ve inspired by what our clients do, and we strive to provide all the necessary technology and skills to turn their dreams into reality.</p>
+                  <p class="about-text">That’s why your success is our main goal. We believe that together, we can help you achieve great things.</p>
+                  <div class="about-action bg-orange fadeIn duraction-1 delay-0_6">
+                    <h4 class="fs-32 c-white fw-bold">Lack of resources?</h4>
+                    <p class="fs-24 c-white">We hire IT talents</p><a class="btn-send bg-white" href="#"><span class="c-orange">Send A request</span>
+                      <svg class="svg-sprite-icon icon-send c-orange">
+                        <use xlink:href="img/sprite/symbol/sprite.svg#send"></use>
+                      </svg></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <section class="third section">
-          <div class="relative w-100 h-100 flex-center-center">
-            <div class="container">
-              <h2 class="title_3">Need a fast <br class="d-lg-none d-sm-block d-smm-none d-block"> Time-to-market ?</h2>
-              <div class="flex-smm-center-between">
-                <div class="card slideInLeft duraction-1 delay-0_5">
-                  <div>
-                    <p class="fs-48 fw-bold c-blue">Prototype<span class="fs-24">in 1-2  Weeks</span></p>
-                    <p class="fs-20 fw-medium">Сlickable prototyping <br> with UX expertise</p>
-                  </div><a class="btn-send gradient__purple-blue" href="#">Send A request
-                    <svg class="svg-sprite-icon icon-send c-white">
-                      <use xlink:href="img/sprite/symbol/sprite.svg#send"></use>
-                    </svg></a>
+        </div>
+      </section>
+      <section class="tenth section">
+        <div class="container"> 
+          <h2 class="title_2 c-white"> <span class="d-block slideInUp duraction-1 delay-0_5">HQ Team</span><span class="line line-left line-white slideInLeft duraction-1 delay-0_5"> </span><span class="line line-right line-white slideInRight duraction-1 delay-0_5"></span></h2>
+          <div class="flex-wrap teams">
+            <div class="col-50 slideInUpSmall duraction-1 delay-0_5"> <a class="team" href="#">
+                <div class="team-head">
+                  <div class="team-border"> 
+                    <div class="team-colors gradient__green-blue_v2"></div>
+                  </div>
+                  <div class="team-img" style="background-image: url(img/team1.png)"></div>
                 </div>
-                <div class="img-rocket d-smm-block d-none"><img class="slideInDownSmall duraction-1 delay-0_5" src="img/fxemoji_rocket.png" alt="rocket"></div>
-                <div class="card wow slideInRight duraction-1 delay-0_5">
-                  <div>
-                    <p class="fs-48 fw-bold c-orange">MVP<span class="fs-24">in 2-3 Months</span></p>
-                    <p class="fs-20 fw-medium">High-quality MVP uploaded <br class="d-sm-block d-none"> into app store</p>
-                  </div><a class="btn-send gradient__orange-yellow" href="#">Send A request
-                    <svg class="svg-sprite-icon icon-send c-white">
-                      <use xlink:href="img/sprite/symbol/sprite.svg#send"></use>
-                    </svg></a>
+                <p class="fs-24 c-white fw-medium text-center">YAN HO <br> Founding Partner</p></a></div>
+            <div class="col-50 slideInUpSmall duraction-1 delay-0_5"> <a class="team" href="#">
+                <div class="team-head">
+                  <div class="team-border"> 
+                    <div class="team-colors gradient__purple-blue"> </div>
+                  </div>
+                  <div class="team-img" style="background-image: url(img/team2.png)"></div>
                 </div>
-              </div>
-            </div><img class="d-smm-block d-none bg-circle findIn duraction-1 delay-0_5" src="img/circle.svg" alt="circle"><img class="d-smm-block d-none cloud cloud-1" src="img/cloud.png" alt="cloud"><img class="d-smm-block d-none cloud cloud-2" src="img/cloud-1.png" alt="cloud">
+                <p class="fs-24 c-white fw-medium text-center">ALEX NABIL<br>Managing Partner</p></a></div>
           </div>
-        </section>
-        <section class="fourth section">
-          <div class="flex-smm-center-center h-100">
-            <div class="container">
-              <div class="flex-sm-center-between flex-start-between flex-wrap">
-                <div class="col-50 justify-content-end">
-                  <div class="max-460">
-                    <h2 class="title_2 c-white slideInLeft duraction-1 delay-0_5">Technologies<span class="line line-left line-white"></span></h2>
-                    <p class="fs-24 c-white slideInUp duraction-1 delay-0_5">We use the most up-to-date technologies in existence to deliver the best solutions to carry out complex projects. Basing on client needs and business goals we will line up the best technology stack to ensure smoothly run on any device and platform.</p>
-                  </div>
-                </div>
-                <div class="col-50">
-                  <div class="web-tech"><img class="img-web slideInRight duraction-1 delay-0_5" src="img/im_technologies.svg" alt="technologies"></div>
-                </div>
-                <div class="col-50 justify-content-end">
-                  <div class="max-460">
-                    <div class="mobile-tech slideInLeft duraction-1 delay-0_5">
-                      <p class="fs-36 fw-bold c-white text-up">Mobile</p>
-                      <div class="mobile-tech__row-lg">
-                        <div class="align-items-md-center mobile-tech__item">
-                          <p class="fs-18 fw-medium c-white text-right relative">IOS<span class="line line-left line-blue"></span></p>
-                          <div class="mobile-tech__row align-items-md-center"><img class="block-ic" src="img/ic/ic_swift.svg" alt="icon"><img class="block-ic" src="img/ic/ic_objectiveC.svg" alt="icon"></div>
-                        </div>
-                        <div class="align-items-md-center mobile-tech__item">
-                          <p class="fs-18 fw-medium c-white text-right relative">ANDROID<span class="line line-left line-green"></span></p>
-                          <div class="mobile-tech__row align-items-md-center"><img class="block-ic" src="img/ic/ic_java.svg" alt="icon"><img class="block-ic" src="img/ic/ic_Kotlin.svg" alt="icon"></div>
-                        </div>
-                        <div class="align-items-md-center mobile-tech__item">
-                          <p class="fs-18 fw-medium c-white text-right relative">CROSS PLATFORM<span class="line line-left line-yellow"></span></p>
-                          <div class="mobile-tech__row align-items-md-center"><img class="block-ic" src="img/ic/ic_reactnative.svg" alt="icon"><img class="block-ic" src="img/ic/ic_flutter.svg" alt="icon"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-50">
-                  <div class="web-tech">
-                    <div class="relative slideInUp duraction-1 delay-0_5"> 
-                      <p class="fs-36 fw-bold c-white text-up">WEB</p>
-                      <div class="d-sm-flex">
-                        <div class="web-col">
-                          <p class="fs-18 fw-medium c-white text-right relative">FRONTEND<span class="line line-left line-yellow"></span></p>
-                          <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_html5.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_reactnative.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_vuejs.svg" alt="icon web"></div>
-                        </div>
-                        <div class="web-col">
-                          <p class="fs-18 fw-medium c-white text-right relative">BACKEND<span class="line line-left line-red"></span></p>
-                          <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_php.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_nodeJS.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_laravel.svg" alt="icon web"></div>
-                        </div>
-                        <div class="web-col">
-                          <p class="fs-18 fw-medium c-white text-right relative">DATABASES<span class="line line-left line-purple"></span></p>
-                          <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_postgre.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_mongo.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_mysql.svg" alt="icon web"></div>
-                        </div>
-                        <div class="web-col">
-                          <p class="fs-18 fw-medium c-white text-right relative">CMS<span class="line line-left line-blue"></span></p>
-                          <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_wordpress.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_opencart.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_drupal.svg" alt="icon web"></div>
-                        </div>
-                        <div class="web-col">
-                          <p class="fs-18 fw-medium c-white text-right relative">INFRASTUCTURE<span class="line line-left line-green"></span></p>
-                          <div class="flex-center-center d-sm-block web-tech__ices"><img class="block-ic" src="img/ic/ic_github.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_aws.svg" alt="icon web"><img class="block-ic" src="img/ic/ic_git.svg" alt="icon web"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="fiveth section">
-          <div class="w-100">
-            <div class="fiveth-top">
-              <div class="container"> 
-                <h2 class="title_2"><span class="d-block slideInUp duraction-1 delay-0_5">Why Us</span><span class="line line-left slideInLeft duraction-1 delay-0_5"></span><span class="line line-right slideInRight duraction-1 delay-0_5"></span></h2>
-                <div class="flex-smm-center-between">
-                  <div class="fiveth-side"> 
-                    <div class="d-sm-block d-flex">
-                      <div class="block-icon bg-blue fadeIn duraction-1 delay-0_5"> 
-                        <svg class="svg-sprite-icon icon-cms">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#cms"></use>
-                        </svg>
-                      </div>
-                      <p class="fs-48 fw-medium text-up slideInLeft duraction-1 delay-0_5">What<span class="c-blue d-block fw-black">we do</span></p>
-                    </div>
-                    <p class="fs-16 fw-medium c-gray fadeIn duraction-1 delay-0_6">Our skilled developers create highest quality software for IOS, Android and other cross-platforms performing experiences across a wide range of connected IoT.</p>
-                  </div>
-                  <div class="circle-work d-sm-block d-none fadeIn duraction-1 delay-0_5"> <img src="img/img.jpg" alt="img"></div>
-                  <div class="fiveth-side"> 
-                    <div class="d-sm-block d-flex">
-                      <div class="block-icon bg-green ml-sm-auto fadeIn duraction-1 delay-0_5">
-                        <svg class="svg-sprite-icon icon-how-work">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#how-work"></use>
-                        </svg>
-                      </div>
-                      <p class="fs-48 fw-medium text-up text-sm-right slideInRight duraction-1 delay-0_5">how<span class="c-green d-block fw-black">we work</span></p>
-                    </div>
-                    <p class="fs-16 fw-medium c-gray text-sm-right fadeIn duraction-1 delay-0_6">We provide full-service software design and development from the beginning or at the late stages.  We  assist our clients until their ideas  achieves high technology results.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="fiveth-bottom">
-              <div class="container"> 
-                <div class="flex-wrap"> 
-                  <div class="card-we">
-                    <div class="card-we__head"> 
-                      <div class="card-we__circle delay-0_5 duraction-1"></div>
-                      <div class="card-we__color fadeIn duraction-1 delay-0_6 bg-yellow">
-                        <svg class="svg-sprite-icon icon-stack">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#stack"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="justify-content-center">
-                      <div class="circle_v2 mr-10 d-sm-block d-none bg-yellow"> </div>
-                      <p class="fs-18 fw-medium c-white-100">Platform-agnostic approach with the perfect stack chosen for your</p>
-                    </div>
-                  </div>
-                  <div class="card-we">
-                    <div class="card-we__head"> 
-                      <div class="card-we__circle delay-0_5 duraction-1"></div>
-                      <div class="card-we__color fadeIn duraction-1 delay-0_6 bg-orange">
-                        <svg class="svg-sprite-icon icon-leader">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#leader"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="justify-content-center">
-                      <div class="circle_v2 mr-10 d-sm-block d-none bg-orange"> </div>
-                      <p class="fs-18 fw-medium c-white-100">Polished business processes to ensure a reliable performance</p>
-                    </div>
-                  </div>
-                  <div class="card-we">
-                    <div class="card-we__head"> 
-                      <div class="card-we__circle delay-0_5 duraction-1"></div>
-                      <div class="card-we__color fadeIn duraction-1 delay-0_6 bg-red">
-                        <svg class="svg-sprite-icon icon-conversation">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#conversation"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="justify-content-center">
-                      <div class="circle_v2 mr-10 d-sm-block d-none bg-red"> </div>
-                      <p class="fs-18 fw-medium c-white-100">Fully transparent, open, and frequent communication</p>
-                    </div>
-                  </div>
-                  <div class="card-we">
-                    <div class="card-we__head"> 
-                      <div class="card-we__circle delay-0_5 duraction-1"></div>
-                      <div class="card-we__color fadeIn duraction-1 delay-0_6 bg-purple">
-                        <svg class="svg-sprite-icon icon-partnership">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#partnership"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="justify-content-center">
-                      <div class="circle_v2 mr-10 d-sm-block d-none bg-purple"> </div>
-                      <p class="fs-18 fw-medium c-white-100">Significant added value with a partnership approach</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="sixth section">
-          <div class="container">
-            <div class="h-win-first">
-              <h2 class="title_4"> <span class="d-block slideInUp duraction-1 delay-0_5">PHASES OF MOBILE APP DEVELOPMENT</span><span class="line line-left slideInLeft duraction-1 delay-0_5"></span><span class="line line-right slideInRight duraction-1 delay-0_5"></span></h2>
-              <div class="stages flex-center-between relative d-md-flex d-none">
-                <div class="stages__info">
-                  <p class="fs-48 fw-bold c-blue text-up relative">inception<span class="line line-left line-blue"></span><span class="stages__amount bg-blue">1</span></p>
-                  <p class="fs-24 c-gray fw-medium">Clarifying app’s vision <br> Defining product’s goals <br> Specifying MVP <br> Writing project description </p>
-                </div>
-                <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
-              </div>
-              <div class="slider-stages d-md-none">
-                <div>
-                  <div class="stages flex-smm-center-between relative stages-left">
-                    <div class="stages__info">
-                      <p class="fs-48 fw-bold c-blue text-up relative">inception<span class="line line-left line-blue"></span><span class="stages__amount bg-blue">1</span></p>
-                      <p class="fs-24 c-gray fw-medium">Clarifying app’s vision <br> Defining product’s goals <br> Specifying MVP <br> Writing project description </p>
-                    </div>
-                    <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="stages flex-smm-center-between relative stages-right">
-                    <div class="stages__info">
-                      <p class="fs-48 fw-bold c-purple text-up relative">design<span class="line line-right line-purple"></span><span class="stages__amount bg-purple">2</span></p>
-                      <p class="fs-24 c-gray fw-medium">Prototyping <br> Mind mapping <br> Clicable wireframes <br> Visual User Interfaces <br>Motion design</p>
-                    </div>
-                    <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="stages flex-smm-center-between relative stages-left">
-                    <div class="stages__info">
-                      <p class="fs-48 fw-bold c-red text-up relative">development<span class="line line-left line-red"></span><span class="stages__amount bg-red">3</span></p>
-                      <p class="fs-24 c-gray fw-medium">Coding<br>Testing <br>Bug detecting<br>Ensuring QA</p>
-                    </div>
-                    <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="stages flex-smm-center-between relative stages-right">
-                    <div class="stages__info">
-                      <p class="fs-48 fw-bold c-orange text-up relative">deployment<span class="line line-right line-orange"></span><span class="stages__amount bg-orange">4</span></p>
-                      <p class="fs-24 c-gray fw-medium">Publishing App in to the stores<br>Content copywriting  <br>Beta testing <br>Optimizing the product page </p>
-                    </div>
-                    <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
-                  </div>
-                </div>
-                <div>
-                  <div class="stages flex-smm-center-between relative stages-left">
-                    <div class="stages__info">
-                      <p class="fs-48 fw-bold c-green text-up relative">Maintenance<span class="line line-left line-green"></span><span class="stages__amount bg-green">5</span></p>
-                      <p class="fs-24 c-gray fw-medium">App support<br>Product enhancement  <br>Crash detecting  <br>monitoring statistics.</p>
-                    </div>
-                    <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="h-win d-md-flex d-none">
-              <div class="stages flex-center-between relative">
-                <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
-                <div class="stages__info">
-                  <p class="fs-48 fw-bold c-purple text-up relative">design<span class="line line-right line-purple"></span><span class="stages__amount bg-purple">1</span></p>
-                  <p class="fs-24 c-gray fw-medium">Prototyping <br> Mind mapping <br> Clicable wireframes <br> Visual User Interfaces <br>Motion design</p>
-                </div>
-              </div>
-              <div class="stages flex-center-between relative">
-                <div class="stages__info">
-                  <p class="fs-48 fw-bold c-red text-up relative">development<span class="line line-left line-red"></span><span class="stages__amount bg-red">3</span></p>
-                  <p class="fs-24 c-gray fw-medium">Coding<br>Testing <br>Bug detecting<br>Ensuring QA</p>
-                </div>
-                <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
-              </div>
-            </div>
-            <div class="h-win d-md-flex d-none">
-              <div class="stages flex-center-between relative">
-                <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
-                <div class="stages__info">
-                  <p class="fs-48 fw-bold c-orange text-up relative">deployment<span class="line line-right line-orange"></span><span class="stages__amount bg-orange">4</span></p>
-                  <p class="fs-24 c-gray fw-medium">Publishing App in to the stores<br>Content copywriting  <br>Beta testing <br>Optimizing the product page </p>
-                </div>
-              </div>
-              <div class="stages flex-center-between relative">
-                <div class="stages__info">
-                  <p class="fs-48 fw-bold c-green text-up relative">Maintenance<span class="line line-left line-green"></span><span class="stages__amount bg-green">5</span></p>
-                  <p class="fs-24 c-gray fw-medium">App support<br>Product enhancement  <br>Crash detecting  <br>monitoring statistics.</p>
-                </div>
-                <div class="stages__gif"><img src="img/gif.png" alt="gif"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="seventh section">
-          <div class="flex-center-center h-100">
-            <div class="container"> 
-              <h2 class="title_2 c-white"> <span class="d-block slideInUp duraction-1 delay-0_5">SHOWCASE</span><span class="line line-left line-white slideInLeft duraction-1 delay-0_5"></span><span class="line line-right line-white slideInRight duraction-1 delay-0_5"></span></h2>
-              <div class="flex-wrap cases"><a class="case gradient-1 slideInLeftTop duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case gradient-2 slideInUp duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case gradient-3 slideInRightTop duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case gradient-4 slideInLeft duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case fadeIn duraction-1 delay-1" href="#"><img class="case-img_all" src="img/all-works.svg" alt="all works"></a><a class="case gradient-5 slideInRight duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case gradient-6 slideInLeftBottom duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case gradient-7 slideInDown duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a><a class="case gradient-8 slideInRightBottom duraction-1 delay-0_5" href="#"><img class="case-img" src="img/case.png" alt="case"></a></div>
-            </div>
-          </div>
-        </section>
-        <section class="eight section">
-          <div class="flex-sm-center-center h-100">
-            <div class="w-100">
-              <div class="eight-top overflow-h">
-                <div class="container"> 
-                  <h2 class="title_2"> <span class="d-block slideInUp duraction-1 delay-0_5">People are saying</span><span class="line line-left slideInLeft duraction-1 delay-0_5"> </span><span class="line line-right slideInRight duraction-1 delay-0_5"></span></h2>
-                  <div class="slider">
-                    <div class="slider-item bg-blue">
-                      <div class="align-items-end relative"> 
-                        <svg class="svg-sprite-icon icon-quotes">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
-                        </svg>
-                        <div class="avatar"><img src="img/img.jpg" alt="img"></div>
-                        <div class="text-center c-white">
-                          <p class="fs-20 fw-medium">Antony Gex</p>
-                          <p class="fs-16 fw-black">Stars media SRL</p>
-                        </div>
-                      </div>
-                      <p class="fs-14 text-center c-white">INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.</p>
-                    </div>
-                    <div class="slider-item bg-purple">
-                      <div class="align-items-end relative"> 
-                        <svg class="svg-sprite-icon icon-quotes">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
-                        </svg>
-                        <div class="avatar"><img src="img/img.jpg" alt="img"></div>
-                        <div class="text-center c-white">
-                          <p class="fs-20 fw-medium">Antony Gex</p>
-                          <p class="fs-16 fw-black">Stars media SRL</p>
-                        </div>
-                      </div>
-                      <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
-                    </div>
-                    <div class="slider-item bg-red">
-                      <div class="align-items-end relative"> 
-                        <svg class="svg-sprite-icon icon-quotes">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
-                        </svg>
-                        <div class="avatar"><img src="img/img.jpg" alt="img"></div>
-                        <div class="text-center c-white">
-                          <p class="fs-20 fw-medium">Antony Gex</p>
-                          <p class="fs-16 fw-black">Stars media SRL</p>
-                        </div>
-                      </div>
-                      <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
-                    </div>
-                    <div class="slider-item bg-yellow">
-                      <div class="align-items-end relative"> 
-                        <svg class="svg-sprite-icon icon-quotes">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
-                        </svg>
-                        <div class="avatar"><img src="img/img.jpg" alt="img"></div>
-                        <div class="text-center c-white">
-                          <p class="fs-20 fw-medium">Antony Gex</p>
-                          <p class="fs-16 fw-black">Stars media SRL</p>
-                        </div>
-                      </div>
-                      <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
-                    </div>
-                    <div class="slider-item bg-green">
-                      <div class="align-items-end relative"> 
-                        <svg class="svg-sprite-icon icon-quotes">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
-                        </svg>
-                        <div class="avatar"><img src="img/img.jpg" alt="img"></div>
-                        <div class="text-center c-white">
-                          <p class="fs-20 fw-medium">Antony Gex</p>
-                          <p class="fs-16 fw-black">Stars media SRL</p>
-                        </div>
-                      </div>
-                      <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
-                    </div>
-                    <div class="slider-item bg-blue">
-                      <div class="align-items-end relative"> 
-                        <svg class="svg-sprite-icon icon-quotes">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
-                        </svg>
-                        <div class="avatar"><img src="img/img.jpg" alt="img"></div>
-                        <div class="text-center c-white">
-                          <p class="fs-20 fw-medium">Antony Gex</p>
-                          <p class="fs-16 fw-black">Stars media SRL</p>
-                        </div>
-                      </div>
-                      <p class="fs-14 text-center c-white">INLIGHT is Mobile and Web Applications development company. We keep our focus on the result and we’ve been focused solely on our customers’ needs for years now.</p>
-                    </div>
-                    <div class="slider-item bg-purple">
-                      <div class="align-items-end relative"> 
-                        <svg class="svg-sprite-icon icon-quotes">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
-                        </svg>
-                        <div class="avatar"><img src="img/img.jpg" alt="img"></div>
-                        <div class="text-center c-white">
-                          <p class="fs-20 fw-medium">Antony Gex</p>
-                          <p class="fs-16 fw-black">Stars media SRL</p>
-                        </div>
-                      </div>
-                      <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
-                    </div>
-                    <div class="slider-item bg-red">
-                      <div class="align-items-end relative"> 
-                        <svg class="svg-sprite-icon icon-quotes">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
-                        </svg>
-                        <div class="avatar"><img src="img/img.jpg" alt="img"></div>
-                        <div class="text-center c-white">
-                          <p class="fs-20 fw-medium">Antony Gex</p>
-                          <p class="fs-16 fw-black">Stars media SRL</p>
-                        </div>
-                      </div>
-                      <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
-                    </div>
-                    <div class="slider-item bg-yellow">
-                      <div class="align-items-end relative"> 
-                        <svg class="svg-sprite-icon icon-quotes">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
-                        </svg>
-                        <div class="avatar"><img src="img/img.jpg" alt="img"></div>
-                        <div class="text-center c-white">
-                          <p class="fs-20 fw-medium">Antony Gex</p>
-                          <p class="fs-16 fw-black">Stars media SRL</p>
-                        </div>
-                      </div>
-                      <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
-                    </div>
-                    <div class="slider-item bg-green">
-                      <div class="align-items-end relative"> 
-                        <svg class="svg-sprite-icon icon-quotes">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#quotes"></use>
-                        </svg>
-                        <div class="avatar"><img src="img/img.jpg" alt="img"></div>
-                        <div class="text-center c-white">
-                          <p class="fs-20 fw-medium">Antony Gex</p>
-                          <p class="fs-16 fw-black">Stars media SRL</p>
-                        </div>
-                      </div>
-                      <p class="fs-14 text-center c-white">INLIGHT  is  Mobile and Web Applications development company.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="eight-bottom overflow-h">	
-                <div class="container">		
-                  <h2 class="title_2"><span class="d-block slideInUp duraction-1 delay-0_5">Our Clients</span><span class="line line-left slideInLeft duraction-1 delay-0_5"> </span><span class="line line-right slideInRight duraction-1 delay-0_5"></span></h2>
-                  <div class="slider-client"> 
-                    <div class="slider-img"><img src="img/clients/unnamed.svg" alt="unnamed"></div>
-                    <div class="slider-img"><img src="img/clients/gopro_logo.svg" alt="gopro"></div>
-                    <div class="slider-img"><img src="img/clients/unnamed.svg" alt="unnamed"></div>
-                    <div class="slider-img"><img src="img/clients/logo-black.svg" alt="black"></div>
-                    <div class="slider-img"><img src="img/clients/unnamed.svg" alt="unnamed"></div>
-                    <div class="slider-img"><img src="img/clients/unnamed.svg" alt="unnamed"></div>
-                    <div class="slider-img"><img src="img/clients/gopro_logo.svg" alt="gopro"></div>
-                    <div class="slider-img"><img src="img/clients/unnamed.svg" alt="unnamed"></div>
-                    <div class="slider-img"><img src="img/clients/logo-black.svg" alt="black"></div>
-                    <div class="slider-img"><img src="img/clients/unnamed.svg" alt="unnamed"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="ninth section">
-          <div class="flex-sm-center-center h-100">
-            <div class="container">
-              <h2 class="title_2 c-white"> <span class="d-block slideInUp duraction-1 delay-0_5">About Us</span><span class="line line-left line-white slideInLeft duraction-1 delay-0_5"> </span><span class="line line-right line-white slideInRight duraction-1 delay-0_5"></span></h2>
-              <div class="flex-wrap swipe-read flip-book" id="demoBookExample"> 
-                <div class="col-50 active page page-cover page-cover-bottom" data-density="hard">  
-                  <div class="about-item">
-                    <h3 class="about-title zoomOutSmall duraction-1 delay-0_5">Who <span class="c-purple">we are</span></h3>
-                    <p class="about-text">INLIGHT is an Mobile and Web Applications development studio.</p>
-                    <p class="about-text">We have extensive experience in native mobile applications development, allowing us to carry out complex projects and meet any specifications required.</p>
-                    <p class="about-text">Keeping our focus on the result and we’ve been focused solely on our customers’ needs <br> for years now.</p>
-                    <p class="about-text">INLIGHT achieves high-end results with meticulous attention to every single detail using the most up-to-date technologies in existence. </p>
-                    <div class="about-action bg-purple fadeIn duraction-1 delay-0_6">
-                      <h4 class="fs-32 c-white fw-bold">Start your project</h4>
-                      <p class="fs-24 c-white">Let’s work together</p><a class="btn-send bg-white" href="#"><span class="c-purple">Send A request</span>
-                        <svg class="svg-sprite-icon icon-send c-purple">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#send"></use>
-                        </svg></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-50 page page-cover page-cover-bottom" data-density="hard"> 
-                  <div class="about-item">
-                    <h3 class="about-title zoomOutSmall duraction-1 delay-0_5">our  <span class="c-orange">philosophy</span></h3>
-                    <p class="about-text">We are powered by ideas that change the world, delivering our experience for different clients and industries all over the world.</p>
-                    <p class="about-text">World-changing ideas are sometimes complex, even overwhelming and we’re glad to explore them for ambitious projects.</p>
-                    <p class="about-text">We’ve inspired by what our clients do, and we strive to provide all the necessary technology and skills to turn their dreams into reality.</p>
-                    <p class="about-text">That’s why your success is our main goal. We believe that together, we can help you achieve great things.</p>
-                    <div class="about-action bg-orange fadeIn duraction-1 delay-0_6">
-                      <h4 class="fs-32 c-white fw-bold">Lack of resources?</h4>
-                      <p class="fs-24 c-white">We hire IT talents</p><a class="btn-send bg-white" href="#"><span class="c-orange">Send A request</span>
-                        <svg class="svg-sprite-icon icon-send c-orange">
-                          <use xlink:href="img/sprite/symbol/sprite.svg#send"></use>
-                        </svg></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="tenth section">
+        </div>
+        <footer class="footer"> 
           <div class="container"> 
-            <h2 class="title_2 c-white"> <span class="d-block slideInUp duraction-1 delay-0_5">HQ Team</span><span class="line line-left line-white slideInLeft duraction-1 delay-0_5"> </span><span class="line line-right line-white slideInRight duraction-1 delay-0_5"></span></h2>
-            <div class="flex-wrap teams">
-              <div class="col-50 slideInUpSmall duraction-1 delay-0_5"> <a class="team" href="#">
-                  <div class="team-head">
-                    <div class="team-border"> 
-                      <div class="team-colors gradient__green-blue_v2"></div>
-                    </div>
-                    <div class="team-img" style="background-image: url(img/team1.png)"></div>
-                  </div>
-                  <p class="fs-24 c-white fw-medium text-center">YAN HO <br> Founding Partner</p></a></div>
-              <div class="col-50 slideInUpSmall duraction-1 delay-0_5"> <a class="team" href="#">
-                  <div class="team-head">
-                    <div class="team-border"> 
-                      <div class="team-colors gradient__purple-blue"> </div>
-                    </div>
-                    <div class="team-img" style="background-image: url(img/team2.png)"></div>
-                  </div>
-                  <p class="fs-24 c-white fw-medium text-center">ALEX NABIL<br>Managing Partner</p></a></div>
+            <div class="flex-wrap flex-center-between"> 
+              <div class="footer__left"><img class="footer-img" src="img/logo.svg" alt="logo">
+                <div class="fs-14 fw-medium text-center">
+                  <p class="text-gradient">BRIGHT APPS STUDIO</p>
+                  <p class="c-gray">Yours Technology Partner</p>
+                </div>
+              </div>
+              <nav class="flex-wrap navfooter">
+                <ul class="menu-footer">
+                  <li class="menu-main"> 
+                    <div class="circle bg-yellow mr-10"></div>EXPLORE
+                  </li>
+                  <li class="menu-footer-item"><a class="menu-footer-link" href="#">Showcase</a></li>
+                  <li class="menu-footer-item"><a class="menu-footer-link" href="#">About Us</a></li>
+                  <li class="menu-footer-item"><a class="menu-footer-link" href="#">Our Stack</a></li>
+                  <li class="menu-footer-item"><a class="menu-footer-link" href="#">Our Team</a></li>
+                  <li class="menu-footer-item"><a class="menu-footer-link" href="#">Reviews</a></li>
+                </ul>
+                <ul class="menu-footer">
+                  <li class="menu-main"> 
+                    <div class="circle bg-green mr-10"></div>SERVICES
+                  </li>
+                  <li class="menu-footer-item"><a class="menu-footer-link" href="#">Ios Development</a></li>
+                  <li class="menu-footer-item"><a class="menu-footer-link" href="#">Android Development</a></li>
+                  <li class="menu-footer-item"><a class="menu-footer-link" href="#">Web Development</a></li>
+                  <li class="menu-footer-item"><a class="menu-footer-link" href="#">Ui/Ux Design</a></li>
+                  <li class="menu-footer-item"><a class="menu-footer-link" href="#">Quality Assurance</a></li>
+                </ul>
+                <ul class="menu-footer">
+                  <li class="menu-main"> 
+                    <div class="circle bg-blue mr-10"></div>CONTACTS
+                  </li>
+                  <li class="menu-footer-item">hello@inlight.tech</li>
+                  <li class="menu-footer-item">Hungary, <br> 1053 Budapest, <br class="d-smm-block d-none"> Ferenciek tere 2</li>
+                  <li class="menu-footer-item">Ukraine, <br> 04071 Kyiv, <br class="d-smm-block d-none"> Verkhnii Val 10</li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer-bottom">
+              <div class="flex-center-center footer-socials w-100"><a class="social" href="#">
+                  <svg class="svg-sprite-icon icon-in">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#in"></use>
+                  </svg></a><a class="social" href="#">
+                  <svg class="svg-sprite-icon icon-facebook">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#facebook"></use>
+                  </svg></a><a class="social" href="#">
+                  <svg class="svg-sprite-icon icon-twitter">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#twitter"></use>
+                  </svg></a><a class="social" href="#">
+                  <svg class="svg-sprite-icon icon-youtube">
+                    <use xlink:href="img/sprite/symbol/sprite.svg#youtube"></use>
+                  </svg></a></div>
+              <p class="text-lg-center text-md-left text-center fs-12 c-gray footer-copyright w-100">
+                <svg class="svg-sprite-icon icon-copyright">
+                  <use xlink:href="img/sprite/symbol/sprite.svg#copyright"></use>
+                </svg>INLIGHT 2020 All right reserved
+              </p>
             </div>
           </div>
-          <footer class="footer"> 
-            <div class="container"> 
-              <div class="flex-wrap flex-center-between"> 
-                <div class="footer__left"><img class="footer-img" src="img/logo.svg" alt="logo">
-                  <div class="fs-14 fw-medium text-center">
-                    <p class="text-gradient">BRIGHT APPS STUDIO</p>
-                    <p class="c-gray">Yours Technology Partner</p>
-                  </div>
-                </div>
-                <nav class="flex-wrap navfooter">
-                  <ul class="menu-footer">
-                    <li class="menu-main"> 
-                      <div class="circle bg-yellow mr-10"></div>EXPLORE
-                    </li>
-                    <li class="menu-footer-item"><a class="menu-footer-link" href="#">Showcase</a></li>
-                    <li class="menu-footer-item"><a class="menu-footer-link" href="#">About Us</a></li>
-                    <li class="menu-footer-item"><a class="menu-footer-link" href="#">Our Stack</a></li>
-                    <li class="menu-footer-item"><a class="menu-footer-link" href="#">Our Team</a></li>
-                    <li class="menu-footer-item"><a class="menu-footer-link" href="#">Reviews</a></li>
-                  </ul>
-                  <ul class="menu-footer">
-                    <li class="menu-main"> 
-                      <div class="circle bg-green mr-10"></div>SERVICES
-                    </li>
-                    <li class="menu-footer-item"><a class="menu-footer-link" href="#">Ios Development</a></li>
-                    <li class="menu-footer-item"><a class="menu-footer-link" href="#">Android Development</a></li>
-                    <li class="menu-footer-item"><a class="menu-footer-link" href="#">Web Development</a></li>
-                    <li class="menu-footer-item"><a class="menu-footer-link" href="#">Ui/Ux Design</a></li>
-                    <li class="menu-footer-item"><a class="menu-footer-link" href="#">Quality Assurance</a></li>
-                  </ul>
-                  <ul class="menu-footer">
-                    <li class="menu-main"> 
-                      <div class="circle bg-blue mr-10"></div>CONTACTS
-                    </li>
-                    <li class="menu-footer-item">hello@inlight.tech</li>
-                    <li class="menu-footer-item">Hungary, <br> 1053 Budapest, <br class="d-smm-block d-none"> Ferenciek tere 2</li>
-                    <li class="menu-footer-item">Ukraine, <br> 04071 Kyiv, <br class="d-smm-block d-none"> Verkhnii Val 10</li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="footer-bottom">
-                <div class="flex-center-center footer-socials w-100"><a class="social" href="#">
-                    <svg class="svg-sprite-icon icon-in">
-                      <use xlink:href="img/sprite/symbol/sprite.svg#in"></use>
-                    </svg></a><a class="social" href="#">
-                    <svg class="svg-sprite-icon icon-facebook">
-                      <use xlink:href="img/sprite/symbol/sprite.svg#facebook"></use>
-                    </svg></a><a class="social" href="#">
-                    <svg class="svg-sprite-icon icon-twitter">
-                      <use xlink:href="img/sprite/symbol/sprite.svg#twitter"></use>
-                    </svg></a><a class="social" href="#">
-                    <svg class="svg-sprite-icon icon-youtube">
-                      <use xlink:href="img/sprite/symbol/sprite.svg#youtube"></use>
-                    </svg></a></div>
-                <p class="text-lg-center text-md-left text-center fs-12 c-gray footer-copyright w-100">
-                  <svg class="svg-sprite-icon icon-copyright">
-                    <use xlink:href="img/sprite/symbol/sprite.svg#copyright"></use>
-                  </svg>INLIGHT 2020 All right reserved
-                </p>
-              </div>
-            </div>
-          </footer>
-        </section>
-      </div>
+        </footer>
+      </section>
     </div>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/libs.js"></script>
